@@ -20,40 +20,34 @@
 
 layout : single
 
-
-title	 	   : "Au tour des Maths"
-email		   : alain.camanes@free.fr
-description	   : "Ce site contient différents documents de travail à destination de la classe de PSI du lycée Stanislas. Vous trouverez également les documents utilisés lors de mes années en MPSI ainsi qu'à l'Université de Nantes."
-
-url	     	   : http://acamanes.github.io
-name		   : Alain Camanes
-
+# Build settings
 remote_theme: mmistakes/minimal-mistakes
 #theme : minimal-mistakes-jekyll
 minimal_mistakes_skin : dark
 search		      : true
+encoding	: "utf-8"
+locale: "fr-FR"
 
-logo		      : /_pages/images/ico.png
+# Definitions du site
+title	 	   : "Au tour des Maths"
+email		   : alain.camanes@free.fr
+description	   : "Ce site contient différents documents de travail à destination de la classe de PSI du lycée Stanislas. Vous trouverez également les documents utilisés lors de mes années en MPSI ainsi qu'à l'Université de Nantes."
+url	     	   : http://acamanes.github.io
+name		   : Alain Camanes
+logo		   : /_pages/images/ico.png
 
 include:
   - _pages
 
-encoding	: "utf-8"
-
-baseurl: "" # the subpath of your site, e.g. /blog
-
-# twitter_username: jekyllrb
-# github_username:  jekyll
-
-# Build settings
-locale: "fr-FR"
-# masthead_title: "Alain Camanes - Page professionnelle"
-
-# theme: minima
-
 plugins:
   - jekyll-feed
   - jekyll-include-cache
+
+
+collections:
+  chapters:
+    test: true
+    
 
 # Exclude from processing.
 # The following items will not be processed, by default.
