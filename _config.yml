@@ -28,8 +28,8 @@ description	   : "Ce site contient différents documents de travail à destinati
 url	     	   : http://acamanes.github.io
 name		   : Alain Camanes
 
-remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-#theme : minimal-mistakes-jekyll
+#remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+theme : minimal-mistakes-jekyll
 minimal_mistakes_skin : dark
 search		      : true
 
