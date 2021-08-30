@@ -1,0 +1,11 @@
+main:
+  - title: "PSI"
+    url: /docs/psi/
+  - title: "Diffusion Scientifique"
+    url: /docs/diffusion_scientifique
+  - title: "MPSI"
+    url: /docs/mpsi
+  - title: "Université"
+    url: /docs/universite
+  - title: "Liens"
+    url: /docs/liens
