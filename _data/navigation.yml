@@ -1,6 +1,6 @@
 main:
   - title: "PSI"
-    url: /psi_chapters/
+    url: /psi/
   - title: "Diffusion Scientifique"
     url: /docs/diffusion_scientifique
   - title: "MPSI"
