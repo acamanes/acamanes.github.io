@@ -1,0 +1,11 @@
+startdate: "2021-09-20"
+
+semaines:
+  - title: "Suites numériques"
+    number: "01"
+  - title: "Séries numériques"
+    number: "02"
+  - holidays: true
+    title: "Vacances de Printemps"
+  - title: "Algèbre linéaire"
+    number: "03"
