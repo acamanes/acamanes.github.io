@@ -1,11 +1,53 @@
-startdate: "2021-09-20"
+startdate: "2021-09-20 12:00"
 
 semaines:
-  - title: "Suites numériques"
+  - title: "Suites numériques, Fonctions numériques de la variable réelle"
     number: "01"
   - title: "Séries numériques"
     number: "02"
-  - holidays: true
-    title: "Vacances de Printemps"
-  - title: "Algèbre linéaire"
+  - title: "Séries numériques"
     number: "03"
+  - title: "Algèbre linéaire"
+    number: "04"
+  - title: "Déterminants"
+    number: "05"
+  - holidays: true
+    title: "Vacances de Toussaint"
+  - holidays: true
+  - title: "Intégration sur un invervalle quelconque"
+    number: "06"
+  - title: "Intégration sur un invervalle quelconque"
+    number: "07"
+  - title: "Probabilités"
+    number: "08"
+  - title: "Probabilités"
+    number: "09"
+  - title: "Variables aléatoires discrètes"
+    number: "10"
+  - title: "Variables aléatoires discrètes"
+    number: "11"
+  - holidays: true
+    title: "Vacances de Noël"
+  - holidays: true
+  - title: "Espaces vectoriels normés de dimension finie"
+    number: "12"
+  - title: "Suites et Séries de fonctions"
+    number: "13"
+  - title: "Suites et Séries de fonctions"
+    number: "14"
+  - title: "Séries entières"
+    number: "15"
+  - title: "Séries entières"
+    number: "16"
+  - title: "Réduction des endomorphismes"
+    number: "17"
+  - title: "Réduction des endomorphismes"
+    number: "18"
+  - holidays: true
+    title: "Vacances de Printemps & Concours Blanc"
+  - holidays: true
+  - holidays: true
+  - title: "Intégrales à paramètre"
+    number: "19"
+  - title: "Espaces vectoriels préhilbertiens"
+    number: "20"
