@@ -44,10 +44,6 @@ plugins:
   - jekyll-include-cache
 
 
-collections:
-  chapters:
-    test: true
-    
 
 # Exclude from processing.
 # The following items will not be processed, by default.
