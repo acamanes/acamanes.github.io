@@ -6,6 +6,8 @@ toc: true
 toc_sticky: true
 toc_label: "Au menu"
 toc_levels: 6
+sidebar:
+  nav: "psi"
 ---
 
 
@@ -13,6 +15,7 @@ toc_levels: 6
 {% assign 4jours = 4 | times: 86400 %}
 
 {% assign debutsemaine = site.data.psi_colles.startdate | date : "%s" %}
+
 {% assign finsemaine = site.data.psi_colles.startdate | date : "%s" | plus: 4jours | date: "%s" %}
 
 <ol>

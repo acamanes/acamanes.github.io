@@ -1,11 +1,13 @@
 ---
 layout: single
 title: Les Chapitres en PSI
-permalink: /psi/
+permalink: /psi/chapitres.html
 toc: true
 toc_sticky: true
 toc_label: "Au menu"
 toc_levels: 1..6
+sidebar:
+  nav: "psi"
 ---
 
 <ul start="0" style="color:Peru; list-style-type:none">
