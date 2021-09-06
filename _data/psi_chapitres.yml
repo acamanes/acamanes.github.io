@@ -8,11 +8,13 @@ chapitres:
     chapitre: true
     td: true
     tdindic: true
+    fc: 
+     - titre: "Suites récurrentes"
+    top: 
+     - titre: "Sommes doubles"
+     - titre: "Inégalités"
     themes: 
      - titre: "Résolution de f(x) = 0"
-    cplts: 
-     - number: "01"
-       titre: "Test"
      
   - titre: "Séries numériques"
     chapitre: true
@@ -25,6 +27,11 @@ chapitres:
      - titre: "Une démonstration de la formule de Stirling"
      - titre: "Théorème de Mertens"
      - titre: "Développement décimal"
+    fc: 
+     - titre: "Convergente ou Divergente ?"
+    top: 
+     - titre: "Comportements asymptotiques"
+     - titre: "Utilisation des formules de Taylor"
 
   - titre: "Algèbre linéaire"
     chapitre: true
@@ -34,6 +41,8 @@ chapitres:
      - titre: "Familles de polynômes"
      - titre: "Interpolation de Lagrange - Zéros des polynômes de Tchebychev"
      - titre: "Autour des endomorphismes nilpotents"
+    top: 
+      - titre: "Espaces vectoriels & Géométrie"
 
   - titre: "Déterminants"
     chapitre: true
@@ -46,9 +55,13 @@ chapitres:
     chapitre: true
     td: true
     tdindic: true
+    fc: 
+     - titre: "Convergente ou Divergente ?"
     themes:
      - titre: "Calculs approchés d'intégrales"
      - titre: "Intégrale de Dirichlet"
+    top: 
+     - titre: "Calculs de primitives"
 
   - titre: "Probabilités sur des ensembles finis ou dénombrables"
     chapitre: true
@@ -56,6 +69,8 @@ chapitres:
     tdindic: true
     themes:
      - titre: "Dénombrement de surjections"
+    top: 
+     - titre: "Dénombrements"
 
   - titre: "Variables aléatoires discrètes"
     chapitre: true
@@ -90,6 +105,8 @@ chapitres:
     chapitre: true
     td: true
     tdindic: true
+    top: 
+     - titre: "Réduction des endomorphismes"
     themes:
      - titre: "Localisation des valeurs propres"
      - titre: "Adhérence de l'ensemble des matrices diagonalisables"
@@ -101,6 +118,8 @@ chapitres:
     chapitre: true
     td: true
     tdindic: true
+    top: 
+     - titre: "Dominer les fonctions"
 
   - titre: "Espaces vectoriels préhilbertiens réels"
     chapitre: true
@@ -119,11 +138,12 @@ chapitres:
     td: true
     tdindic: true
 
-
   - titre: "Calcul différentiel"
     chapitre: true
     td: true
     tdindic: true
+    top: 
+     - titre: "Équations différentielles"
 
 
   - titre: "Fonctions vectorielles, Arcs paramétrés"

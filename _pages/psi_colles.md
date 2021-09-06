@@ -12,20 +12,20 @@ sidebar:
 
 
 {% assign week = 7 | times: 86400 %}
-{% assign 4jours = 4 | times: 86400 %}
+{% assign quatrejours = 4 | times: 86400 %}
 
 {% assign debutsemaine = site.data.psi_colles.startdate | date : "%s" %}
 
-{% assign finsemaine = site.data.psi_colles.startdate | date : "%s" | plus: 4jours | date: "%s" %}
+{% assign finsemaine = site.data.psi_colles.startdate | date : "%s" | plus: quatrejours %}
 
 {% assign number = 1 %}
 
 <ol>
 {% for s in site.data.psi_colles.semaines %}
 {% if number < 10 %}
-{% assign cpt = "0" | append:{{number}} %}
+{% assign cpt = "0" | append:number %}
 {% else %}
-{% assign cpt = {{number}} %}
+{% assign cpt = number %}
 {% endif %}
 
 {% if s.holidays != true %}

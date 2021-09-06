@@ -15,3 +15,8 @@ psi:
     url: /psi/chapitres.html
   - title: "Colles"
     url: /psi/colles.html
+  - title: "Informatique"
+    url: /psi/informatique.html
+  - title: "Documents divers"
+    url: /psi/divers.html
+    
