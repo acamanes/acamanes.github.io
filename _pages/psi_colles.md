@@ -18,13 +18,22 @@ sidebar:
 
 {% assign finsemaine = site.data.psi_colles.startdate | date : "%s" | plus: 4jours | date: "%s" %}
 
+{% assign number = 1 %}
+
 <ol>
 {% for s in site.data.psi_colles.semaines %}
+{% if number < 10 %}
+{% assign cpt = "0" | append:{{number}} %}
+{% else %}
+{% assign cpt = {{number}} %}
+{% endif %}
+
 {% if s.holidays != true %}
 <li>
 <h6>{{debutsemaine| date:"%d/%m"}}-{{finsemaine| date:"%d/%m"}}</h6>
-<a href="./psi_doc/colle{{s.number}}.pdf">{{s.title}}</a>
+<a href="./psi_doc/colle{{cpt}}.pdf">{{s.title}}</a>
 </li>
+{% assign number = number | plus: 1 %}
 {% else %}
 {{s.title}}
 {% endif %}

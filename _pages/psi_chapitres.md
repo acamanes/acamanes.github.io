@@ -10,22 +10,28 @@ sidebar:
   nav: "psi"
 ---
 
+{% assign cpttheme = 0 %}
+
 <ul start="0" style="color:Peru; list-style-type:none">
 {% for chap in site.data.psi_chapitres.chapitres %}
+{% assign number = forloop.index | plus: -1 %}
+{% if number < 10 %}
+{% assign number = "0" | append:{{number}} %}
+{% endif %}
 <li>
-<h2 id="chap_{{chap.number}}" style="color:Peru">{{chap.number}} - {{chap.titre}}</h2>
+<h2 id="chap_{{}}" style="color:Peru">{{number}} - {{chap.titre}}</h2>
 {% if chap.chapitre %}
-<a href="./psi_doc/chap_e{{chap.number}}.pdf">Cours</a>,
+<a href="./psi_doc/chap_e{{number}}.pdf">Cours</a>,
 {% endif %}
 
 
 {% if chap.td %}
-<a href="./psi_doc/exos_e{{chap.number}}.pdf">Exercices</a>,
+<a href="./psi_doc/exos_e{{number}}.pdf">Exercices</a>,
 {% endif %}
 
 
 {% if chap.tdindic %}
-<a href="./psi_doc/exos_i{{chap.number}}.pdf">Indications</a>,
+<a href="./psi_doc/exos_i{{number}}.pdf">Indications</a>,
 {% endif %}
 
 {% if chap.cplts %}
@@ -41,9 +47,15 @@ sidebar:
 {% if chap.themes %}
 <h6 style="color:#5090B4">Thèmes</h6> <ul>
 {% for th in chap.themes %}
+{% if cpttheme < 10 %}
+{% assign ntheme = "0" | append:{{cpttheme}} %}
+{% else %}
+{% assign ntheme = {{cpttheme}} %}
+{% endif %}
 <li>
-<a href="./psi_doc/themes_e{{th.number}}.pdf">{{th.titre}}</a>
+<a href="./psi_doc/themes_e{{ntheme}}.pdf">{{th.titre}}</a>
 </li>
+{% assign cpttheme = cpttheme | plus:1 %}
 {% endfor %}
 </ul>
 {% endif %}

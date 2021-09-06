@@ -1,179 +1,132 @@
 chapitres:
-  - number: "00"
-    titre: "Prémices"
+  - titre: "Prémices"
     chapitre: true
     td: true
     tdindic: true
-    themes: false
-  - number: "01"
-    titre: "Suites numériques, Fonctions numériques de la variable réelle"
+    
+  - titre: "Suites numériques, Fonctions numériques de la variable réelle"
     chapitre: true
     td: true
     tdindic: true
     themes: 
-     - number: "01"
-       titre: "Résolution de f(x) = 0"
+     - titre: "Résolution de f(x) = 0"
     cplts: 
      - number: "01"
        titre: "Test"
-  - number: "02"
-    titre: "Séries numériques"
+     
+  - titre: "Séries numériques"
     chapitre: true
     td: true
     tdindic: true
     themes:
-     - number: "02"
-       titre: "Règles de convergence / divergence"
+     - titre: "Règles de convergence / divergence"
+     - titre: "Développement asymptotique de la série harmonique"
+     - titre: "Calcul de zeta(2)"
+     - titre: "Une démonstration de la formule de Stirling"
+     - titre: "Théorème de Mertens"
+     - titre: "Développement décimal"
 
-     - number: "03"
-       titre: "Développement asymptotique de la série harmonique"
- 
-     - number: "04"
-       titre: "Calcul de zeta(2)"
-
-     - number: "05"
-       titre: "Une démonstration de la formule de Stirling"
-
-     - number: "06"
-       titre: "Théorème de Mertens"
-
-     - number: "07"
-       titre: "Développement décimal"
-
-  - number: "03"
-    titre: "Algèbre linéaire"
+  - titre: "Algèbre linéaire"
     chapitre: true
     td: true
     tdindic: true
     themes:
-     - number: "08"
-       titre: "Familles de polynômes"
-     - number: "09"
-       titre: "Interpolation de Lagrange - Zéros des polynômes de Tchebychev"
-     - number: "10"
-       titre: "Autour des endomorphismes nilpotents"
+     - titre: "Familles de polynômes"
+     - titre: "Interpolation de Lagrange - Zéros des polynômes de Tchebychev"
+     - titre: "Autour des endomorphismes nilpotents"
 
-  - number: "04"
-    titre: "Déterminants"
+  - titre: "Déterminants"
     chapitre: true
     td: true
     tdindic: true
     themes:
-     - number: "11"
-       titre: "Déterminants classiques"
+     - titre: "Déterminants classiques"
 
-  - number: "05"
-    titre: "Intégration sur un intervalle quelconque"
+  - titre: "Intégration sur un intervalle quelconque"
     chapitre: true
     td: true
     tdindic: true
     themes:
-     - number: "12"
-       titre: "Calculs approchés d'intégrales"
-     - number: "13"
-       titre: "Intégrale de Dirichlet"
+     - titre: "Calculs approchés d'intégrales"
+     - titre: "Intégrale de Dirichlet"
 
-  - number: "06"
-    titre: "Probabilités sur des ensembles finis ou dénombrables"
+  - titre: "Probabilités sur des ensembles finis ou dénombrables"
     chapitre: true
     td: true
     tdindic: true
     themes:
-     - number: "14"
-       titre: "Dénombrement de surjections"
+     - titre: "Dénombrement de surjections"
 
-  - number: "07"
-    titre: "Variables aléatoires discrètes"
+  - titre: "Variables aléatoires discrètes"
     chapitre: true
     td: true
     tdindic: true
     themes:
-     - number: "15"
-       titre: "La notion d'entropie"
+     - titre: "La notion d'entropie"
 
-  - number: "08"
-    titre: "Espaces vectoriels normés de dimension finie"
+  - titre: "Espaces vectoriels normés de dimension finie"
     chapitre: true
     td: true
     tdindic: true
     themes:
-     - number: "16"
-       titre: "Convexité et Normes p"
-     - number: "17"
-       titre: "Normes matricielles et Conditionnement"
+     - titre: "Convexité et Normes p"
+     - titre: "Normes matricielles et Conditionnement"
 
-  - number: "09"
-    titre: "Suites et Séries de fonctions"
+  - titre: "Suites et Séries de fonctions"
     chapitre: true
     td: true
     tdindic: true
     themes:
-     - number: "18"
-       titre: "Fonction continue partout dérivable nulle part"
-     - number: "19"
-       titre: "Théorème de Stone Weierstrass"
+     - titre: "Fonction continue partout dérivable nulle part"
+     - titre: "Théorème de Stone Weierstrass"
 
-  - number: "10"
-    titre: "Séries entières"
+  - titre: "Séries entières"
     chapitre: true
     td: true
     tdindic: true
 
 
-  - number: "11"
-    titre: "Réduction des endomorphismes"
+  - titre: "Réduction des endomorphismes"
     chapitre: true
     td: true
     tdindic: true
     themes:
-     - number: "20"
-       titre: "Localisation des valeurs propres"
-     - number: "21"
-       titre: "Adhérence de l'ensemble des matrices diagonalisables"
-     - number: "22"
-       titre: "Exponentielle de matrices"
-     - number: "23"
-       titre: "Décompositions matricielles"
-     - number: "24"
-       titre: "Adjoint d'un endomorphisme"
+     - titre: "Localisation des valeurs propres"
+     - titre: "Adhérence de l'ensemble des matrices diagonalisables"
+     - titre: "Exponentielle de matrices"
+     - titre: "Décompositions matricielles"
+     - titre: "Adjoint d'un endomorphisme"
 
-  - number: "12"
-    titre: "Intégrales à paramètre"
+  - titre: "Intégrales à paramètre"
     chapitre: true
     td: true
     tdindic: true
 
-  - number: "13"
-    titre: "Espaces vectoriels préhilbertiens réels"
+  - titre: "Espaces vectoriels préhilbertiens réels"
     chapitre: true
     td: true
     tdindic: true
        
-  - number: "12"
-    titre: "Endomorphismes d'un espace euclidien"
+  - titre: "Endomorphismes d'un espace euclidien"
     chapitre: true
     td: true
     tdindic: true
     themes:
-     - number: "25"
-       titre: "Étude de O(E) \\ SO(E) - Quart de tour en dimension 4"
+     - titre: "Étude de O(E) \\ SO(E) - Quart de tour en dimension 4"
 
-  - number: "13"
-    titre: "Équations différentielles linéaires"
+  - titre: "Équations différentielles linéaires"
     chapitre: true
     td: true
     tdindic: true
 
 
-  - number: "14"
-    titre: "Calcul différentiel"
+  - titre: "Calcul différentiel"
     chapitre: true
     td: true
     tdindic: true
 
 
-  - number: "15"
-    titre: "Fonctions vectorielles, Arcs paramétrés"
+  - titre: "Fonctions vectorielles, Arcs paramétrés"
     chapitre: true
     td: true
     tdindic: true
