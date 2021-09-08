@@ -97,6 +97,23 @@ sidebar:
 </ul>
 {% endif %}
 
+{% if chap.hp %}
+<h3>Résultats Hors-Programme</h3> <ul>
+{% for th in chap.hp %}
+{% if cpthp < 10 %}
+{% assign nhp = "0" | append:cpthp %}
+{% else %}
+{% assign nhp = cpthp %}
+{% endif %}
+<li>
+<a href="./psi_doc/hp_e{{nhp}}.pdf">{{th.titre}}</a>
+</li>
+{% assign cpthp = cpthp | plus:1 %}
+{% endfor %}
+</ul>
+{% endif %}
+
+
 </li>
 {% endfor %}
 </ul>
