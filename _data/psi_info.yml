@@ -1,0 +1,13 @@
+formulaire: "https://www.concours-centrale-supelec.fr/CentraleSupelec/SujetsOral/PSI"
+
+tp:
+ - titre: "Python & L'informatique aux concours"
+ - titre: "Introduction à la Programmation récursive"
+ - titre: "Algorithmes de Tris"
+ - titre: "Révisions des Bases de données"
+   annexes: true
+ - titre: "Chiffrement & Images PGM"
+   annexes: true
+ - titre: "Piles & Files"
+ - titre: "Codage de Huffman"
+   annexes: true

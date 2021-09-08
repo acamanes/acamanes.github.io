@@ -10,6 +10,13 @@ sidebar:
   nav: "psi"
 ---
 
+{% if site.data.psi_colles.ref %}
+<nobr>
+{% for r in site.data.psi_colles.ref %}
+<a href="./psi_doc/ref/{{r.ref}}" class="ref">&Sigma;</a>
+{% endfor %}
+</nobr>
+{% endif %}
 
 {% assign week = 7 | times: 86400 %}
 {% assign quatrejours = 4 | times: 86400 %}
@@ -30,7 +37,7 @@ sidebar:
 
 {% if s.holidays != true %}
 <li>
-<h6>{{debutsemaine| date:"%d/%m"}}-{{finsemaine| date:"%d/%m"}}</h6>
+<h6 id="colle_{{cpt}}">{{debutsemaine| date:"%d/%m"}}-{{finsemaine| date:"%d/%m"}}</h6>
 <a href="./psi_doc/colle{{cpt}}.pdf">{{s.title}}</a>
 </li>
 {% assign number = number | plus: 1 %}

@@ -21,7 +21,10 @@ sidebar:
 {% assign number = "0" | append:number %}
 {% endif %}
 <li>
-<h2 class="mycss" id= "chap_{{number}}">{{number}} - {{chap.titre}}</h2>
+<h2 class="mycss" id="chap_{{number}}">{{number}} - {{chap.titre}}
+{% if chap.ref %}
+<a href="./psi_doc/ref/{{chap.ref}}" class="ref">&Sigma;</a>
+{% endif %}</h2>
 {% if chap.chapitre %}
 <a href="./psi_doc/chap_e{{number}}.pdf">Cours</a>,
 {% endif %}

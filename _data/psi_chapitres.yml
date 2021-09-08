@@ -3,11 +3,13 @@ chapitres:
     chapitre: true
     td: true
     tdindic: true
+    ref: "arithmetique_traite-jesse_james.jpg"
     
   - titre: "Suites numériques, Fonctions numériques de la variable réelle"
     chapitre: true
     td: true
     tdindic: true
+    ref: "xkcd_2042-rolle_s_theorem.png"
     fc: 
      - titre: "Suites récurrentes"
     top: 
@@ -71,6 +73,7 @@ chapitres:
     chapitre: true
     td: true
     tdindic: true
+    ref: "xkcd_2117-differentiation_and_integration.png"
     fc: 
      - titre: "Convergente ou Divergente ?"
     themes:
@@ -96,6 +99,7 @@ chapitres:
     chapitre: true
     td: true
     tdindic: true
+    ref: "xkcd_2379-probability_comparisons.png"
     themes:
      - titre: "Dénombrement de surjections"
     top: 
@@ -105,6 +109,7 @@ chapitres:
     chapitre: true
     td: true
     tdindic: true
+    ref: "le_devin-7.jpg"
     themes:
      - titre: "La notion d'entropie"
 

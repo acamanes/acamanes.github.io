@@ -1,5 +1,9 @@
 startdate: "2021-09-20 12:00"
 
+ref:
+ - ref: "qed-combat_des_chefs.jpg"
+ - ref: "domaine_des_dieux-petite_demonstration.jpg"
+
 semaines:
   - title: "Suites numériques, Fonctions numériques de la variable réelle"
   - title: "Séries numériques"
