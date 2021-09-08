@@ -85,6 +85,18 @@ sidebar:
 {% endfor %}
 </ul>
 {% endif %}
+
+{% if chap.animations %}
+<h3>Animations</h3>
+<ul>
+{% for anim in chap.animations %}
+<li>
+<a href="./psi_doc/animations{{anim.url}}" target="_blank">{{anim.titre}}</a>
+</li>
+{% endfor %}
+</ul>
+{% endif %}
+
 </li>
 {% endfor %}
 </ul>

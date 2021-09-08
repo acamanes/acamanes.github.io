@@ -15,6 +15,13 @@ chapitres:
      - titre: "Inégalités"
     themes: 
      - titre: "Résolution de f(x) = 0"
+    animations:
+     - titre: Limite et caractérisation séquentielle
+       url: "/suites_fonctions/01-x_sin_1_x-continuite.mp4"
+     - titre: Absence de limite par caractérisation séquentielle
+       url: "/suites_fonctions/02-sin_1_x-non_continuite.mp4"
+     - titre: Limite du taux d'accroissement
+       url: "/suites_fonctions/03-taux_d_accroissement.mp4"
      
   - titre: "Séries numériques"
     chapitre: true
