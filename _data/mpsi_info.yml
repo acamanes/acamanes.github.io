@@ -1,13 +1,11 @@
-ref:
- - ref: "le_devin-informatix.png"
- - ref: "marcel_dalton-python.png"
 
 formulaire: "https://www.concours-centrale-supelec.fr/CentraleSupelec/SujetsOral/PSI"
+
+ref: "xkcd_1270-functional.png"
 
 tp:
  - titre: "Python & L'informatique aux concours"
  - titre: "Introduction à la Programmation récursive"
-   ref: "xkcd_1739-fixing_problems.png"
  - titre: "Algorithmes de Tris"
  - titre: "Révisions des Bases de données"
    annexes: true

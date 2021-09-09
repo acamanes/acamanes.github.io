@@ -29,6 +29,7 @@ chapitres:
     chapitre: true
     td: true
     tdindic: true
+    ref: "xkcd_1153-proof.png"
     themes:
      - titre: "Règles de convergence / divergence"
      - titre: "Développement asymptotique de la série harmonique"
@@ -155,6 +156,7 @@ chapitres:
     chapitre: true
     td: true
     tdindic: true
+    ref: "de_cape_et_de_crocs_t4-spectre.png"
     top: 
      - titre: "Réduction des endomorphismes"
     themes:
@@ -175,11 +177,13 @@ chapitres:
     chapitre: true
     td: true
     tdindic: true
+    ref : "xkcd_199-right_hand_rule.png"
        
   - titre: "Endomorphismes d'un espace euclidien"
     chapitre: true
     td: true
     tdindic: true
+    ref: "xkcd_184-matrix_rotation.png"
     themes:
      - titre: "Étude de O(E) \\ SO(E) - Quart de tour en dimension 4"
 
