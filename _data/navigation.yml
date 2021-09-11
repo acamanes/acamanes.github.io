@@ -1,12 +1,10 @@
 main:
   - title: "PSI"
     url: /psi/chapitres.html
-  - title: "Diffusion Scientifique"
-    url: /docs/diffusion_scientifique
   - title: "MPSI"
     url: /docs/mpsi
-  - title: "Université"
-    url: /docs/universite
+  - title: "Diffusion Scientifique"
+    url: /docs/diffusion_scientifique
   - title: "Liens"
     url: /docs/liens
 
@@ -19,4 +17,24 @@ psi:
     url: /psi/informatique.html
   - title: "Documents divers"
     url: /psi/divers.html
-    
+
+mpsi:
+  - title: "Cours & Exercices"
+    url: "/mpsi/chapitres.html"
+  - title: "Problèmes"
+    url: "/mpsi/problemes.html"
+  - title: "Informatique"
+    url: "/mpsi/informatique.html"
+  - title: "Option Informatique"
+    url: "/mpsi/option_informatique.html"
+
+diffusion:
+  - title: "Articles"
+    url: "/diffusion/articles.html"
+  - title: "Ateliers"
+    url: "/diffusion/ateliers.html"
+  - title: "Université"
+    url: "/diffusion/universite.html"
+
+liens:
+  - title: "Liens"

@@ -6,6 +6,7 @@ toc: true
 toc_sticky: true
 toc_label: "Au menu"
 toc_levels: 1..6
+toc_icon: "infinity"
 sidebar:
   nav: "psi"
 ---

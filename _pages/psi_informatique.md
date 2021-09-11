@@ -1,17 +1,19 @@
 ---
 layout: single
-title: L'informatique en PSI
+title: L'Informatique en PSI
 permalink: /psi/informatique.html
 toc: true
 toc_sticky: true
 toc_label: "Au menu"
 toc_levels: 1..6
+toc_icon: "infinity"
 sidebar:
   nav: "psi"
 ---
 
 {% assign cpttp = 0 %}
 
+<center>
 {% if site.data.psi_colles.ref %}
 <nobr>
 {% for r in site.data.psi_info.ref %}
@@ -19,7 +21,7 @@ sidebar:
 {% endfor %}
 </nobr>
 {% endif %}
-
+</center>
 
 
 <a href="{{site.data.psi_info.formulaire}}">Formulaire</a> disponible lors des Oraux de Centrale.

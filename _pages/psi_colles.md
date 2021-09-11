@@ -6,10 +6,18 @@ toc: true
 toc_sticky: true
 toc_label: "Au menu"
 toc_levels: 6
+toc_icon: "infinity"
 sidebar:
   nav: "psi"
 ---
 
+{% assign week = 7 | times: 86400 %}
+{% assign quatrejours = 4 | times: 86400 %}
+{% assign debutsemaine = site.data.psi_colles.startdate | date : "%s" %}
+{% assign finsemaine = site.data.psi_colles.startdate | date : "%s" | plus: quatrejours %}
+{% assign number = 1 %}
+
+<center>
 {% if site.data.psi_colles.ref %}
 <nobr>
 {% for r in site.data.psi_colles.ref %}
@@ -17,15 +25,7 @@ sidebar:
 {% endfor %}
 </nobr>
 {% endif %}
-
-{% assign week = 7 | times: 86400 %}
-{% assign quatrejours = 4 | times: 86400 %}
-
-{% assign debutsemaine = site.data.psi_colles.startdate | date : "%s" %}
-
-{% assign finsemaine = site.data.psi_colles.startdate | date : "%s" | plus: quatrejours %}
-
-{% assign number = 1 %}
+</center>
 
 <ol>
 {% for s in site.data.psi_colles.semaines %}
