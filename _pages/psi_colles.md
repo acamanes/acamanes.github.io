@@ -18,13 +18,11 @@ sidebar:
 {% assign number = 1 %}
 
 <center>
-{% if site.data.psi_colles.ref %}
 <nobr>
 {% for r in site.data.psi_colles.ref %}
 <a href="./psi_doc/ref/{{r.ref}}" class="ref">&Sigma;</a>
 {% endfor %}
 </nobr>
-{% endif %}
 </center>
 
 <ol>

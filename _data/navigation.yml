@@ -2,11 +2,11 @@ main:
   - title: "PSI"
     url: /psi/chapitres.html
   - title: "MPSI"
-    url: /docs/mpsi
+    url: /mpsi/option_informatique.html
   - title: "Diffusion Scientifique"
-    url: /docs/diffusion_scientifique
+    url: /diffusion_scientifique
   - title: "Liens"
-    url: /docs/liens
+    url: /liens
 
 psi:
   - title: "Chapitres"

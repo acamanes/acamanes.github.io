@@ -14,13 +14,11 @@ sidebar:
 {% assign cpttp = 0 %}
 
 <center>
-{% if site.data.psi_colles.ref %}
 <nobr>
 {% for r in site.data.psi_info.ref %}
 <a href="./psi_doc/ref/{{r.ref}}" class="ref">&Sigma;</a>
 {% endfor %}
 </nobr>
-{% endif %}
 </center>
 
 
@@ -28,7 +26,7 @@ sidebar:
 
 <ul start="0" style="list-style-type:none">
 {% for chap in site.data.psi_info.tp %}
-<li> <h3 id="#tp_{{ntp}}">{{chap.titre}}
+<li> <h3 id="#tp_{{cpttp}}">{{chap.titre}}
 {% if chap.ref %}
 <a href="./psi_doc/ref/{{chap.ref}}" class="ref">&Sigma;</a>
 {% endif %}</h3>
