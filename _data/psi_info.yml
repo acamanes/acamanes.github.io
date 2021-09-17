@@ -2,7 +2,11 @@ ref:
  - ref: "le_devin-informatix.png"
  - ref: "marcel_dalton-python.png"
 
-formulaire: "https://www.concours-centrale-supelec.fr/CentraleSupelec/SujetsOral/PSI"
+docs:
+ - titre: "Formulaire disponible lors des Oraux de Centrale"
+   url: "https://www.concours-centrale-supelec.fr/CentraleSupelec/SujetsOral/PSI"
+ - titre: "Memento"
+   url: "./psi_doc/info/memento.pdf"
 
 tp:
  - titre: "Python & L'informatique aux concours"

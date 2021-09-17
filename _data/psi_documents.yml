@@ -1,0 +1,16 @@
+calculs:
+  - titre: "Les bases du calcul"
+    docs:
+     - titre: "Formulaire"
+       url: "formulaire.pdf"
+     - titre: "Cahier de calcul"
+       url: "cahier_de_calcul_enonces.pdf"
+
+  - titre: "Aide à la rédaction"
+    docs:
+     - titre: "Consignes de rédaction"
+       url: "consignes_de_redaction.pdf"
+     - titre: "Garder en tête"
+       url: "commandements.pdf"
+     - titre: "Comprendre la notion de preuve"
+       url: "comment_rediger_les_preuves.pdf"

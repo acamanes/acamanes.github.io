@@ -21,12 +21,17 @@ sidebar:
 </nobr>
 </center>
 
+<ul>
+{% for doc in site.data.psi_info.docs %}
+<li><a href="{{doc.url}}">{{doc.titre}}.</a></li>
+{% endfor %}
+</ul>
+<!-- <a href="{{site.data.psi_info.formulaire}}">Formulaire</a> disponible lors des Oraux de Centrale. -->
 
-<a href="{{site.data.psi_info.formulaire}}">Formulaire</a> disponible lors des Oraux de Centrale.
-
-<ul start="0" style="list-style-type:none">
+<!-- <ul start="0" style="list-style-type:none"> -->
 {% for chap in site.data.psi_info.tp %}
-<li> <h3 id="#tp_{{cpttp}}">{{chap.titre}}
+<!-- <li>  -->
+<h3 id="#tp_{{cpttp}}">{{chap.titre}}
 {% if chap.ref %}
 <a href="./psi_doc/ref/{{chap.ref}}" class="ref">&Sigma;</a>
 {% endif %}</h3>
@@ -39,7 +44,7 @@ sidebar:
 {% if chap.annexes %}
 <a href="./psi_doc/info/ipt-tp_{{ntp}}.zip">Données</a>.
 {% endif %}
-</li>
+<!-- </li> -->
 {% assign cpttp = cpttp | plus:1 %}
 {% endfor %}
-</ul>
+<!-- </ul> -->
