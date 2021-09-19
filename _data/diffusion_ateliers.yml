@@ -1,0 +1,84 @@
+presentation: |
+  Les ateliers proposés sont sans ordinateur et ont pour but la manipulation d'idées mathématiques ou informatiques en adéquation avec les notions étudiées durant la classe. Ces ateliers ont été organisés dans des classes de primaire. Les durées et niveaux indiqués sont approximatifs. N'hésitez pas à me contacter pour modifier les sources. Un grand merci aux enseignants qui ont échangé lors de la préparation et ont ouvert les portes de leurs classes. Certaines activités se sont inspirées du groupe de travail <a href="https://github.com/InfoSansOrdi/InfoSansOrdi/blob/master/README.md">ISO</a>.
+
+ateliers:
+  - titre: "Le triangle des couleurs"
+    niveau: "Cycle 2"
+    presentation: |
+      Mélanger le rouge, le bleu et le jaune pour obtenir un triangle avec toutes les couleurs.
+    fichier: "cp-04-triangle_des_couleurs"
+
+  - titre: "Escher & Maths"
+    niveau: "Cycle 2"
+    presentation: |
+      Partir d'&oelig;uvres de M.C. Escher pour manipuler quelques concepts géométriques.
+    ateliers:
+      - titre: "Le bracelet magique"
+        niveau: "CP"
+        presentation: |
+          Construction et manipulation d'un ruban de M&ouml;bius.
+        fichier: "cp-01-bracelet_magique"
+      - titre: "Traquer les trous"
+        niveau: "CP"
+        presentation: |
+          Construction puis coloriage de pavages du plan.
+        fichier: "cp-02-traquer_les_trous"
+      - titre: "Dessiner l'impossible"
+        niveau: "CP"
+        presentation: |
+          Reproduire sur un quadrillage un triangle de Penrose.
+        fichier: "cp-03-dessiner_l_impossible"
+
+  - titre: "Mises en rang"
+    niveau: "Cycles 2 & 3"
+    presentation: |
+      Découvrir les algorithmes en manipulant des algorithmes de tris.
+    ateliers:
+      - titre: "Sorty dancing"
+        niveau: "CE1"
+        presentation: |
+          4 séances pour découvrir des algorithmes, sur papier, en dansant puis sur l'ordinateur.
+        fichier: "ce1-01-sorty_dancing"
+      - titre: "Tree-ptyque sur les Tris"
+        niveau: "CE2"
+        presentation: |
+          Ranger les données pour les retrouver plus rapidement, à l'aide d'arbres de décisions.
+        fichier: "ce2-01-tree_ptyque_sur_les_tris"
+      - titre: "Une brochette de critères"
+        niveau: "CE2"
+        presentation: |
+          Réalisation de cartes perforées pour effectuer des recherches multi-critères.
+        fichier: "ce2-02-brochette_de_criteres"
+
+  - titre: "Count a Bit!"
+    niveau: "Cycle 3"
+    presentation: |
+      Tour de magie pour pratiquer les décompositions additives.
+    fichier: "ce2-03-count_a_bit"
+
+  - titre: "Le tour du monde en 4 couleurs!"
+    niveau: "Cycle 3"
+    presentation: |
+      Colorier le patron d'un cube sur lequel sont dessinés des pays.
+    fichier: "cm1-01-tour_du_monde_en_4_couleurs"
+
+  - titre: "Télécommunications"
+    niveau: "Cycle 3"
+    presentation: |
+      Comment coder, transmettre puis chiffrer les informations.
+    ateliers:
+      - titre: "Ti Taah Top"
+        niveau: "CM1"
+        presentation: |
+          Découverte du code Morse.
+        fichier: "cm1-02-ti_taah_top"
+      - titre: "En réseaux"
+        niveau: "CM1"
+        presentation: |
+          Découverte de l'Internet et jeu de rôle dans un réseau.
+        fichier: "cm1-03-en_reseaux"
+      - titre: "Ave Cesar !"
+        niveau: "CM1"
+        presentation: |
+          Chiffrement et déchiffrement avec le chiffre de Cesar.
+        fichier: "cm1-04-ave_cesar"
