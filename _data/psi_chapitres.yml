@@ -15,6 +15,8 @@ chapitres:
     top: 
      - titre: "Sommes doubles"
      - titre: "Inégalités"
+     - titre: "Comportements asymptotiques"
+     - titre: "Utilisation des formules de Taylor"
     themes: 
      - titre: "Résolution de f(x) = 0"
     animations:
@@ -24,7 +26,14 @@ chapitres:
        url: "/suites_fonctions/02-sin_1_x-non_continuite.mp4"
      - titre: "Limite du taux d'accroissement"
        url: "/suites_fonctions/03-taux_d_accroissement.mp4"
-     
+     - titre: "Suite récurrente - Cas général"
+       url: "/suites_recurrentes/01-suite_recurrente.mp4"
+     - titre: "Suite récurrente - Cas croissant"
+       url: "/suites_recurrentes/02-suite_recurrente_croissante.mp4"
+     - titre: "Suite récurrente - Cas décroissant"
+       url: "/suites_recurrentes/03-suite_recurrente_decroissante.mp4"
+
+
   - titre: "Séries numériques"
     chapitre: true
     td: true
@@ -39,9 +48,9 @@ chapitres:
      - titre: "Développement décimal"
     fc: 
      - titre: "Convergente ou Divergente ?"
-    top:
-     - titre: "Comportements asymptotiques"
-     - titre: "Utilisation des formules de Taylor"
+    animations:
+     - titre: "Réordonnancement de Riemann"
+       url: "/series_numeriques/semi_convergence_reordonnancement.mp4"
     hp:
      - titre: "Sommabilité et Réordonnancement"
 
@@ -163,8 +172,6 @@ chapitres:
      - titre: "Localisation des valeurs propres"
      - titre: "Adhérence de l'ensemble des matrices diagonalisables"
      - titre: "Exponentielle de matrices"
-     - titre: "Décompositions matricielles"
-     - titre: "Adjoint d'un endomorphisme"
 
   - titre: "Intégrales à paramètre"
     chapitre: true
@@ -185,6 +192,8 @@ chapitres:
     tdindic: true
     ref: "xkcd_184-matrix_rotation.png"
     themes:
+     - titre: "Décompositions matricielles"
+     - titre: "Adjoint d'un endomorphisme"
      - titre: "Étude de O(E) \\ SO(E) - Quart de tour en dimension 4"
 
   - titre: "Équations différentielles linéaires"

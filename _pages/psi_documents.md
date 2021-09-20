@@ -26,7 +26,11 @@ sidebar:
 <li> <h3 id="#docs_{{cptdoc}}">{{chap.titre}}</h3>
 <ul>
 {% for doc in chap.docs %}
-<li><a href="{{doc.url}}">{{doc.titre}}</a>.</li>
+<li><a href="{{doc.url}}">{{doc.titre}}</a>.
+{% for r in doc.ref %}
+<a href="./psi_doc/ref/{{r}}" class="ref">&Sigma;</a>
+{% endfor %}
+</li>
 {% endfor %}
 </ul>
 </li>
