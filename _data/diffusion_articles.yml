@@ -21,3 +21,29 @@ articles:
 
     journal: "Manuscrit de Thèse."
     fichier: "these_camanes.pdf"
+
+  - titre: "Le mouvement brownien (II)"
+    presentation: |
+
+    journal: ""
+    fichier: "brownien_donsker.pdf"
+
+  - titre: "Le mouvement brownien (I)"
+    presentation: |
+
+    journal: ""
+    fichier: "brownien_l2.pdf"
+
+  - titre: "Le théorème de Wigner"
+    presentation: |
+
+    journal: ""
+    fichier: "wigner.pdf"
+
+
+  - titre: "La conjecture de Parisi"
+    presentation: |
+
+    journal: "Rapport de DEA"
+    fichier: "master_camanes.pdf"
+
