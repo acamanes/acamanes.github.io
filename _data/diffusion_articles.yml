@@ -1,49 +1,53 @@
 articles:
   - titre: "Le théorème de Banach-Kuratowski"
     presentation: |
-      
+      Pourquoi ne peut-on pas prendre la tribu discrète dans le jeu de pile ou face ? Relecture de l'article initial.
     fichier: "banach_kuratowski.pdf"
 
   - titre: "Aging branching process and queuing for an infinite bus line"
     journal: "Queueing Syst (2018) 88, avec V. Bansaye."
     presentation: |
-
-    fichier: "critical_temperature.pdf"
+      À quelles conditions sur la discipline adoptée par les passagers qui attendent aux stations deux bus desservant une même ligne vont-ils se rattraper ?
+    url: "https://arxiv.org/abs/1506.04168v2"
 
   - titre: "The critical temperature of a Directed Polymer in a random environment"
     presentation: |
-
-    journal: "Markov Processes and Related Fields 15, 105-116 (2009), avec Ph.~Carmona."
+      Un critère fondé sur la géométrie du graphe pour préciser la température critique.
+    journal: "Markov Processes and Related Fields 15, 105-116 (2009), avec Ph. Carmona."
     fichier: "critical_temperature.pdf"
 
   - titre: "Polymères dirigés et Réseaux conducteurs de chaleur"
     presentation: |
-
+        Présentation des résultats obtenus dans le cadre de l'étude probabiliste de deux modèles de physique statistique.
     journal: "Manuscrit de Thèse."
     fichier: "these_camanes.pdf"
 
   - titre: "Le mouvement brownien (II)"
     presentation: |
-
-    journal: ""
+      Le mouvement brownien comme limite de marches aléatoires : le théorème de Donsker.
+    journal: "Notes d'exposé au séminaire des doctorants."
     fichier: "brownien_donsker.pdf"
 
   - titre: "Le mouvement brownien (I)"
     presentation: |
-
-    journal: ""
+      Quelques propriétés et une construction du mouvement brownien : le théorème de Wiener.
+    journal: "Notes d'exposé au séminaire des doctorants"
     fichier: "brownien_l2.pdf"
 
   - titre: "Le théorème de Wigner"
     presentation: |
-
-    journal: ""
+      Comportement du spectre de certaines matrices aléatoires dont la taille tend vers l'infini : le théorème de Wigner.
+    journal: "Notes d'exposé au séminaire des doctorants."
     fichier: "wigner.pdf"
 
+  - titre: "Récurrence des marches aléatoires"
+    presentation: |
+      Pourquoi un homme ivre est presque sûr de rentrer chez lui alors que ce n'est pas le cas d'un oiseau éméché ?
+    journal: ""
+    fichier: "expose_recurrence_clemenceau.pdf"
 
   - titre: "La conjecture de Parisi"
     presentation: |
-
-    journal: "Rapport de DEA"
+      Travail sur un article de M. Talagrand.
+    journal: "Mémoire de DEA."
     fichier: "master_camanes.pdf"
-

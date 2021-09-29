@@ -5,10 +5,14 @@ calculs:
        url: "formulaire.pdf"
        ref:
          - "xkcd_2070-trigonometric_identities.png"
-     - titre: "Cahier de calcul"
+     - titre: "Cahier de calcul - Les énoncés"
        url: "cahier_de_calcul_enonces.pdf"
        ref:
          - "l_etoile_mysterieuse-calculs.jpg"
+     - titre: "Cahier de calcul - Avec les corrigés"
+       url: "cahier_de_calcul.pdf"
+       ref:
+         - "calculs_capitaine-l_etoile_mysterieuse.jpg"
 
   - titre: "Aide à la rédaction"
     docs:

@@ -5,15 +5,19 @@
 @charset "utf-8";
 
 
-$background-color: #36454f; // charcoal		   
-$link-color: #718c9e;
-$text-color: #b7c4cd;
+$background-color: #384751; // charcoal		   
+// $background-color: #36454f; // charcoal		   
+$link-color: #9090dd;
+$text-color: #e5eaed;
+// $text-color: #b7c4cd;
+
+//$link-color: #718c9e;
 
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
-h2 {color:#e5eaed;}
+h2 {color:#ccc4cd;}
 h3 {color:#9fb1b2;}
 
 a.ref {text-decoration: none;

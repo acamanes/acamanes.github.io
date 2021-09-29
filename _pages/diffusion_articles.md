@@ -22,8 +22,17 @@ sidebar:
 </center>
 
 {% for chap in site.data.diffusion_articles.articles %}
-<h3 id="#docs_{{cptdoc}}"><a href="{{doc.fichier}}.pdf">{{chap.titre}}</a>
+<h3 id="#docs_{{cptdoc}}">
+{% if chap.fichier %}
+<a href="./articles/{{chap.fichier}}">
+{% else %}
+<a href="{{chap.url}}">
+{% endif %}
+{{chap.titre}}</a>
 </h3>
+{% if chap.journal %}
+<b><i>{{chap.journal}}</i></b>
+{% endif %}
 {{chap.presentation}}
-<br/><a href="{{doc.fichier}}.pdf">pdf</a>
+{% assign cptdoc = cptdoc  | plus:1 %}
 {% endfor %}
