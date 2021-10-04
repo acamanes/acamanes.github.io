@@ -24,7 +24,7 @@ sidebar:
 {{site.data.diffusion_ateliers.presentation}}
 
 {% for chap in site.data.diffusion_ateliers.ateliers %}
-<h2 id="#docs_{{cptdoc}}">{{chap.titre}}
+<h2 id="docs_{{cptdoc}}">{{chap.titre}}
 {% if chap.niveau %}
 ({{chap.niveau}}) 
 {% endif %}
@@ -37,11 +37,12 @@ sidebar:
 {% if doc.niveau %}
 ({{doc.niveau}})
 {% endif %}
-<br/><a href="{{doc.fichier}}.pdf">Fiche professeur</a>, <a href="{{doc.fichier}}.zip">Ressources</a>.
+<br/><a href="./ateliers/{{doc.fichier}}.pdf">Fiche professeur</a>, <a href="./ateliers/{{doc.fichier}}.zip">Ressources</a>.
 </li>
 {% endfor %}
 </ul>
 {% else %}
-<a href="{{chap.fichier}}.pdf">Fiche professeur</a>, <a href="{{chap.fichier}}.zip">Ressources</a>.
+<a href="./ateliers/{{chap.fichier}}.pdf">Fiche professeur</a>, <a href="./ateliers/{{chap.fichier}}.zip">Ressources</a>.
 {% endif %}
+{% assign cptdoc = cptdoc | plus:1 %}
 {% endfor %}
