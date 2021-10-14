@@ -2,12 +2,6 @@ presentation: |
   Les ateliers proposés sont sans ordinateur et ont pour but la manipulation d'idées mathématiques ou informatiques en adéquation avec les notions étudiées durant la classe. Ces ateliers ont été organisés dans des classes de primaire. Les durées et niveaux indiqués sont approximatifs. N'hésitez pas à me contacter pour modifier les sources. Un grand merci aux enseignants qui ont échangé lors de la préparation et ont ouvert les portes de leurs classes. Certaines activités se sont inspirées du groupe de travail <a href="https://github.com/InfoSansOrdi/InfoSansOrdi/blob/master/README.md">ISO</a>.
 
 ateliers:
-  - titre: "Le triangle des couleurs"
-    niveau: "Cycle 2"
-    presentation: |
-      Mélanger le rouge, le bleu et le jaune pour obtenir un triangle avec toutes les couleurs.
-    fichier: "cp-04-triangle_des_couleurs"
-
   - titre: "Escher & Maths"
     niveau: "Cycle 2"
     presentation: |
@@ -28,6 +22,12 @@ ateliers:
         presentation: |
           Reproduire sur un quadrillage un triangle de Penrose.
         fichier: "cp-03-dessiner_l_impossible"
+
+  - titre: "Le triangle des couleurs"
+    niveau: "Cycle 2"
+    presentation: |
+      Mélanger le rouge, le bleu et le jaune pour obtenir un triangle avec toutes les couleurs.
+    fichier: "cp-04-triangle_des_couleurs"
 
   - titre: "Mises en rang"
     niveau: "Cycles 2 & 3"
