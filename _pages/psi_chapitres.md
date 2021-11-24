@@ -12,6 +12,7 @@ sidebar:
 ---
 
 {% assign cptfc = 1 %}
+{% assign cpthp = 1 %}
 {% assign cpttop = 1 %}
 {% assign cpttheme = 1 %}
 

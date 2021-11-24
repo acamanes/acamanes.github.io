@@ -1,4 +1,21 @@
+livres:
+  - titre: "Informatique pour tous"
+    presentation: "Le programme d'informatique de tronc commun pour les 1e et 2e années de CPGE scientifiques. <i>Éditions Vuibert, en cours d'écriture.</i>"
+    lien: ""
+
+  - titre: "Cahier de Calcul"
+    presentation: "Recueil de fiches de calculs élémentaires pour pratiquer en autonomie, avec corrections détaillées."
+    lien: "https://colasbd.github.io/cdc/"
+
+  - titre: "Maths la Terminale S"
+    presentation: "Receuil d'exercices et de problèmes contextualisés avec des indications et corrections détaillées permettant de travailler en autonomie."
+    lien: "https://www.editions-ellipses.fr/accueil/982-maths-la-terminale-s-objectif-mention-tres-tres-bien-en-24-problemes-corriges-9782340009981.html"
+
 articles:
+  - titre: "Capital risqué et temps d'attente"
+    presentation: |
+      Un capital évolue, chaque mois, aléatoirement. Combien de temps doit on attendre en moyenne pour que ce capital soit multiplié par 1000 ? À paraître dans le journal <a href="https://www.quadrature.info/">Quadrature</a>.
+
   - titre: "Le théorème de Banach-Kuratowski"
     presentation: |
       Pourquoi ne peut-on pas prendre la tribu discrète dans le jeu de pile ou face ? Relecture de l'article initial.

@@ -123,17 +123,6 @@ chapitres:
     themes:
      - titre: "La notion d'entropie"
 
-  - titre: "Espaces vectoriels normés de dimension finie"
-    chapitre: true
-    td: true
-    tdindic: true
-    themes:
-     - titre: "Convexité et Normes p"
-     - titre: "Normes matricielles et Conditionnement"
-    animations:
-     - titre: "Normes p et Boules dans le plan"
-       url: "/topologie/normes_et_boules.mp4"
-
   - titre: "Suites et Séries de fonctions"
     chapitre: true
     td: true
@@ -160,6 +149,16 @@ chapitres:
     td: true
     tdindic: true
 
+  - titre: "Espaces vectoriels normés de dimension finie"
+    chapitre: true
+    td: true
+    tdindic: true
+    themes:
+     - titre: "Convexité et Normes p"
+     - titre: "Normes matricielles et Conditionnement"
+    animations:
+     - titre: "Normes p et Boules dans le plan"
+       url: "/topologie/normes_et_boules.mp4"
 
   - titre: "Réduction des endomorphismes"
     chapitre: true

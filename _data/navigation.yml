@@ -20,11 +20,11 @@ psi:
 
 mpsi:
   - title: "Cours & Exercices"
-    url: "/mpsi/chapitres.html"
+    url: "http://alain.camanes.free.fr/body.php?page=mpsi_cours"
   - title: "Problèmes"
-    url: "/mpsi/problemes.html"
+    url: "http://alain.camanes.free.fr/body.php?page=mpsi_devoirs"
   - title: "Informatique"
-    url: "/mpsi/informatique.html"
+    url: "http://alain.camanes.free.fr/body.php?page=mpsi_info"
   - title: "Option Informatique"
     url: "/mpsi/option_informatique.html"
 
