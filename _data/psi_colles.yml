@@ -28,10 +28,11 @@ semaines:
   - title: "Séries entières"
   - title: "Réduction des endomorphismes"
   - title: "Réduction des endomorphismes"
-  - title: "Espaces vectoriels normés de dimension finie"
-  - holidays: true
-    title: "Vacances de Printemps & Concours Blanc"
-  - holidays: true
-  - holidays: true
   - title: "Intégrales à paramètre"
+  - holidays: true
+    title: "Vacances de Printemps"
+  - holidays: true
+  - holidays: true
+    title: "Concours Blanc"
+  - title: "Espaces vectoriels normés de dimension finie"
   - title: "Espaces vectoriels préhilbertiens"
