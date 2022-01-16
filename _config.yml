@@ -29,7 +29,7 @@ encoding	: "utf-8"
 locale: "fr-FR"
 
 # Definitions du site
-title	 	   : "Au tour des Maths"
+title	 	   : "Autour des Maths" # "Pi Rho Maths"
 email		   : alain.camanes@free.fr
 description	   : "Ce site contient différents documents de travail à destination de la classe de PSI du lycée Stanislas. Vous trouverez également les documents utilisés lors de mes années en MPSI ainsi qu'à l'Université de Nantes."
 url	     	   : http://acamanes.github.io

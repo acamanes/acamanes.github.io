@@ -2,6 +2,46 @@ presentation: |
   Les ateliers proposés sont sans ordinateur et ont pour but la manipulation d'idées mathématiques ou informatiques en adéquation avec les notions étudiées durant la classe. Ces ateliers ont été organisés dans des classes de primaire. Les durées et niveaux indiqués sont approximatifs. N'hésitez pas à me contacter pour modifier les sources. Un grand merci aux enseignants qui ont échangé lors de la préparation et ont ouvert les portes de leurs classes. Certaines activités se sont inspirées du groupe de travail <a href="https://github.com/InfoSansOrdi/InfoSansOrdi/blob/master/README.md">ISO</a>.
 
 ateliers:
+
+  - titre: "Parcours d'économes (à venir)"
+    niveau: "Cycle 3"
+    presentation: |
+      Recherche de circuits eulériens dans des graphes et recherche d'une caractérisation.
+    ateliers:
+      - titre: "Parcours d'économes"
+        niveau: "CM2"
+        presentation: |
+          (à venir)
+        fichier: "cm2-01-parcours_d_economes"
+
+
+  - titre: "Un bol d'Euler"
+    niveau: "Cycle 2"
+    presentation: |
+      Rencontrer la relation d'Euler qui relie le nombre de sommets, de faces et d'arêtes d'un graphe dans différentes situations.
+    ateliers:
+      - titre: "Colorions des pâtés !"
+        niveau: "CE1"
+        presentation: |
+          &Agrave; partir de la carte d'un quartier, construire un graphe.
+        fichier: "ce1-02-colorions_des_pates"
+      - titre: "Sprout toujours !"
+        niveau: "CE1"
+        presentation: |
+          Découverte d'un jeu &agrave; deux joueurs qui consiste &agrave; cr&eacute;er un graphe.
+        fichier: "ce1-03-sprout_toujours"
+      - titre: "Solides"
+        niveau: "CE1"
+        presentation: |
+          Dénombrement des faces, arêtes, sommets de solides classiques puis coloriage et construction d'un cube.
+        fichier: "ce1-04-c_est_un_solide"
+      - titre: "Planches &agrave; clous"
+        niveau: "CE1"
+        presentation: |
+          Recherche de chemins à l'aide d'une planche à clous et d'un bout de ficelle.
+        fichier: "ce1-05-planches_a_clous"
+
+
   - titre: "Escher & Maths"
     niveau: "Cycle 2"
     presentation: |

@@ -26,13 +26,13 @@ semaines:
   - title: "Suites et Séries de fonctions"
   - title: "Séries entières"
   - title: "Séries entières"
+  - title: "Espaces vectoriels normés de dimension finie"
   - title: "Réduction des endomorphismes"
   - title: "Réduction des endomorphismes"
-  - title: "Intégrales à paramètre"
   - holidays: true
     title: "Vacances de Printemps"
   - holidays: true
   - holidays: true
     title: "Concours Blanc"
-  - title: "Espaces vectoriels normés de dimension finie"
+  - title: "Intégrales à paramètre"
   - title: "Espaces vectoriels préhilbertiens"

@@ -21,7 +21,7 @@ sidebar:
 </nobr>
 </center>
 
-{{site.data.diffusion_ateliers.presentation}}
+<i style="font-size:95%">{{site.data.diffusion_ateliers.presentation}}</i>
 
 {% for chap in site.data.diffusion_ateliers.ateliers %}
 <h2 id="docs_{{cptdoc}}">{{chap.titre}}
@@ -29,7 +29,7 @@ sidebar:
 ({{chap.niveau}}) 
 {% endif %}
 </h2>
-{{chap.presentation}}
+<i style="font-size:90%">{{chap.presentation}}</i>
 {% if chap.ateliers %}
 <ul>
 {% for doc in chap.ateliers %}
@@ -37,12 +37,18 @@ sidebar:
 {% if doc.niveau %}
 ({{doc.niveau}})
 {% endif %}
-<br/><a href="./ateliers/{{doc.fichier}}.pdf">Fiche professeur</a>, <a href="./ateliers/{{doc.fichier}}.zip">Ressources</a>.
+<p style="font-size:75%">
+{% if doc.presentation %}
+<i>{{doc.presentation}}</i><br/>
+{% endif %}
+<a href="./ateliers/{{doc.fichier}}.pdf">Fiche professeur</a>, <a href="./ateliers/{{doc.fichier}}.zip">Ressources</a>.
+</p>
 </li>
 {% endfor %}
 </ul>
 {% else %}
-<a href="./ateliers/{{chap.fichier}}.pdf">Fiche professeur</a>, <a href="./ateliers/{{chap.fichier}}.zip">Ressources</a>.
+<nobr><br/>
+<i style="font-size:75%"><a href="./ateliers/{{chap.fichier}}.pdf">Fiche professeur</a>, <a href="./ateliers/{{chap.fichier}}.zip">Ressources</a>.</i>
 {% endif %}
 {% assign cptdoc = cptdoc | plus:1 %}
 {% endfor %}
