@@ -127,6 +127,8 @@ chapitres:
     chapitre: true
     td: true
     tdindic: true
+    fc: 
+     - titre: "Convergences"
     themes:
      - titre: "Fonction continue partout dérivable nulle part"
      - titre: "Théorème de Stone Weierstrass"
