@@ -1,4 +1,8 @@
 main:
+  - title: "ECT2"
+    url: /ect2/chapitres.html
+  - title: "D2"
+    url: /d2/chapitres.html
   - title: "PSI"
     url: /psi/chapitres.html
   - title: "MPSI"
@@ -7,6 +11,25 @@ main:
     url: /diffusion/ateliers.html
   - title: "Liens"
     url: /liens
+
+ect2:
+  - title: "Chapitres"
+    url: /ect2/chapitres.html
+  - title: "Colles"
+    url: /ect2/colles.html
+  - title: "Informatique"
+    url: /ect2/informatique.html
+  - title: "Documents de travail"
+    url: /ect2/documents.html
+
+d2:
+  - title: "Chapitres"
+    url: /d2/chapitres.html
+  - title: "Colles"
+    url: /d2/colles.html
+  - title: "Documents de travail"
+    url: /d2/documents.html
+
 
 psi:
   - title: "Chapitres"

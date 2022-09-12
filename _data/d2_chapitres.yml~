@@ -1,0 +1,219 @@
+chapitres:
+  - titre: "Prémices"
+    chapitre: true
+    td: true
+    tdindic: true
+    ref: "arithmetique_traite-jesse_james.jpg"
+    
+  - titre: "Suites numériques, Fonctions numériques de la variable réelle"
+    chapitre: true
+    td: true
+    tdindic: true
+    ref: "xkcd_2042-rolle_s_theorem.png"
+    fc: 
+     - titre: "Suites récurrentes"
+    top: 
+     - titre: "Sommes doubles"
+     - titre: "Inégalités"
+     - titre: "Comportements asymptotiques"
+     - titre: "Utilisation des formules de Taylor"
+    themes: 
+     - titre: "Résolution de f(x) = 0"
+    animations:
+     - titre: "Limite et caractérisation séquentielle"
+       url: "/suites_fonctions/01-x_sin_1_x-continuite.mp4"
+     - titre: "Absence de limite par caractérisation séquentielle"
+       url: "/suites_fonctions/02-sin_1_x-non_continuite.mp4"
+     - titre: "Limite du taux d'accroissement"
+       url: "/suites_fonctions/03-taux_d_accroissement.mp4"
+     - titre: "Suite récurrente - Cas général"
+       url: "/suites_recurrentes/01-suite_recurrente.mp4"
+     - titre: "Suite récurrente - Cas croissant"
+       url: "/suites_recurrentes/02-suite_recurrente_croissante.mp4"
+     - titre: "Suite récurrente - Cas décroissant"
+       url: "/suites_recurrentes/03-suite_recurrente_decroissante.mp4"
+
+
+  - titre: "Séries numériques"
+    chapitre: true
+    td: true
+    tdindic: true
+    ref: "xkcd_1153-proof.png"
+    themes:
+     - titre: "Règles de convergence / divergence"
+     - titre: "Développement asymptotique de la série harmonique"
+     - titre: "Calcul de zeta(2)"
+     - titre: "Une démonstration de la formule de Stirling"
+     - titre: "Théorème de Mertens"
+     - titre: "Développement décimal"
+    fc: 
+     - titre: "Convergente ou Divergente ?"
+    animations:
+     - titre: "Réordonnancement de Riemann"
+       url: "/series_numeriques/semi_convergence_reordonnancement.mp4"
+    hp:
+     - titre: "Sommabilité et Réordonnancement"
+
+  - titre: "Algèbre linéaire"
+    chapitre: true
+    td: true
+    tdindic: true
+    themes:
+     - titre: "Familles de polynômes"
+     - titre: "Interpolation de Lagrange - Zéros des polynômes de Tchebychev"
+     - titre: "Autour des endomorphismes nilpotents"
+    top: 
+      - titre: "Espaces vectoriels & Géométrie"
+    animations:
+      - titre: "Interpolation de Lagrange et Phénomène de Runge"
+        url: "/interpolation_lagrange/01-pil.mp4"
+      - titre: "Interpolation de Lagrange et Zéros des polynômes de Tchebychev"
+        url: "/interpolation_lagrange/02-pil_thebychev.mp4"
+    hp:
+      - titre: "Théorème de d'Alembert-Gauss"
+
+  - titre: "Déterminants"
+    chapitre: true
+    td: true
+    tdindic: true
+    themes:
+     - titre: "Déterminants classiques"
+
+  - titre: "Intégration sur un intervalle quelconque"
+    chapitre: true
+    td: true
+    tdindic: true
+    ref: "xkcd_2117-differentiation_and_integration.png"
+    fc: 
+     - titre: "Convergente ou Divergente ?"
+    themes:
+     - titre: "Calculs approchés d'intégrales"
+     - titre: "Intégrale de Dirichlet"
+    top: 
+     - titre: "Calculs de primitives"
+    animations:
+     - titre: "Méthode des rectangles à gauche"
+       url: "/integration_segment/01-methode_des_rectangles_a_gauche.mp4"
+     - titre: "Méthode des rectangles médians"
+       url: "/integration_segment/02-methode_des_rectangles_medians.mp4"
+     - titre: "Méthode des trapèzes"
+       url: "/integration_segment/03-methode_des_trapezes.mp4"
+     - titre: "Fonction intégrable et non bornée"
+       url: "/integration_intervalle/01-integrale_ln.mp4"
+     - titre: "Fonction intégrable sans limite en l'infini"
+       url: "/integration_intervalle/02-integrale_tentes.mp4"
+     - titre: "Intégrale de Dirichlet"
+       url: "/integration_intervalle/integrale_dirichlet.mp4"
+
+  - titre: "Probabilités sur des ensembles finis ou dénombrables"
+    chapitre: true
+    td: true
+    tdindic: true
+    ref: "xkcd_2379-probability_comparisons.png"
+    themes:
+     - titre: "Dénombrement de surjections"
+    top: 
+     - titre: "Dénombrements"
+
+  - titre: "Variables aléatoires discrètes"
+    chapitre: true
+    td: true
+    tdindic: true
+    ref: "le_devin-7.jpg"
+    themes:
+     - titre: "La notion d'entropie"
+
+  - titre: "Suites et Séries de fonctions"
+    chapitre: true
+    td: true
+    tdindic: true
+    fc: 
+     - titre: "Convergences"
+    themes:
+     - titre: "Fonction continue partout dérivable nulle part"
+     - titre: "Théorème de Stone Weierstrass"
+    animations:
+     - titre: "Convergence simple & non uniforme"
+       url: "/suites_et_series_de_fonctions/01-convergence_simple_convergence_non_uniforme.mp4"
+     - titre: "Convergence uniforme & dérivée non convergente"
+       url: "/suites_et_series_de_fonctions/02-convergence_uniforme_derivee_non_convergente.mp4"
+     - titre: "Convergence simple & suite d'intégrales divergente"
+       url: "/suites_et_series_de_fonctions/03-convergence_simple_suite_d_integrales_divergente.mp4"
+     - titre: "Convergence simple & limite non intégrable"
+       url: "/suites_et_series_de_fonctions/04-convergence_simple_limite_non_integrable.mp4"
+     - titre: "Convergence uniforme, Préservation de la continuité"
+       url: "/suites_et_series_de_fonctions/05-convergence_uniforme_continuite.mp4"
+    hp:
+     - titre: "Théorème de Fubini & Inversion des signes somme"
+       
+  - titre: "Séries entières"
+    chapitre: true
+    td: true
+    tdindic: true
+
+  - titre: "Espaces vectoriels normés de dimension finie"
+    chapitre: true
+    td: true
+    tdindic: true
+    themes:
+     - titre: "Convexité et Normes p"
+     - titre: "Normes matricielles et Conditionnement"
+    animations:
+     - titre: "Normes p et Boules dans le plan"
+       url: "/topologie/normes_et_boules.mp4"
+
+  - titre: "Réduction des endomorphismes"
+    chapitre: true
+    td: true
+    tdindic: true
+    ref: "de_cape_et_de_crocs_t4-spectre.png"
+    top: 
+     - titre: "Réduction des endomorphismes"
+    themes:
+     - titre: "Localisation des valeurs propres"
+     - titre: "Adhérence de l'ensemble des matrices diagonalisables"
+     - titre: "Exponentielle de matrices"
+
+  - titre: "Intégrales à paramètre"
+    chapitre: true
+    td: true
+    tdindic: true
+    top: 
+     - titre: "Dominer les fonctions"
+
+  - titre: "Espaces vectoriels préhilbertiens réels"
+    chapitre: true
+    td: true
+    tdindic: true
+    ref : "xkcd_199-right_hand_rule.png"
+       
+  - titre: "Endomorphismes d'un espace euclidien"
+    chapitre: true
+    td: true
+    tdindic: true
+    ref: "xkcd_184-matrix_rotation.png"
+    themes:
+     - titre: "Décompositions matricielles"
+     - titre: "Adjoint d'un endomorphisme"
+     - titre: "Étude de O(E) \\ SO(E) - Quart de tour en dimension 4"
+
+  - titre: "Équations différentielles linéaires"
+    chapitre: true
+    td: true
+    tdindic: true
+    hp:
+     - titre: "Théorème de Cauchy linéaire"
+     - titre: "Méthode de la variation des constantes"
+
+  - titre: "Calcul différentiel"
+    chapitre: true
+    td: true
+    tdindic: true
+    top: 
+     - titre: "Équations différentielles"
+
+
+  - titre: "Fonctions vectorielles, Arcs paramétrés"
+    chapitre: true
+    td: true
+    tdindic: true

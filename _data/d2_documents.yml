@@ -1,0 +1,5 @@
+calculs:
+  - titre: "Programme officiel"
+    docs:
+     - titre: "Programme de D2"
+       url: "d2-programme.pdf"

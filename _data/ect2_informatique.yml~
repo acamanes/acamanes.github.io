@@ -1,0 +1,20 @@
+ref:
+ - ref: "xkcd_1270-functional.png"
+
+presentations:
+ - titre: "Informatique - OCaml"
+ - titre: "Fonctions, Expressions"
+   td: true
+ - titre: "Structures impératives"
+ - titre: "Constructeurs & Enregistrements"
+ - titre: "Récursivité & Compléments"
+   td: true
+ - titre: "Diviser pour Régner"
+   td: true
+ - titre: "Arbres binaires"
+   td: true
+ - titre: "Programmation dynamique"
+   td: true
+ - titre: "Structures de données"
+   td: true
+ 

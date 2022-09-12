@@ -1,0 +1,26 @@
+calculs:
+  - titre: "Les bases du calcul"
+    docs:
+     - titre: "Formulaire"
+       url: "formulaire.pdf"
+       ref:
+         - "xkcd_2070-trigonometric_identities.png"
+     - titre: "Cahier de calcul - Les énoncés"
+       url: "cahier_de_calcul_enonces.pdf"
+       ref:
+         - "l_etoile_mysterieuse-calculs.jpg"
+     - titre: "Cahier de calcul - Avec les corrigés"
+       url: "cahier_de_calcul.pdf"
+       ref:
+         - "calculs_capitaine-l_etoile_mysterieuse.jpg"
+
+  - titre: "Aide à la rédaction"
+    docs:
+     - titre: "Consignes de rédaction"
+       url: "consignes_de_redaction.pdf"
+     - titre: "Garder en tête"
+       url: "commandements.pdf"
+     - titre: "Comprendre la notion de preuve"
+       url: "comment_rediger_les_preuves.pdf"
+       ref:
+         - "xkcd_1856-existence_proof.png"

@@ -1,14 +1,14 @@
 ---
 layout: single
-title: "Chapitres en PSI"
-permalink: /psi/chapitres.html
+title: "Chapitres en D2"
+permalink: /d2/chapitres.html
 toc: true
 toc_sticky: true
 toc_label: "Au menu"
 toc_levels: 1..6
 toc_icon: "infinity"
 sidebar:
-  nav: "psi"
+  nav: "d2"
 ---
 
 {% assign cptfc = 1 %}
@@ -17,7 +17,7 @@ sidebar:
 {% assign cpttheme = 1 %}
 
 <ul start="0" style="list-style-type:none">
-{% for chap in site.data.psi_chapitres.chapitres %}
+{% for chap in site.data.d2_chapitres.chapitres %}
 {% assign number = forloop.index | plus: -1 %}
 {% if number < 10 %}
 {% assign number = "0" | append:number %}
@@ -25,20 +25,18 @@ sidebar:
 <li>
 <h2 class="mycss" id="chap_{{number}}">{{number}} - {{chap.titre}}
 {% if chap.ref %}
-<a href="./psi_doc/ref/{{chap.ref}}" class="ref">&Sigma;</a>
+<a href="./d2_doc/ref/{{chap.ref}}" class="ref">&Sigma;</a>
 {% endif %}</h2>
 {% if chap.chapitre %}
-<a href="./psi_doc/chap_e{{number}}.pdf">Cours</a>,
+<a href="./d2_doc/chap_e{{number}}.pdf">Cours</a>,
 {% endif %}
-
 
 {% if chap.td %}
-<a href="./psi_doc/exos_e{{number}}.pdf">Exercices</a>,
+<a href="./d2_doc/exos_e{{number}}.pdf">Exercices</a>,
 {% endif %}
 
-
 {% if chap.tdindic %}
-<a href="./psi_doc/exos_i{{number}}.pdf">Indications</a>,
+<a href="./d2_doc/exos_i{{number}}.pdf">Indications</a>,
 {% endif %}
 
 {% if chap.fc %}
@@ -50,13 +48,12 @@ sidebar:
 {% assign nfc = cptfc %}
 {% endif %}
 <li>
-<a href="./psi_doc/fc{{nfc}}.pdf">{{th.titre}}</a>
+<a href="./d2_doc/fc{{nfc}}.pdf">{{th.titre}}</a>
 </li>
 {% assign cptfc = cptfc | plus:1 %}
 {% endfor %}
 </ul>
 {% endif %}
-
 
 {% if chap.top %}
 <h3>Compléments</h3> <ul>
@@ -67,26 +64,9 @@ sidebar:
 {% assign ntop = cpttop %}
 {% endif %}
 <li>
-<a href="./psi_doc/top_e{{ntop}}.pdf">{{th.titre}}</a>
+<a href="./d2_doc/top_e{{ntop}}.pdf">{{th.titre}}</a>
 </li>
 {% assign cpttop = cpttop | plus:1 %}
-{% endfor %}
-</ul>
-{% endif %}
-
-
-{% if chap.themes %}
-<h3>Thèmes</h3> <ul>
-{% for th in chap.themes %}
-{% if cpttheme < 10 %}
-{% assign ntheme = "0" | append:cpttheme %}
-{% else %}
-{% assign ntheme = cpttheme %}
-{% endif %}
-<li>
-<a href="./psi_doc/themes_e{{ntheme}}.pdf">{{th.titre}}</a>
-</li>
-{% assign cpttheme = cpttheme | plus:1 %}
 {% endfor %}
 </ul>
 {% endif %}
@@ -96,24 +76,8 @@ sidebar:
 <ul>
 {% for anim in chap.animations %}
 <li>
-<a href="./psi_doc/animations{{anim.url}}" target="_blank">{{anim.titre}}</a>
+<a href="./d2_doc/animations{{anim.url}}" target="_blank">{{anim.titre}}</a>
 </li>
-{% endfor %}
-</ul>
-{% endif %}
-
-{% if chap.hp %}
-<h3>Résultats Hors-Programme</h3> <ul>
-{% for th in chap.hp %}
-{% if cpthp < 10 %}
-{% assign nhp = "0" | append:cpthp %}
-{% else %}
-{% assign nhp = cpthp %}
-{% endif %}
-<li>
-<a href="./psi_doc/hp_e{{nhp}}.pdf">{{th.titre}}</a>
-</li>
-{% assign cpthp = cpthp | plus:1 %}
 {% endfor %}
 </ul>
 {% endif %}

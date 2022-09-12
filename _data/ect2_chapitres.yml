@@ -1,0 +1,8 @@
+chapitres:
+  - titre: "Calcul matriciel"
+    chapitre: true
+    td: true
+
+  - titre: "Intégrale sur un segment"
+    chapitre: true
+    td: true

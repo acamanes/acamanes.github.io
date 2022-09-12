@@ -5,6 +5,6 @@ layout: single
 
 <html>
     <head>
-	<meta http-equiv="Refresh" content="0; url='./psi/chapitres.html" />
+	<meta http-equiv="Refresh" content="0; url='./ect2/chapitres.html" />
     </head>
 </html>

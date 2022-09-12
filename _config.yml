@@ -31,7 +31,7 @@ locale: "fr-FR"
 # Definitions du site
 title	 	   : "Autour des Maths" # "Pi Rho Maths"
 email		   : alain.camanes@free.fr
-description	   : "Ce site contient différents documents de travail à destination de la classe de PSI du lycée Stanislas. Vous trouverez également les documents utilisés lors de mes années en MPSI ainsi qu'à l'Université de Nantes."
+description	   : "Ce site contient différents documents de travail à destination des étudiants de CPGE. Vous trouverez également les documents utilisés lors de mes années à l'Université de Nantes."
 url	     	   : http://acamanes.github.io
 name		   : Alain Camanes
 logo		   : /_pages/images/ico.png

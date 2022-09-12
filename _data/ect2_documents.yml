@@ -1,0 +1,5 @@
+calculs:
+  - titre: "Programme officiel"
+    docs:
+     - titre: "Programme d'ECT"
+       url: "ect-programme.pdf"
