@@ -6,3 +6,7 @@ chapitres:
   - titre: "Intégrale sur un segment"
     chapitre: true
     td: true
+
+  - titre: "Matrices inversibles"
+    chapitre: true
+    td: true
