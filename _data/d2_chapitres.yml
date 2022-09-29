@@ -2,3 +2,6 @@ chapitres:
   - titre: "Analyse réelle"
     chapitre: true
     td: true
+  - titre: "Dénombrement"
+    chapitre: true
+    td: true
