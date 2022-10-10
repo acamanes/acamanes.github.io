@@ -1,3 +1,9 @@
 presentations:
- - titre: "Suites & Représentations graphiques"
+ - titre: "Lecture de code : Variables & Fonctions"
+   td: true
+ - titre: "Lecture de code : Structures de contrôle"
+   td: true
+ - titre: "Modules : numpy & matplotlib.pyplot"
+   td: true
+ - titre: "Fonctions & Suites"
    td: true

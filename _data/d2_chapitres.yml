@@ -5,3 +5,6 @@ chapitres:
   - titre: "Dénombrement"
     chapitre: true
     td: true
+  - titre: "Intégration"
+    chapitre: true
+    td: true

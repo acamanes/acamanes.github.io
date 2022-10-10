@@ -13,3 +13,7 @@ calculs:
        url: "ect2-cplts_e01.pdf"
      - titre: "Propositions de corrigés"
        url: "ect2-cplts_s01.pdf"
+  - titre: "Calculs de primitives"
+    docs:
+     - titre: "Exercices"
+       url: "ect2-cplts_e02.pdf"
