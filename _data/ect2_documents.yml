@@ -15,5 +15,5 @@ calculs:
        url: "ect2-cplts_s01.pdf"
   - titre: "Calculs de primitives"
     docs:
-     - titre: "Exercices"
+     - titre: "Règles de calculs"
        url: "ect2-cplts_e02.pdf"
