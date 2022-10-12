@@ -5,3 +5,8 @@ semaines:
   - title: "Analyse réelle"
   - title: "Dénombrement"
   - title: "Dénombrement"
+  - title: "Intégration sur un segment"
+  - holidays: true
+    title: "Vacances de Toussaint"
+  - holidays: true
+  - title: "Intégration"
