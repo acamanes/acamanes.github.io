@@ -1,0 +1,756 @@
+---
+layout: single
+title: Un serpent en Python !
+permalink: /divers/python_snake.html
+toc: true
+toc_sticky: true
+toc_label: "Au menu"
+toc_levels: 1
+toc_icon: "infinity"
+
+---
+
+Les différentes fonctions du module Pygame qui seront utilisées sont listées ci-dessous avec leur documentation.
+<table>
+  <tr>
+    <th>Fonction</th>
+    <th>Documentation</th>
+  </tr>
+  <tr>
+    <td>init()</td>
+    <td>Initialise tous les modules importés par Pygame (renvoie un tuple indiquant les succès/échecs de ces initialisations.</td>
+  </tr>
+  <tr>
+    <td>display.set_mode()</td>
+    <td>Prend en argument un tuple pour créer une surface.</td>
+  </tr>
+  <tr>
+    <td>update()</td>
+    <td>Met à jour l'écran.</td>
+  </tr>
+  <tr>
+    <td>quit()</td>
+    <td>Permet de tout quitter.</td>
+  </tr>
+  <tr>
+    <td>set_caption()</td>
+    <td>Positionne le titre en haut de l'écran d'affichage.</td>
+  </tr>
+  <tr>
+    <td>event.get()</td>
+    <td>Renvoie la liste de tous les événements.</td>
+  </tr>
+  <tr>
+    <td>Surface.fill()</td>
+    <td>Remplit la surface d'une couleur uniforme.</td>
+  </tr>
+  <tr>
+    <td>time.Clock()</td>
+    <td>Aide à suivre le temps.</td>
+  </tr>
+  <tr>
+    <td>font.SysFont()</td>
+    <td>Transforme une fonte du système en fonte de Pygame.</td>
+  </tr>
+</table>
+
+<h1 id="Ecran">
+  Création de l'écran
+</h1>
+Pour créer l'écran avec Pygame, il suffit d'utiliser la fonction <em>display.set_mode()</em>. Il faut également utiliser les méthodes <em>init()</em> qui permet de tout initialiser etet <em>quit()</em> qui permet de tout remettre à zéro. La méthode <em>update()</em> est utilisée pour actualiser tous les changements effectués sur l'écran. La méthode <em>flip()</em> a une utilité similaire. Cependant, la méthode <em>update()</em> ne remet à jour que ce qui a été modifié sur l'écran alors que la méthode <em>flip()</em> rafraîchit l'écran en entier.
+<pre>
+import pygame # Importe le module
+pygame.init() # Initialise l environnement
+dis = pygame.display.set_mode((400, 300)) # Cree l ecran en precisant ses dimensions
+pygame.display.update() # Rafraichit l ecran
+pygame.quit() # Remet a zero toutes les fonctions
+quit() # Ferme la fenetre
+</pre>
+
+Lors du lancement de ce code, l'écran apparaît et se referme immédiatement. Pour éviter ceci, nous allons utiliser une boucle conditionnelle qui tourne tant que le jeu n'est pas terminé.
+<pre>
+import pygame # Importe le module
+pygame.init() # Initialise l environnement
+dis = pygame.display.set_mode((400, 300)) # Cree l ecran en precisant ses dimensions
+pygame.display.update() # Rafraichit l ecran
+pygame.display.set_caption("Jeu du serpent") # Ajout d un titre
+game_over = False # Vaut False tant que le jeu n est pas termine
+while not game_over:
+    for event in pygame.event.get():
+        print(event) # Affiche tous les evenements
+pygame.quit() # Remet à zero toutes les fonctions
+quit() # Ferme la fenetre
+</pre>
+Quand on lance ce script, il ne s'arrête jamais et affiche tous les événements qui ont lieu. Nous allons maintenant spécifier au programme de quitter quand on clique sur le bouton fermer. Pour faire ceci, Pygame possède un événement appelé <em>QUIT</em> :
+<pre>
+import pygame # Importe le module
+pygame.init() # Initialise l environnement
+dis = pygame.display.set_mode((400, 300)) # Cree l ecran en precisant ses dimensions
+pygame.display.update() # Rafraichit l ecran
+pygame.display.set_caption("Jeu du serpent") # Ajout d un titre
+game_over = False # Vaut False tant que le jeu n est pas termine
+while not game_over:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            game_over = True
+pygame.quit() # Remet à zero toutes les fonctions
+quit() # Ferme la fenetre
+</pre>
+
+L'écran est maintenant réglé. L'étape suivante consiste à créer le serpent.
+
+<h2>
+  Exercices
+</h2>
+<ol>
+  <li>Modifier la taille de l'écran.</li>
+  <li>Modifier le titre de l'écran.</li>
+</ol>
+
+<h1 id="Serpent">
+  Création du serpent
+</h1>
+Pour créer le serpent, on commence par définir quelques couleurs. Les couleurs sont définies dans le système RGB (Red/Green/Blue) en précisant les proportions de rouge/vert/bleu qu'elles possèdent. Le noir correspond au cas où 3 composantes sont à 0 ; le blanc à celui où les 3 composantes sont à 255. Le serpent sera défini à l'aide de rectangles. Dans Pygame, pour définir un rectangle, on utilise la fonction <em>draw.rect()</em> pour laquelle on précise la couleur et la taille.
+<pre>
+import pygame # Importe le module
+pygame.init() # Initialise l environnement
+dis_width, dis_height = 800, 600 # Dimensions de l ecran
+
+blue = (0, 0, 255)
+red = (255, 0, 0)
+
+dis = pygame.display.set_mode((dis_width, dis_height)) # Cree l ecran en precisant ses dimensions
+
+pygame.display.set_caption("Jeu du serpent") # Ajout d un titre
+game_over = False # Vaut False tant que le jeu n est pas termine
+while not game_over:
+    dis.fill(red) # Couleur de fond en rouge
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            game_over = True
+    pygame.draw.rect(dis, blue, [200, 150, 10, 10])
+    pygame.display.update() # Rafraichit l ecran
+pygame.quit() # Remet a zero toutes les fonctions
+quit() # Ferme la fenetre
+</pre>
+
+<h2>
+  Exercices
+</h2>
+<ol>
+  <li>Modifier les dimensions de l'écran.</li>
+  <li>Modifier la couleur de fond.</li>
+  <li>Modifier la couleur du rectangle.</li>
+  <li>En modifiant les valeurs 10/10, modifier la taille du rectangle.</li>
+  <li>En modifiant les valeurs 200/150, modifier la posiion du rectangle</li>
+</ol>
+
+
+<h1 id="Deplacement">
+  Déplacer le serpent
+</h1>
+Pour faire bouger le serpent, nous avons besoins d'utiliser les événements générés par les touches du clavier. Nous utiliserons ici <em>K_UP</em> (flèche vers le haut), <em>K_DOWN</em> (flèche vers le bas), <em>K_LEFT</em> (flèche vers la gauche et <em>K_RIGHT</em> (flèche vers la droite). Les variables <em>x1_change</em> et <em>y1_change</em> permettent d'enregistrer les modifications à effectuer sur la position du serpent.
+<pre>
+import pygame # Importe le module
+ 
+pygame.init() # Initialise l environnement
+
+dis_width, dis_height = 800, 600 # Dimensions de l ecran
+
+white = (255, 255, 255)
+black = (0, 0, 0)
+red = (255, 0, 0)
+
+dis = pygame.display.set_mode((dis_width, dis_height)) # Cree l ecran en precisant ses dimensions
+pygame.display.set_caption("Jeu du serpent") # Ajout d un titre
+ 
+game_over = False # Vaut False tant que le jeu n est pas terminé
+
+x1, y1 = 300, 300 # Position initiale du serpent
+ 
+x1_change, y1_change = 0, 0
+ 
+clock = pygame.time.Clock() # Recupere l heure
+ 
+while not game_over:
+    for event in pygame.event.get():
+        # Detection de l evenement
+        if event.type == pygame.QUIT:
+            game_over = True
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_LEFT:
+                x1_change, y1_change = -10, 0
+            elif event.key == pygame.K_RIGHT:
+                x1_change, y1_change = 10, 0
+            elif event.key == pygame.K_UP:
+                x1_change, y1_change = 0, -10
+            elif event.key == pygame.K_DOWN:
+                x1_change, y1_change = 0, 10
+
+    # Mise a jour de la position du serpent
+    x1, y1 = x1 + x1_change, y1 + y1_change
+
+    # Couleur du fond
+    dis.fill(white)
+
+    # Couleur du serpent
+    pygame.draw.rect(dis, black, [x1, y1, 10, 10])
+ 
+    # Rafraichit l ecran
+    pygame.display.update()
+ 
+    # Pas plus de 30 rafraichissements par seconde
+    clock.tick(30)
+ 
+pygame.quit()
+quit()
+</pre>
+
+<h2>
+  Exercices
+</h2>
+<ol>
+  <li>Modifier les couleurs.</li>
+  <li>Modifier le titre de l'écran.</li>
+  <li>Faire déplacer le serpent vers le bas quand on appuie sur la flèche vers le haut et vers le haut lorsqu'on appuie sur la flèche vers le bas.</li>
+  <li>Faire se déplacer le serpent plus vite puis plus lentement.</li>
+  <li>Faire s'arrêter le serpent lorsqu'on appuie sur la barre d'espace (<em>K_SPACE</em>).</li>
+  <li>Au lancement du jeu, faire en sorte que le serpent se trouve au centre de l'écran.</li>
+</ol>
+
+<h1 id="Fin du jeu">
+  Game over et frontières
+</h1>
+
+Dans le jeu du serpent, lorsque le serpent touche l'un des bords de l'écran, le jeu termine. Pour programmer cette fonctionnalité, on utilise une conditionnelle <em>if</em> qui vérifie si les coordonnées du serpent sont dans le bon intervalle.
+<pre>
+import pygame # Importe le module
+import time # Gestion du temps
+
+pygame.init() # Initialise l environnement
+
+dis_width, dis_height = 800, 600 # Dimensions de l ecran
+
+white = (255, 255, 255)
+black = (0, 0, 0)
+red = (255, 0, 0)
+
+dis = pygame.display.set_mode((dis_width, dis_height)) # Cree l ecran en precisant ses dimensions
+pygame.display.set_caption("Jeu du serpent") # Ajout d un titre
+ 
+game_over = False # Vaut False tant que le jeu n est pas terminé
+
+x1, y1 = dis_width/2, dis_height/2 # Position initiale du serpent
+
+snake_block = 10 # Taille du serpent
+snake_speed = 30 # Rapidite du serpent
+
+x1_change, y1_change = 0, 0
+
+clock = pygame.time.Clock() # Recupere l heure
+
+font_style = pygame.font.SysFont(None, 50) # Choix de la fonte
+
+def message(msg, color):
+    """msg : chaine de caracter
+    color : couleur
+    Affiche le message msg en couleur color"""
+    mesg = font_style.render(msg, True, color)
+    # Position et affichage du message
+    dis.blit(mesg, [dis_width/2, dis_height/2])
+
+
+while not game_over:
+    for event in pygame.event.get():
+        # Detection de l evenement
+        if event.type == pygame.QUIT:
+            game_over = True
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_LEFT:
+                x1_change, y1_change = -snake_block, 0
+            elif event.key == pygame.K_RIGHT:
+                x1_change, y1_change = snake_block, 0
+            elif event.key == pygame.K_UP:
+                x1_change, y1_change = 0, -snake_block
+            elif event.key == pygame.K_DOWN:
+                x1_change, y1_change = 0, snake_block
+
+    # Sortie de l ecran
+    if x1 >= dis_width or x1 < 0 or y1 >= dis_height or y1 < 0:
+        game_over = True
+
+    # Mise a jour de la position du serpent
+    x1, y1 = x1 + x1_change, y1 + y1_change
+
+    # Couleur du fond
+    dis.fill(white)
+
+    # Couleur du rectangle
+    pygame.draw.rect(dis, black, [x1, y1, snake_block, snake_block])
+ 
+    # Rafraichit l ecran
+    pygame.display.update()
+ 
+    # Pas plus de 30 rafraichissements par seconde
+    clock.tick(snake_speed)
+ 
+# Message de fin de jeu
+message("Vous avez perdu", red)	     
+pygame.display.update()
+time.sleep(2)
+							     
+pygame.quit()
+quit()
+</pre>
+
+
+<h2>
+  Exercices
+</h2>
+<ol>
+  <li>Modifier le contenu du message affiché.</li>
+  <li>Modifier la couleur du message affiché.</li>
+  <li>Modifier le code pour que le serpent revienne par la gauche s'il touche le mur droite sans que le jeu termine.</li>
+</ol>
+
+
+<h1 id="Nourriture">
+  Ajout de la nourriture
+</h1>
+Nous allons maintenant ajouter la nourriture. La nourriture sera disposée aléatoirement sur l'écran. À chaque fois que le serpent mange, on affiche le message MIAM!!. On ajoute également, lorsque le joueur perd, la possibilité soit de quitter le jeu, soit de rejouer.
+
+<pre>
+import pygame # Importe le module
+import time # Gestion du temps
+import random # Gestion des nombres aleatoires
+
+pygame.init() # Initialise l environnement
+
+dis_width, dis_height = 800, 600 # Dimensions de l ecran
+
+snake_block = 10 # Taille du serpent
+snake_speed = 30 # Rapidite du serpent
+
+white = (255, 255, 255)
+black = (0, 0, 0)
+red = (255, 0, 0)
+blue = (0, 0, 225)
+
+dis = pygame.display.set_mode((dis_width, dis_height)) # Cree l ecran en precisant ses dimensions
+pygame.display.set_caption("Jeu du serpent") # Ajout d un titre
+
+clock = pygame.time.Clock() # Recupere l heure
+
+font_style = pygame.font.SysFont(None, 30) # Choix de la fonte
+
+def message(msg, color):
+    """msg : chaine de caracter
+    color : couleur
+    Affiche le message msg en couleur color"""
+    mesg = font_style.render(msg, True, color)
+    # Recupere la taille du rectangle du texte
+    text_rect = mesg.get_rect(center=(dis_width/2, dis_height/2))
+    # Positionne et affiche le texte
+    dis.blit(mesg, text_rect)
+
+def gameLoop(): 
+    game_over = False # Vaut False tant que le jeu n est pas terminé
+    game_close = False # Vaut False tant qu on ne termine pas le jeu
+
+    x1, y1 = dis_width/2, dis_height/2 # Position initiale du serpent
+    x1_change, y1_change = 0, 0
+
+    # Position de la nourriture
+    foodx = round(random.randrange(0, dis_width - snake_block)/10)*10
+    foody = round(random.randrange(0, dis_height - snake_block)/10)*10
+
+    while not game_over:
+        while game_close:
+            dis.fill(white)
+            # Message de fin de jeu
+            message("Vous avez perdu ! Cliquer sur Q pour quitter et N pour jouer une nouvelle partie", red)	     
+            pygame.display.update()
+            for event in pygame.event.get():
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_q:
+                        game_over = True
+                        game_close = False
+                    if event.key == pygame.K_n:
+                        gameLoop()
+
+        for event in pygame.event.get():
+            # Detection de l evenement
+            if event.type == pygame.QUIT:
+                game_over = True
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_LEFT:
+                    x1_change, y1_change = -snake_block, 0
+                elif event.key == pygame.K_RIGHT:
+                    x1_change, y1_change = snake_block, 0
+                elif event.key == pygame.K_UP:
+                    x1_change, y1_change = 0, -snake_block
+                elif event.key == pygame.K_DOWN:
+                    x1_change, y1_change = 0, snake_block
+
+        # Sortie de l ecran
+        if x1 >= dis_width or x1 < 0 or y1 >= dis_height or y1 < 0:
+            game_close = True
+
+        # Mise a jour de la position du serpent
+        x1, y1 = x1 + x1_change, y1 + y1_change
+
+        # Couleur du fond
+        dis.fill(white)
+
+        # Position du serpent
+        pygame.draw.rect(dis, black, [x1, y1, snake_block, snake_block])
+
+        # Position de la nourriture serpent
+        pygame.draw.rect(dis, blue, [foodx, foody, snake_block, snake_block])
+
+        # Rafraichit l ecran
+        pygame.display.update()
+
+        # Serpent mange la nourriture
+        if x1 == foodx and y1 == foody:
+            message("Miam!!", red)
+            pygame.display.update()
+            # Position de la nourriture
+            foodx = round(random.randrange(0, dis_width - snake_block)/10)*10
+            foody = round(random.randrange(0, dis_height - snake_block)/10)*10
+            time.sleep(5)
+
+        # Rafraichissements par seconde
+        clock.tick(snake_speed)
+							     
+    pygame.quit()
+    quit()
+
+gameLoop()
+</pre>
+
+<h2>
+  Exercices
+</h2>
+<ol>
+  <li>Modifier les touches qui permettent de quitter et de rejouer</li>
+  <li>Modifier le message MIAM!</li>
+  <li>Modifier le temps d'affichage du message MIAM!</li>
+</ol>
+
+<h1 id="Taille">
+Augmenter la taille du serpent
+</h1>
+
+Dans le code suivant, la taille du serpent augmente quand il mange de la nourriture. On modifie également le code pour que le jeu termine si le serpent rencontre une partie de son corps. Les différents éléments du corps du serpent sont stockés dans une liste.
+<pre>
+import pygame # Importe le module
+import time # Gestion du temps
+import random # Gestion des nombres aleatoires
+
+pygame.init() # Initialise l environnement
+
+dis_width, dis_height = 800, 600 # Dimensions de l ecran
+snake_block = 10 # Taille du serpent
+snake_speed = 30 # Rapidite du serpent
+
+white = (255, 255, 255)
+yellow = (255, 255, 102)
+black = (0, 0, 0)
+red = (255, 0, 0)
+green = (0, 255, 0)
+blue = (0, 0, 225)
+
+dis = pygame.display.set_mode((dis_width, dis_height)) # Cree l ecran en precisant ses dimensions
+pygame.display.set_caption("Jeu du serpent") # Ajout d un titre
+
+clock = pygame.time.Clock() # Recupere l heure
+
+font_style = pygame.font.SysFont(None, 25) # Choix de la fonte
+
+def message(msg, color):
+    """msg : chaine de caracter
+    color : couleur
+    Affiche le message msg en couleur color"""
+    mesg = font_style.render(msg, True, color)
+    # Recupere la taille du rectangle du texte
+    text_rect = mesg.get_rect(center=(dis_width/2, dis_height/2))
+    # Positionne et affiche le texte
+    dis.blit(mesg, text_rect)
+
+def our_snake(snake_block, snake_list):
+    """snake_block : taille du serpent
+    snake_list : positions du corps du serpent
+    dessine le serpent sur l ecran"""
+    for i in range(0, len(snake_list)):
+        x, y = snake_list[i]
+        pygame.draw.rect(dis, black, [x, y, snake_block, snake_block])
+
+def gameLoop():
+    game_over = False # Vaut False tant que le jeu n est pas terminé
+    game_close = False # Vaut False tant qu on ne termine pas le jeu
+
+    x1, y1 = dis_width/2, dis_height/2 # Position initiale du serpent
+    x1_change, y1_change = 0, 0
+
+    # Definition du serpent
+    snake_list = []
+    length_of_snake = 1
+
+    # Position de la nourriture
+    foodx = round(random.randrange(0, dis_width - snake_block)/10)*10
+    foody = round(random.randrange(0, dis_height - snake_block)/10)*10
+
+    while not game_over:
+        while game_close:
+            dis.fill(blue)
+            # Message de fin de jeu
+            message("Vous avez perdu ! Cliquer sur Q pour quitter et N pour jouer une nouvelle partie", red)	     
+            pygame.display.update()
+            for event in pygame.event.get():
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_q:
+                        game_over = True
+                        game_close = False
+                    if event.key == pygame.K_n:
+                        gameLoop()
+
+        for event in pygame.event.get():
+            # Detection de l evenement
+            if event.type == pygame.QUIT:
+                game_over = True
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_LEFT:
+                    x1_change, y1_change = -snake_block, 0
+                elif event.key == pygame.K_RIGHT:
+                    x1_change, y1_change = snake_block, 0
+                elif event.key == pygame.K_UP:
+                    x1_change, y1_change = 0, -snake_block
+                elif event.key == pygame.K_DOWN:
+                    x1_change, y1_change = 0, snake_block
+
+        # Sortie de l ecran
+        if x1 >= dis_width or x1 < 0 or y1 >= dis_height or y1 < 0:
+            game_close = True
+
+        # Mise a jour de la position du serpent
+        x1, y1 = x1 + x1_change, y1 + y1_change
+
+        # Couleur du fond
+        dis.fill(blue)
+
+
+        # Position de la nourriture serpent
+        pygame.draw.rect(dis, green, [foodx, foody, snake_block, snake_block])
+
+	# Ajout de la position de la tete du serpent
+        snake_head = (x1, y1)
+        snake_list.append(snake_head)
+        # Suppression si necessaire de la queue du serpent
+        if len(snake_list) > length_of_snake:
+            del snake_list[0]
+
+        # Test si le serpent rencontre son corps
+        for position in snake_list[:-1]:
+            if position == snake_head:
+                game_close = True
+
+        # Dessin du serpent
+        our_snake(snake_block, snake_list)
+
+        # Rafraichit l ecran
+        pygame.display.update()
+
+        # Serpent mange la nourriture
+        if x1 == foodx and y1 == foody:
+            message("Miam!!", red)
+            pygame.display.update()
+            length_of_snake += 1
+            # Nouvelle nourriture
+            foodx = round(random.randrange(0, dis_width - snake_block)/10)*10
+            foody = round(random.randrange(0, dis_height - snake_block)/10)*10
+            time.sleep(2)
+
+        # Rafraichissements par seconde
+        clock.tick(snake_speed)
+							     
+    pygame.quit()
+    quit()
+
+gameLoop()
+</pre>
+
+<h2>
+Exercices
+</h2>
+<ol>
+  <li>Modifier la couleur de la tête du serpent.</li>
+  <li>Modifier la rapidité du serpent.</li>
+  <li>Modifier le code pour que, si le serpent sort par la droite, il rentre par la gauche ; s'il sort par le haut, il rentre par le bas.</li>
+</ol>
+
+
+<h1 id="Score">
+  Décompte et affichage du score
+</h1>
+
+Finalement, nous allons compter le nombre de nourritures ingurgitées par le serpent et afficher ce score dans un coin de l'écran.
+<pre>
+import pygame # Importe le module
+import time # Gestion du temps
+import random # Gestion des nombres aleatoires
+
+pygame.init() # Initialise l environnement
+
+dis_width, dis_height = 800, 600 # Dimensions de l ecran
+snake_block = 10 # Taille du serpent
+snake_speed = 30 # Rapidite du serpent
+
+white = (255, 255, 255)
+yellow = (255, 255, 102)
+black = (0, 0, 0)
+red = (255, 0, 0)
+green = (0, 255, 0)
+blue = (0, 0, 225)
+
+dis = pygame.display.set_mode((dis_width, dis_height)) # Cree l ecran en precisant ses dimensions
+pygame.display.set_caption("Jeu du serpent") # Ajout d un titre
+
+clock = pygame.time.Clock() # Recupere l heure
+
+font_style = pygame.font.SysFont(None, 25) # Choix de la fonte
+score_font = pygame.font.SysFont("comicsansms", 35) # Fonte du score
+
+def your_score(score):
+    """score : score du joueur
+    Affiche le score en haut a gauche de l ecran"""
+    value = score_font.render("Votre score : "+str(score), True, yellow)
+    dis.blit(value, [0, 0])
+
+def message(msg, color):
+    """msg : chaine de caracter
+    color : couleur
+    Affiche le message msg en couleur color"""
+    mesg = font_style.render(msg, True, color)
+    # Recupere la taille du rectangle du texte
+    text_rect = mesg.get_rect(center=(dis_width/2, dis_height/2))
+    # Positionne et affiche le texte
+    dis.blit(mesg, text_rect)
+
+def our_snake(snake_block, snake_list):
+    """snake_block : taille du serpent
+    snake_list : positions du corps du serpent
+    dessine le serpent sur l ecran"""
+    for i in range(0, len(snake_list)):
+        x, y = snake_list[i]
+        pygame.draw.rect(dis, black, [x, y, snake_block, snake_block])
+
+def gameLoop():
+    game_over = False # Vaut False tant que le jeu n est pas terminé
+    game_close = False # Vaut False tant qu on ne termine pas le jeu
+
+    x1, y1 = dis_width/2, dis_height/2 # Position initiale du serpent
+    x1_change, y1_change = 0, 0
+
+    # Definition du serpent
+    snake_list = []
+    length_of_snake = 1
+    local_snake_speed = snake_speed
+
+    # Position de la nourriture
+    foodx = round(random.randrange(0, dis_width - snake_block)/10)*10
+    foody = round(random.randrange(0, dis_height - snake_block)/10)*10
+
+    while not game_over:
+        while game_close:
+            dis.fill(blue)
+            # Message de fin de jeu
+            message("Vous avez perdu ! Cliquer sur Q pour quitter et N pour jouer une nouvelle partie", red)	     
+            pygame.display.update()
+            for event in pygame.event.get():
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_q:
+                        game_over = True
+                        game_close = False
+                    if event.key == pygame.K_n:
+                        gameLoop()
+
+        for event in pygame.event.get():
+            # Detection de l evenement
+            if event.type == pygame.QUIT:
+                game_over = True
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_LEFT:
+                    x1_change, y1_change = -snake_block, 0
+                elif event.key == pygame.K_RIGHT:
+                    x1_change, y1_change = snake_block, 0
+                elif event.key == pygame.K_UP:
+                    x1_change, y1_change = 0, -snake_block
+                elif event.key == pygame.K_DOWN:
+                    x1_change, y1_change = 0, snake_block
+
+        # Sortie de l ecran
+        if x1 >= dis_width or x1 < 0 or y1 >= dis_height or y1 < 0:
+            game_close = True
+
+        # Mise a jour de la position du serpent
+        x1, y1 = x1 + x1_change, y1 + y1_change
+
+        # Couleur du fond
+        dis.fill(blue)
+
+
+        # Position de la nourriture serpent
+        pygame.draw.rect(dis, green, [foodx, foody, snake_block, snake_block])
+
+	# Ajout de la position de la tete du serpent
+        snake_head = (x1, y1)
+        snake_list.append(snake_head)
+        # Suppression si necessaire de la queue du serpent
+        if len(snake_list) > length_of_snake:
+            del snake_list[0]
+
+        # Test si le serpent rencontre son corps
+        for position in snake_list[:-1]:
+            if position == snake_head:
+                game_close = True
+
+        # Dessin du serpent
+        our_snake(snake_block, snake_list)
+        your_score(length_of_snake - 1)
+
+        # Rafraichit l ecran
+        pygame.display.update()
+
+        # Serpent mange la nourriture
+        if x1 == foodx and y1 == foody:
+            message("Miam!!", red)
+            pygame.display.update()
+            length_of_snake += 1
+            # Nouvelle nourriture
+            foodx = round(random.randrange(0, dis_width - snake_block)/10)*10
+            foody = round(random.randrange(0, dis_height - snake_block)/10)*10
+            time.sleep(2)
+
+        # Rafraichissements par seconde
+        clock.tick(local_snake_speed)
+							     
+    pygame.quit()
+    quit()
+
+gameLoop()
+</pre>
+
+<h2>
+  Exercices
+</h2>
+<ol>
+  <li>Modifier la couleur d'affichage du score.</li>
+  <li>Modifier le code pour que, si le serpent sort par la droite, il rentre par la gauche ; s'il sort par le haut, il rentre par le bas.</li>
+  <li>Modifier le code pour que le serpent accélère dès qu'une pomme est mangée.</li>
+  <li>Ajouter un obstacle au milieu de l'écran qui engendre la perte du serpent.</li>
+</ol>
+
+<h1 id="Statistiques">
+  Enregistrement des statistiques
+</h1>
