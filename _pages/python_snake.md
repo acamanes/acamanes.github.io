@@ -205,7 +205,6 @@ while not game_over:
     # Couleur du serpent
     pygame.draw.rect(dis, black, [x1, y1, 10, 10])
  
-    # Rafraichit l ecran
     pygame.display.update()
  
     # Limite les rafraichissements de l ecran par seconde
@@ -268,7 +267,6 @@ def message(msg, color):
 
 while not game_over:
     for event in pygame.event.get():
-        # Detection de l evenement
         if event.type == pygame.QUIT:
             game_over = True
         if event.type == pygame.KEYDOWN:
@@ -296,7 +294,7 @@ while not game_over:
     clock.tick(snake_speed)
  
 # Message de fin de jeu
-message("Vous avez perdu", red)	     
+message("Vous avez perdu", red)
 pygame.display.update()
 time.sleep(2)
 							     
@@ -321,28 +319,28 @@ quit()
 Nous allons maintenant ajouter la nourriture. La nourriture sera disposée aléatoirement sur l'écran. À chaque fois que le serpent mange, on affiche le message MIAM!!. On ajoute également, lorsque le joueur perd, la possibilité soit de quitter le jeu, soit de rejouer.
 
 <pre>
-import pygame # Importe le module
-import time # Gestion du temps
-import random # Gestion des nombres aleatoires
+import pygame
+import time
+import random
 
-pygame.init() # Initialise l environnement
+pygame.init()
 
-dis_width, dis_height = 800, 600 # Dimensions de l ecran
-
-snake_block = 10 # Taille du serpent
-snake_speed = 30 # Rapidite du serpent
+dis_width, dis_height = 800, 600
 
 white = (255, 255, 255)
 black = (0, 0, 0)
 red = (255, 0, 0)
 blue = (0, 0, 225)
 
-dis = pygame.display.set_mode((dis_width, dis_height)) # Cree l ecran en precisant ses dimensions
-pygame.display.set_caption("Jeu du serpent") # Ajout d un titre
+dis = pygame.display.set_mode((dis_width, dis_height))
+pygame.display.set_caption("Jeu du serpent")
 
-clock = pygame.time.Clock() # Recupere l heure
+snake_block = 10
+snake_speed = 30
 
-font_style = pygame.font.SysFont(None, 30) # Choix de la fonte
+clock = pygame.time.Clock()
+
+font_style = pygame.font.SysFont(None, 30)
 
 def message(msg, color):
     """msg : chaine de caracter
@@ -358,7 +356,7 @@ def gameLoop():
     game_over = False # Vaut False tant que le jeu n est pas terminé
     game_close = False # Vaut False tant qu on ne termine pas le jeu
 
-    x1, y1 = dis_width/2, dis_height/2 # Position initiale du serpent
+    x1, y1 = dis_width/2, dis_height/2
     x1_change, y1_change = 0, 0
 
     # Position de la nourriture
@@ -368,8 +366,7 @@ def gameLoop():
     while not game_over:
         while game_close:
             dis.fill(white)
-            # Message de fin de jeu
-            message("Vous avez perdu ! Cliquer sur Q pour quitter et N pour jouer une nouvelle partie", red)	     
+            message("Vous avez perdu ! Cliquer sur Q pour quitter et N pour jouer une nouvelle partie", red)
             pygame.display.update()
             for event in pygame.event.get():
                 if event.type == pygame.KEYDOWN:
@@ -380,7 +377,6 @@ def gameLoop():
                         gameLoop()
 
         for event in pygame.event.get():
-            # Detection de l evenement
             if event.type == pygame.QUIT:
                 game_over = True
             if event.type == pygame.KEYDOWN:
@@ -397,19 +393,15 @@ def gameLoop():
         if x1 >= dis_width or x1 < 0 or y1 >= dis_height or y1 < 0:
             game_close = True
 
-        # Mise a jour de la position du serpent
         x1, y1 = x1 + x1_change, y1 + y1_change
 
-        # Couleur du fond
         dis.fill(white)
 
-        # Position du serpent
         pygame.draw.rect(dis, black, [x1, y1, snake_block, snake_block])
 
         # Position de la nourriture serpent
         pygame.draw.rect(dis, blue, [foodx, foody, snake_block, snake_block])
 
-        # Rafraichit l ecran
         pygame.display.update()
 
         # Serpent mange la nourriture
@@ -419,9 +411,8 @@ def gameLoop():
             # Position de la nourriture
             foodx = round(random.randrange(0, dis_width - snake_block)/10)*10
             foody = round(random.randrange(0, dis_height - snake_block)/10)*10
-            time.sleep(5)
+            time.sleep(5) # Temps d affichage du message
 
-        # Rafraichissements par seconde
         clock.tick(snake_speed)
 							     
     pygame.quit()
@@ -505,7 +496,6 @@ def gameLoop():
     while not game_over:
         while game_close:
             dis.fill(blue)
-            # Message de fin de jeu
             message("Vous avez perdu ! Cliquer sur Q pour quitter et N pour jouer une nouvelle partie", red)	     
             pygame.display.update()
             for event in pygame.event.get():
@@ -517,7 +507,6 @@ def gameLoop():
                         gameLoop()
 
         for event in pygame.event.get():
-            # Detection de l evenement
             if event.type == pygame.QUIT:
                 game_over = True
             if event.type == pygame.KEYDOWN:
@@ -559,7 +548,6 @@ def gameLoop():
         # Dessin du serpent
         our_snake(snake_block, snake_list)
 
-        # Rafraichit l ecran
         pygame.display.update()
 
         # Serpent mange la nourriture
@@ -572,7 +560,6 @@ def gameLoop():
             foody = round(random.randrange(0, dis_height - snake_block)/10)*10
             time.sleep(2)
 
-        # Rafraichissements par seconde
         clock.tick(snake_speed)
 							     
     pygame.quit()
@@ -665,7 +652,6 @@ def gameLoop():
     while not game_over:
         while game_close:
             dis.fill(blue)
-            # Message de fin de jeu
             message("Vous avez perdu ! Cliquer sur Q pour quitter et N pour jouer une nouvelle partie", red)	     
             pygame.display.update()
             for event in pygame.event.get():
@@ -677,7 +663,6 @@ def gameLoop():
                         gameLoop()
 
         for event in pygame.event.get():
-            # Detection de l evenement
             if event.type == pygame.QUIT:
                 game_over = True
             if event.type == pygame.KEYDOWN:
@@ -720,7 +705,6 @@ def gameLoop():
         our_snake(snake_block, snake_list)
         your_score(length_of_snake - 1)
 
-        # Rafraichit l ecran
         pygame.display.update()
 
         # Serpent mange la nourriture
@@ -733,7 +717,6 @@ def gameLoop():
             foody = round(random.randrange(0, dis_height - snake_block)/10)*10
             time.sleep(2)
 
-        # Rafraichissements par seconde
         clock.tick(local_snake_speed)
 							     
     pygame.quit()
