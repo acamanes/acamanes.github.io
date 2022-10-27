@@ -321,7 +321,7 @@ Nous allons maintenant ajouter la nourriture. La nourriture sera disposée aléa
 <pre>
 import pygame
 import time
-import random
+import random # Gestion des nombres aleatoires
 
 pygame.init()
 
@@ -436,9 +436,9 @@ Augmenter la taille du serpent
 
 Dans le code suivant, la taille du serpent augmente quand il mange de la nourriture. On modifie également le code pour que le jeu termine si le serpent rencontre une partie de son corps. Les différents éléments du corps du serpent sont stockés dans une liste.
 <pre>
-import pygame # Importe le module
-import time # Gestion du temps
-import random # Gestion des nombres aleatoires
+import pygame
+import time
+import random
 
 pygame.init() # Initialise l environnement
 
@@ -453,8 +453,8 @@ red = (255, 0, 0)
 green = (0, 255, 0)
 blue = (0, 0, 225)
 
-dis = pygame.display.set_mode((dis_width, dis_height)) # Cree l ecran en precisant ses dimensions
-pygame.display.set_caption("Jeu du serpent") # Ajout d un titre
+dis = pygame.display.set_mode((dis_width, dis_height))
+pygame.display.set_caption("Jeu du serpent")
 
 clock = pygame.time.Clock() # Recupere l heure
 
@@ -586,7 +586,7 @@ Finalement, nous allons compter le nombre de nourritures ingurgitées par le ser
 <pre>
 import pygame # Importe le module
 import time # Gestion du temps
-import random # Gestion des nombres aleatoires
+import random
 
 pygame.init() # Initialise l environnement
 
