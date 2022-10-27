@@ -10,6 +10,10 @@ toc_icon: "infinity"
 
 ---
 
+Le déroulé de ce projet est très largement inspirée de cette <a href="https://www.edureka.co/blog/snake-game-with-pygame/">page</a>.
+
+<br/>
+
 Les différentes fonctions du module Pygame qui seront utilisées sont listées ci-dessous avec leur documentation.
 <table>
   <tr>
@@ -18,27 +22,27 @@ Les différentes fonctions du module Pygame qui seront utilisées sont listées 
   </tr>
   <tr>
     <td>init()</td>
-    <td>Initialise tous les modules importés par Pygame (renvoie un tuple indiquant les succès/échecs de ces initialisations.</td>
+    <td>Initialise tous les modules importés par Pygame (renvoie un tuple indiquant les succès/échecs de ces initialisations)</td>
   </tr>
   <tr>
     <td>display.set_mode()</td>
-    <td>Prend en argument un tuple pour créer une surface.</td>
+    <td>Prend en argument un tuple (longueur, largeur) et crée l'écran du jeu.</td>
   </tr>
   <tr>
-    <td>update()</td>
-    <td>Met à jour l'écran.</td>
+    <td>display.update()</td>
+    <td>Rafraîchit l'écran du jeu.</td>
   </tr>
   <tr>
     <td>quit()</td>
-    <td>Permet de tout quitter.</td>
+    <td>Réinitialise les modules lors de l'arrêt du jeu.</td>
   </tr>
   <tr>
-    <td>set_caption()</td>
-    <td>Positionne le titre en haut de l'écran d'affichage.</td>
+    <td>display.set_caption()</td>
+    <td>Définit le titre en haut de l'écran de jeu.</td>
   </tr>
   <tr>
     <td>event.get()</td>
-    <td>Renvoie la liste de tous les événements.</td>
+    <td>Renvoie la liste de tous les événements et les supprime de la file.</td>
   </tr>
   <tr>
     <td>Surface.fill()</td>
@@ -46,7 +50,7 @@ Les différentes fonctions du module Pygame qui seront utilisées sont listées 
   </tr>
   <tr>
     <td>time.Clock()</td>
-    <td>Aide à suivre le temps.</td>
+    <td>Crée un objet qui permet de suivre l'évolution du temps.font</td>
   </tr>
   <tr>
     <td>font.SysFont()</td>
@@ -54,50 +58,52 @@ Les différentes fonctions du module Pygame qui seront utilisées sont listées 
   </tr>
 </table>
 
+Le caractère <em>#</em> permet d'écrire des commentaires qui ne seront pas exécutés. Lors de l'introduction de nouvelles fonctions, nous les commenterons pour expliciter leur utilité. Il est très important de commenter TOUT le code.
+
 <h1 id="Ecran">
   Création de l'écran
 </h1>
-Pour créer l'écran avec Pygame, il suffit d'utiliser la fonction <em>display.set_mode()</em>. Il faut également utiliser les méthodes <em>init()</em> qui permet de tout initialiser etet <em>quit()</em> qui permet de tout remettre à zéro. La méthode <em>update()</em> est utilisée pour actualiser tous les changements effectués sur l'écran. La méthode <em>flip()</em> a une utilité similaire. Cependant, la méthode <em>update()</em> ne remet à jour que ce qui a été modifié sur l'écran alors que la méthode <em>flip()</em> rafraîchit l'écran en entier.
+Pour créer l'écran de jeu avec Pygame, il suffit d'utiliser la fonction <em>display.set_mode()</em> en précisant la taille de l'écran. Les méthodes <em>init()</em> et <em>quit()</em> permettent de remettre à zéro les modules au début et à la fin du jeu. La méthode <em>update()</em> rafraîchit l'écran avec les nouvelles modifications.
 <pre>
 import pygame # Importe le module
-pygame.init() # Initialise l environnement
+pygame.init() # Initialise les fonctions pygame
 dis = pygame.display.set_mode((400, 300)) # Cree l ecran en precisant ses dimensions
 pygame.display.update() # Rafraichit l ecran
-pygame.quit() # Remet a zero toutes les fonctions
-quit() # Ferme la fenetre
+pygame.quit() # Remet à zero toutes les fonctions
+quit() # Quitte Python
 </pre>
 
-Lors du lancement de ce code, l'écran apparaît et se referme immédiatement. Pour éviter ceci, nous allons utiliser une boucle conditionnelle qui tourne tant que le jeu n'est pas terminé.
+Lors du lancement de ce code, l'écran apparaît et se referme immédiatement. Pour éviter ceci, nous allons utiliser une boucle conditionnelle qui tourne tant que le jeu n'est pas terminé. Nous ajoutons également un titre à notre fenêtre.
 <pre>
-import pygame # Importe le module
-pygame.init() # Initialise l environnement
-dis = pygame.display.set_mode((400, 300)) # Cree l ecran en precisant ses dimensions
-pygame.display.update() # Rafraichit l ecran
+import pygame
+pygame.init()
+dis = pygame.display.set_mode((400, 300))
+pygame.display.update()
 pygame.display.set_caption("Jeu du serpent") # Ajout d un titre
 game_over = False # Vaut False tant que le jeu n est pas termine
 while not game_over:
     for event in pygame.event.get():
         print(event) # Affiche tous les evenements
-pygame.quit() # Remet à zero toutes les fonctions
-quit() # Ferme la fenetre
+pygame.quit()
+quit()
 </pre>
-Quand on lance ce script, il ne s'arrête jamais et affiche tous les événements qui ont lieu. Nous allons maintenant spécifier au programme de quitter quand on clique sur le bouton fermer. Pour faire ceci, Pygame possède un événement appelé <em>QUIT</em> :
+
+Quand on lance ce script, il ne s'arrête jamais et affiche tous les événements qui ont lieu. Nous allons maintenant spécifier au programme de quitter quand on clique sur le bouton fermer (en haut à droite de la fenêtre). Pour faire ceci, Pygame possède un événement appelé <em>QUIT</em> :
 <pre>
-import pygame # Importe le module
-pygame.init() # Initialise l environnement
-dis = pygame.display.set_mode((400, 300)) # Cree l ecran en precisant ses dimensions
-pygame.display.update() # Rafraichit l ecran
-pygame.display.set_caption("Jeu du serpent") # Ajout d un titre
+import pygame
+pygame.init()
+
+dis = pygame.display.set_mode((400, 300))
+pygame.display.update()
+pygame.display.set_caption("Jeu du serpent")
 game_over = False # Vaut False tant que le jeu n est pas termine
 while not game_over:
     for event in pygame.event.get():
-        if event.type == pygame.QUIT:
+        if event.type == pygame.QUIT: # Detection du clic
             game_over = True
-pygame.quit() # Remet à zero toutes les fonctions
-quit() # Ferme la fenetre
+pygame.quit()
+quit()
 </pre>
-
-L'écran est maintenant réglé. L'étape suivante consiste à créer le serpent.
 
 <h2>
   Exercices
@@ -108,69 +114,72 @@ L'écran est maintenant réglé. L'étape suivante consiste à créer le serpent
 </ol>
 
 <h1 id="Serpent">
-  Création du serpent
+  Création de la tête du serpent
 </h1>
-Pour créer le serpent, on commence par définir quelques couleurs. Les couleurs sont définies dans le système RGB (Red/Green/Blue) en précisant les proportions de rouge/vert/bleu qu'elles possèdent. Le noir correspond au cas où 3 composantes sont à 0 ; le blanc à celui où les 3 composantes sont à 255. Le serpent sera défini à l'aide de rectangles. Dans Pygame, pour définir un rectangle, on utilise la fonction <em>draw.rect()</em> pour laquelle on précise la couleur et la taille.
+Pour créer le serpent, on commence par définir quelques couleurs. Les couleurs sont définies dans le système RGB (Red/Green/Blue) en précisant les proportions de rouge/vert/bleu qu'elles possèdent. Le noir correspond au cas où 3 composantes sont à 0 ; le blanc à celui où les 3 composantes sont à 255. Le serpent sera défini à l'aide de rectangles. Dans Pygame, pour définir un rectangle, on utilise la fonction <em>draw.rect()</em> pour laquelle on précise la couleur et la taille. On stocke également les tailles de l'écran dans des variables pour pouvoir les modifier plus facilement.
 <pre>
-import pygame # Importe le module
-pygame.init() # Initialise l environnement
+import pygame
+pygame.init()
+
 dis_width, dis_height = 800, 600 # Dimensions de l ecran
 
+# Definition de couleurs
 blue = (0, 0, 255)
 red = (255, 0, 0)
 
-dis = pygame.display.set_mode((dis_width, dis_height)) # Cree l ecran en precisant ses dimensions
+dis = pygame.display.set_mode((dis_width, dis_height))
 
-pygame.display.set_caption("Jeu du serpent") # Ajout d un titre
-game_over = False # Vaut False tant que le jeu n est pas termine
+pygame.display.set_caption("Jeu du serpent")
+game_over = False
 while not game_over:
     dis.fill(red) # Couleur de fond en rouge
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             game_over = True
+	# Creation d un rectangle bleu
     pygame.draw.rect(dis, blue, [200, 150, 10, 10])
-    pygame.display.update() # Rafraichit l ecran
-pygame.quit() # Remet a zero toutes les fonctions
-quit() # Ferme la fenetre
+    pygame.display.update()
+	
+pygame.quit()
+quit()
 </pre>
 
 <h2>
   Exercices
 </h2>
 <ol>
-  <li>Modifier les dimensions de l'écran.</li>
-  <li>Modifier la couleur de fond.</li>
+  <li>Modifier les dimensions de l'écran en modifiant le contenu des variables.</li>
+  <li>Définir les couleurs vert et jaune.</li>
+  <li>Modifier la couleur du fond de l'écran.</li>
   <li>Modifier la couleur du rectangle.</li>
   <li>En modifiant les valeurs 10/10, modifier la taille du rectangle.</li>
   <li>En modifiant les valeurs 200/150, modifier la posiion du rectangle</li>
+  <li>En utilisant les variables <em>dis_width</em> et <em>dis_heigh</em> ainsi que la division <em>/</em>, créer un rectangle dont les longueurs et largeurs sont les moitiés de celles de l'écran</li>
 </ol>
 
 
 <h1 id="Deplacement">
-  Déplacer le serpent
+  Déplacer la tête du serpent
 </h1>
-Pour faire bouger le serpent, nous avons besoins d'utiliser les événements générés par les touches du clavier. Nous utiliserons ici <em>K_UP</em> (flèche vers le haut), <em>K_DOWN</em> (flèche vers le bas), <em>K_LEFT</em> (flèche vers la gauche et <em>K_RIGHT</em> (flèche vers la droite). Les variables <em>x1_change</em> et <em>y1_change</em> permettent d'enregistrer les modifications à effectuer sur la position du serpent.
+Pour faire bouger la tête du serpent, nous avons besoins d'utiliser les événements générés par les touches du clavier. Nous utiliserons ici <em>K_UP</em> (flèche vers le haut), <em>K_DOWN</em> (flèche vers le bas), <em>K_LEFT</em> (flèche vers la gauche et <em>K_RIGHT</em> (flèche vers la droite). Les variables <em>x1_change</em> et <em>y1_change</em> permettent d'enregistrer les modifications à effectuer sur la position du serpent.
 <pre>
-import pygame # Importe le module
- 
-pygame.init() # Initialise l environnement
+import pygame
+pygame.init()
 
-dis_width, dis_height = 800, 600 # Dimensions de l ecran
+dis_width, dis_height = 800, 600
 
 white = (255, 255, 255)
 black = (0, 0, 0)
 red = (255, 0, 0)
 
-dis = pygame.display.set_mode((dis_width, dis_height)) # Cree l ecran en precisant ses dimensions
-pygame.display.set_caption("Jeu du serpent") # Ajout d un titre
- 
-game_over = False # Vaut False tant que le jeu n est pas terminé
+dis = pygame.display.set_mode((dis_width, dis_height))
+pygame.display.set_caption("Jeu du serpent")
 
-x1, y1 = 300, 300 # Position initiale du serpent
- 
-x1_change, y1_change = 0, 0
- 
+game_over = False
 clock = pygame.time.Clock() # Recupere l heure
+
+x1, y1 = 300, 300 # Position initiale du serpent 
+x1_change, y1_change = 0, 0
  
 while not game_over:
     for event in pygame.event.get():
@@ -199,7 +208,7 @@ while not game_over:
     # Rafraichit l ecran
     pygame.display.update()
  
-    # Pas plus de 30 rafraichissements par seconde
+    # Limite les rafraichissements de l ecran par seconde
     clock.tick(30)
  
 pygame.quit()
@@ -210,10 +219,10 @@ quit()
   Exercices
 </h2>
 <ol>
-  <li>Modifier les couleurs.</li>
+  <li>Modifier les couleurs du fond, du serpent.</li>
   <li>Modifier le titre de l'écran.</li>
-  <li>Faire déplacer le serpent vers le bas quand on appuie sur la flèche vers le haut et vers le haut lorsqu'on appuie sur la flèche vers le bas.</li>
-  <li>Faire se déplacer le serpent plus vite puis plus lentement.</li>
+  <li>Faire déplacer le serpent vers le bas quand on appuie sur la flèche vers le haut et vers le haut lorsqu'on appuie sur la flèche vers le bas !</li>
+  <li>En modifiant l'argument de <em>tick</em>, faire se déplacer le serpent plus vite puis plus lentement.</li>
   <li>Faire s'arrêter le serpent lorsqu'on appuie sur la barre d'espace (<em>K_SPACE</em>).</li>
   <li>Au lancement du jeu, faire en sorte que le serpent se trouve au centre de l'écran.</li>
 </ol>
@@ -222,32 +231,29 @@ quit()
   Game over et frontières
 </h1>
 
-Dans le jeu du serpent, lorsque le serpent touche l'un des bords de l'écran, le jeu termine. Pour programmer cette fonctionnalité, on utilise une conditionnelle <em>if</em> qui vérifie si les coordonnées du serpent sont dans le bon intervalle.
+Nous allons modifier le code pour que, lorsque le serpent touche l'un des bords de l'écran, le jeu se termine. Pour programmer cette fonctionnalité, on utilise une conditionnelle <em>if</em> : lorsque les coordonnées du serpent sont en dehors de l'écran, le jeu termine. Un message s'affiche alors indiquant que le jeu est terminé.
 <pre>
-import pygame # Importe le module
-import time # Gestion du temps
+import pygame
+import time # Module pour gérer le temps
+pygame.init()
 
-pygame.init() # Initialise l environnement
-
-dis_width, dis_height = 800, 600 # Dimensions de l ecran
+dis_width, dis_height = 800, 600
 
 white = (255, 255, 255)
 black = (0, 0, 0)
 red = (255, 0, 0)
 
-dis = pygame.display.set_mode((dis_width, dis_height)) # Cree l ecran en precisant ses dimensions
-pygame.display.set_caption("Jeu du serpent") # Ajout d un titre
+dis = pygame.display.set_mode((dis_width, dis_height))
+pygame.display.set_caption("Jeu du serpent")
  
-game_over = False # Vaut False tant que le jeu n est pas terminé
+game_over = False
 
-x1, y1 = dis_width/2, dis_height/2 # Position initiale du serpent
-
+x1, y1 = dis_width/2, dis_height/2
 snake_block = 10 # Taille du serpent
 snake_speed = 30 # Rapidite du serpent
-
 x1_change, y1_change = 0, 0
 
-clock = pygame.time.Clock() # Recupere l heure
+clock = pygame.time.Clock()
 
 font_style = pygame.font.SysFont(None, 50) # Choix de la fonte
 
@@ -279,19 +285,14 @@ while not game_over:
     if x1 >= dis_width or x1 < 0 or y1 >= dis_height or y1 < 0:
         game_over = True
 
-    # Mise a jour de la position du serpent
     x1, y1 = x1 + x1_change, y1 + y1_change
 
-    # Couleur du fond
     dis.fill(white)
 
-    # Couleur du rectangle
     pygame.draw.rect(dis, black, [x1, y1, snake_block, snake_block])
  
-    # Rafraichit l ecran
     pygame.display.update()
  
-    # Pas plus de 30 rafraichissements par seconde
     clock.tick(snake_speed)
  
 # Message de fin de jeu
@@ -310,7 +311,7 @@ quit()
 <ol>
   <li>Modifier le contenu du message affiché.</li>
   <li>Modifier la couleur du message affiché.</li>
-  <li>Modifier le code pour que le serpent revienne par la gauche s'il touche le mur droite sans que le jeu termine.</li>
+  <li>Modifier le code pour que le serpent revienne par la gauche s'il touche le mur de droite sans que le jeu se termine.</li>
 </ol>
 
 
