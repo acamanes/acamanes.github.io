@@ -64,7 +64,7 @@ Le caractère <em>#</em> permet d'écrire des commentaires qui ne seront pas ex�
   Création de l'écran
 </h1>
 Pour créer l'écran de jeu avec Pygame, il suffit d'utiliser la fonction <em>display.set_mode()</em> en précisant la taille de l'écran. Les méthodes <em>init()</em> et <em>quit()</em> permettent de remettre à zéro les modules au début et à la fin du jeu. La méthode <em>update()</em> rafraîchit l'écran avec les nouvelles modifications.
-<pre>
+<pre id="01-serpent_init">
 import pygame # Importe le module
 pygame.init() # Initialise les fonctions pygame
 dis = pygame.display.set_mode((400, 300)) # Cree l ecran en precisant ses dimensions
@@ -74,7 +74,7 @@ quit() # Quitte Python
 </pre>
 
 Lors du lancement de ce code, l'écran apparaît et se referme immédiatement. Pour éviter ceci, nous allons utiliser une boucle conditionnelle qui tourne tant que le jeu n'est pas terminé. Nous ajoutons également un titre à notre fenêtre.
-<pre>
+<pre id="02-serpent_ecran">
 import pygame
 pygame.init()
 dis = pygame.display.set_mode((400, 300))
@@ -89,7 +89,7 @@ quit()
 </pre>
 
 Quand on lance ce script, il ne s'arrête jamais et affiche tous les événements qui ont lieu. Nous allons maintenant spécifier au programme de quitter quand on clique sur le bouton fermer (en haut à droite de la fenêtre). Pour faire ceci, Pygame possède un événement appelé <em>QUIT</em> :
-<pre>
+<pre id="03-serpent_quit">
 import pygame
 pygame.init()
 
@@ -117,7 +117,7 @@ quit()
   Création de la tête du serpent
 </h1>
 Pour créer le serpent, on commence par définir quelques couleurs. Les couleurs sont définies dans le système RGB (Red/Green/Blue) en précisant les proportions de rouge/vert/bleu qu'elles possèdent. Le noir correspond au cas où 3 composantes sont à 0 ; le blanc à celui où les 3 composantes sont à 255. Le serpent sera défini à l'aide de rectangles. Dans Pygame, pour définir un rectangle, on utilise la fonction <em>draw.rect()</em> pour laquelle on précise la couleur et la taille. On stocke également les tailles de l'écran dans des variables pour pouvoir les modifier plus facilement.
-<pre>
+<pre id="04-serpent_rectangle">
 import pygame
 pygame.init()
 
@@ -162,7 +162,7 @@ quit()
   Déplacer la tête du serpent
 </h1>
 Pour faire bouger la tête du serpent, nous avons besoins d'utiliser les événements générés par les touches du clavier. Nous utiliserons ici <em>K_UP</em> (flèche vers le haut), <em>K_DOWN</em> (flèche vers le bas), <em>K_LEFT</em> (flèche vers la gauche et <em>K_RIGHT</em> (flèche vers la droite). Les variables <em>x1_change</em> et <em>y1_change</em> permettent d'enregistrer les modifications à effectuer sur la position du serpent.
-<pre>
+<pre id="05-serpent_deplacement">
 import pygame
 pygame.init()
 
@@ -199,20 +199,17 @@ while not game_over:
     # Mise a jour de la position du serpent
     x1, y1 = x1 + x1_change, y1 + y1_change
 
-    # Couleur du fond
     dis.fill(white)
-
-    # Couleur du serpent
     pygame.draw.rect(dis, black, [x1, y1, 10, 10])
  
     pygame.display.update()
  
     # Limite les rafraichissements de l ecran par seconde
-    clock.tick(30)
+    clock.tick(15)
  
 pygame.quit()
 quit()
-</pre>
+o</pre>
 
 <h2>
   Exercices
@@ -231,7 +228,7 @@ quit()
 </h1>
 
 Nous allons modifier le code pour que, lorsque le serpent touche l'un des bords de l'écran, le jeu se termine. Pour programmer cette fonctionnalité, on utilise une conditionnelle <em>if</em> : lorsque les coordonnées du serpent sont en dehors de l'écran, le jeu termine. Un message s'affiche alors indiquant que le jeu est terminé.
-<pre>
+<pre id="06-serpent_frontieres">
 import pygame
 import time # Module pour gérer le temps
 pygame.init()
@@ -248,8 +245,8 @@ pygame.display.set_caption("Jeu du serpent")
 game_over = False
 
 x1, y1 = dis_width/2, dis_height/2
-snake_block = 10 # Taille du serpent
-snake_speed = 30 # Rapidite du serpent
+snake_block = 10 # Taille de la tete du serpent
+snake_speed = 15 # Rapidite du serpent
 x1_change, y1_change = 0, 0
 
 clock = pygame.time.Clock()
@@ -278,6 +275,8 @@ while not game_over:
                 x1_change, y1_change = 0, -snake_block
             elif event.key == pygame.K_DOWN:
                 x1_change, y1_change = 0, snake_block
+            elif event.key == pygame.K_SPACE:
+                x1_change, y1_change = 0, 0
 
     # Sortie de l ecran
     if x1 >= dis_width or x1 < 0 or y1 >= dis_height or y1 < 0:
@@ -318,7 +317,7 @@ quit()
 </h1>
 Nous allons maintenant ajouter la nourriture. La nourriture sera disposée aléatoirement sur l'écran. À chaque fois que le serpent mange, on affiche le message MIAM!!. On ajoute également, lorsque le joueur perd, la possibilité soit de quitter le jeu, soit de rejouer.
 
-<pre>
+<pre id="07-serpent_nourriture">
 import pygame
 import time
 import random # Gestion des nombres aleatoires
@@ -336,7 +335,7 @@ dis = pygame.display.set_mode((dis_width, dis_height))
 pygame.display.set_caption("Jeu du serpent")
 
 snake_block = 10
-snake_speed = 30
+snake_speed = 15
 
 clock = pygame.time.Clock()
 
@@ -388,12 +387,11 @@ def gameLoop():
                     x1_change, y1_change = 0, -snake_block
                 elif event.key == pygame.K_DOWN:
                     x1_change, y1_change = 0, snake_block
+                elif event.key == pygame.K_SPACE:
+                    x1_change, y1_change = 0, 0
 
-        # Sortie de l ecran
-        if x1 >= dis_width or x1 < 0 or y1 >= dis_height or y1 < 0:
-            game_close = True
-
-        x1, y1 = x1 + x1_change, y1 + y1_change
+        # Gestion torique de l ecran
+        x1, y1 = (x1 + x1_change) % dis_width, (y1 + y1_change) % dis_height
 
         dis.fill(white)
 
@@ -435,16 +433,16 @@ Augmenter la taille du serpent
 </h1>
 
 Dans le code suivant, la taille du serpent augmente quand il mange de la nourriture. On modifie également le code pour que le jeu termine si le serpent rencontre une partie de son corps. Les différents éléments du corps du serpent sont stockés dans une liste.
-<pre>
+<pre id="08-serpent_allongement">
 import pygame
 import time
 import random
 
-pygame.init() # Initialise l environnement
+pygame.init()
 
-dis_width, dis_height = 800, 600 # Dimensions de l ecran
-snake_block = 10 # Taille du serpent
-snake_speed = 30 # Rapidite du serpent
+dis_width, dis_height = 800, 600
+snake_block = 10
+snake_speed = 15
 
 white = (255, 255, 255)
 yellow = (255, 255, 102)
@@ -456,18 +454,16 @@ blue = (0, 0, 225)
 dis = pygame.display.set_mode((dis_width, dis_height))
 pygame.display.set_caption("Jeu du serpent")
 
-clock = pygame.time.Clock() # Recupere l heure
+clock = pygame.time.Clock()
 
-font_style = pygame.font.SysFont(None, 25) # Choix de la fonte
+font_style = pygame.font.SysFont(None, 25)
 
 def message(msg, color):
     """msg : chaine de caracter
     color : couleur
     Affiche le message msg en couleur color"""
     mesg = font_style.render(msg, True, color)
-    # Recupere la taille du rectangle du texte
     text_rect = mesg.get_rect(center=(dis_width/2, dis_height/2))
-    # Positionne et affiche le texte
     dis.blit(mesg, text_rect)
 
 def our_snake(snake_block, snake_list):
@@ -479,31 +475,30 @@ def our_snake(snake_block, snake_list):
         pygame.draw.rect(dis, black, [x, y, snake_block, snake_block])
 
 def gameLoop():
-    game_over = False # Vaut False tant que le jeu n est pas terminé
-    game_close = False # Vaut False tant qu on ne termine pas le jeu
+    game_over = False
+    game_close = False
 
-    x1, y1 = dis_width/2, dis_height/2 # Position initiale du serpent
+    x1, y1 = dis_width/2, dis_height/2
     x1_change, y1_change = 0, 0
 
     # Definition du serpent
     snake_list = []
     length_of_snake = 1
 
-    # Position de la nourriture
     foodx = round(random.randrange(0, dis_width - snake_block)/10)*10
     foody = round(random.randrange(0, dis_height - snake_block)/10)*10
 
     while not game_over:
         while game_close:
             dis.fill(blue)
-            message("Vous avez perdu ! Cliquer sur Q pour quitter et N pour jouer une nouvelle partie", red)	     
+            message("Vous avez perdu ! Taper sur 'q' pour quitter et 'n' pour jouer une nouvelle partie", red)
             pygame.display.update()
             for event in pygame.event.get():
                 if event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_q:
                         game_over = True
                         game_close = False
-                    if event.key == pygame.K_n:
+                    elif event.key == pygame.K_n:
                         gameLoop()
 
         for event in pygame.event.get():
@@ -519,28 +514,20 @@ def gameLoop():
                 elif event.key == pygame.K_DOWN:
                     x1_change, y1_change = 0, snake_block
 
-        # Sortie de l ecran
-        if x1 >= dis_width or x1 < 0 or y1 >= dis_height or y1 < 0:
-            game_close = True
+        x1, y1 = (x1 + x1_change) % dis_width, (y1 + y1_change) % dis_height
 
-        # Mise a jour de la position du serpent
-        x1, y1 = x1 + x1_change, y1 + y1_change
-
-        # Couleur du fond
         dis.fill(blue)
 
-
-        # Position de la nourriture serpent
         pygame.draw.rect(dis, green, [foodx, foody, snake_block, snake_block])
 
-	# Ajout de la position de la tete du serpent
+	    # Ajout de la position de la tete du serpent
         snake_head = (x1, y1)
         snake_list.append(snake_head)
         # Suppression si necessaire de la queue du serpent
         if len(snake_list) > length_of_snake:
             del snake_list[0]
 
-        # Test si le serpent rencontre son corps
+        # Teste si le serpent rencontre son corps
         for position in snake_list[:-1]:
             if position == snake_head:
                 game_close = True
@@ -564,7 +551,7 @@ def gameLoop():
 							     
     pygame.quit()
     quit()
-
+    
 gameLoop()
 </pre>
 
@@ -574,7 +561,6 @@ Exercices
 <ol>
   <li>Modifier la couleur de la tête du serpent.</li>
   <li>Modifier la rapidité du serpent.</li>
-  <li>Modifier le code pour que, si le serpent sort par la droite, il rentre par la gauche ; s'il sort par le haut, il rentre par le bas.</li>
 </ol>
 
 
@@ -583,16 +569,16 @@ Exercices
 </h1>
 
 Finalement, nous allons compter le nombre de nourritures ingurgitées par le serpent et afficher ce score dans un coin de l'écran.
-<pre>
-import pygame # Importe le module
-import time # Gestion du temps
+<pre id="09-serpent_score">
+import pygame
+import time
 import random
 
-pygame.init() # Initialise l environnement
+pygame.init()
 
-dis_width, dis_height = 800, 600 # Dimensions de l ecran
-snake_block = 10 # Taille du serpent
-snake_speed = 30 # Rapidite du serpent
+dis_width, dis_height = 800, 600
+snake_block = 10
+snake_speed = 15
 
 white = (255, 255, 255)
 yellow = (255, 255, 102)
@@ -601,12 +587,12 @@ red = (255, 0, 0)
 green = (0, 255, 0)
 blue = (0, 0, 225)
 
-dis = pygame.display.set_mode((dis_width, dis_height)) # Cree l ecran en precisant ses dimensions
-pygame.display.set_caption("Jeu du serpent") # Ajout d un titre
+dis = pygame.display.set_mode((dis_width, dis_height))
+pygame.display.set_caption("Jeu du serpent")
 
-clock = pygame.time.Clock() # Recupere l heure
+clock = pygame.time.Clock()
 
-font_style = pygame.font.SysFont(None, 25) # Choix de la fonte
+font_style = pygame.font.SysFont(None, 25)
 score_font = pygame.font.SysFont("comicsansms", 35) # Fonte du score
 
 def your_score(score):
@@ -620,39 +606,37 @@ def message(msg, color):
     color : couleur
     Affiche le message msg en couleur color"""
     mesg = font_style.render(msg, True, color)
-    # Recupere la taille du rectangle du texte
     text_rect = mesg.get_rect(center=(dis_width/2, dis_height/2))
-    # Positionne et affiche le texte
     dis.blit(mesg, text_rect)
 
 def our_snake(snake_block, snake_list):
     """snake_block : taille du serpent
     snake_list : positions du corps du serpent
     dessine le serpent sur l ecran"""
-    for i in range(0, len(snake_list)):
+    for i in range(0, len(snake_list)-1):
         x, y = snake_list[i]
         pygame.draw.rect(dis, black, [x, y, snake_block, snake_block])
+    x, y = snake_list[-1]
+    pygame.draw.rect(dis, red, [x, y, snake_block, snake_block])
 
 def gameLoop():
-    game_over = False # Vaut False tant que le jeu n est pas terminé
-    game_close = False # Vaut False tant qu on ne termine pas le jeu
+    game_over = False
+    game_close = False
 
-    x1, y1 = dis_width/2, dis_height/2 # Position initiale du serpent
+    x1, y1 = dis_width/2, dis_height/2
     x1_change, y1_change = 0, 0
 
-    # Definition du serpent
     snake_list = []
     length_of_snake = 1
     local_snake_speed = snake_speed
 
-    # Position de la nourriture
     foodx = round(random.randrange(0, dis_width - snake_block)/10)*10
     foody = round(random.randrange(0, dis_height - snake_block)/10)*10
 
     while not game_over:
         while game_close:
             dis.fill(blue)
-            message("Vous avez perdu ! Cliquer sur Q pour quitter et N pour jouer une nouvelle partie", red)	     
+            message("Vous avez perdu ! Taper sur 'q' pour quitter et 'n' pour jouer une nouvelle partie", red)	     
             pygame.display.update()
             for event in pygame.event.get():
                 if event.type == pygame.KEYDOWN:
@@ -675,44 +659,34 @@ def gameLoop():
                 elif event.key == pygame.K_DOWN:
                     x1_change, y1_change = 0, snake_block
 
-        # Sortie de l ecran
-        if x1 >= dis_width or x1 < 0 or y1 >= dis_height or y1 < 0:
-            game_close = True
 
-        # Mise a jour de la position du serpent
-        x1, y1 = x1 + x1_change, y1 + y1_change
+        x1, y1 = (x1 + x1_change) % dis_width, (y1 + y1_change) % dis_height
 
-        # Couleur du fond
+
         dis.fill(blue)
 
 
-        # Position de la nourriture serpent
         pygame.draw.rect(dis, green, [foodx, foody, snake_block, snake_block])
 
-	# Ajout de la position de la tete du serpent
         snake_head = (x1, y1)
         snake_list.append(snake_head)
-        # Suppression si necessaire de la queue du serpent
         if len(snake_list) > length_of_snake:
             del snake_list[0]
 
-        # Test si le serpent rencontre son corps
         for position in snake_list[:-1]:
             if position == snake_head:
                 game_close = True
 
-        # Dessin du serpent
         our_snake(snake_block, snake_list)
+        # Ajout du score
         your_score(length_of_snake - 1)
 
         pygame.display.update()
 
-        # Serpent mange la nourriture
         if x1 == foodx and y1 == foody:
             message("Miam!!", red)
             pygame.display.update()
             length_of_snake += 1
-            # Nouvelle nourriture
             foodx = round(random.randrange(0, dis_width - snake_block)/10)*10
             foody = round(random.randrange(0, dis_height - snake_block)/10)*10
             time.sleep(2)
@@ -730,9 +704,402 @@ gameLoop()
 </h2>
 <ol>
   <li>Modifier la couleur d'affichage du score.</li>
-  <li>Modifier le code pour que, si le serpent sort par la droite, il rentre par la gauche ; s'il sort par le haut, il rentre par le bas.</li>
   <li>Modifier le code pour que le serpent accélère dès qu'une pomme est mangée.</li>
   <li>Ajouter un obstacle au milieu de l'écran qui engendre la perte du serpent.</li>
+</ol>
+
+<h1 id="Obstacles">
+Ajout d'un obstacle
+</h1>
+
+Nous allons maintenant ajouter des obstacles. Un obstacle est un rectangle. Dans l'exemple, nous n'avons pris qu'un seul exemple, mais il est possible d'en définir plusieurs sur un même écran. La méthode <em>collidelist</em> renvoie -1 si le rectangle ne rencontre aucun obstacle et renvoie le numéro de l'obstacle qu'elle renvoie sinon. Nous prenons également garde à choisir une position de départ du serpent et une position pour la nourriture qui soit en dehors des obstacles.
+
+<pre id="10-serpent_obstacle">
+import pygame
+import time
+import random
+
+pygame.init()
+
+dis_width, dis_height = 800, 600
+snake_block = 10
+snake_speed = 15
+
+white = (255, 255, 255)
+yellow = (255, 255, 102)
+black = (0, 0, 0)
+red = (255, 0, 0)
+green = (100, 255, 100)
+blue = (0, 0, 225)
+grey = (50, 50, 50)
+dark_grey = (20, 20, 20)
+
+dis = pygame.display.set_mode((dis_width, dis_height))
+pygame.display.set_caption("Jeu du serpent")
+
+clock = pygame.time.Clock()
+
+font_style = pygame.font.SysFont(None, 25)
+score_font = pygame.font.SysFont("comicsansms", 35)
+
+def your_score(score):
+    """score : score du joueur
+    Affiche le score en haut a gauche de l ecran"""
+    value = score_font.render("Votre score : "+str(score), True, yellow)
+    dis.blit(value, [0, 0])
+
+def message(msg, color):
+    """msg : chaine de caracter
+    color : couleur
+    Affiche le message msg en couleur color"""
+    mesg = font_style.render(msg, True, color)
+    text_rect = mesg.get_rect(center=(dis_width/2, dis_height/2))
+    dis.blit(mesg, text_rect)
+
+def our_snake(snake_block, snake_list):
+    """snake_block : taille du serpent
+    snake_list : positions du corps du serpent
+    dessine le serpent sur l ecran"""
+    for i in range(0, len(snake_list)-1):
+        x, y = snake_list[i]
+        pygame.draw.rect(dis, black, [x, y, snake_block, snake_block])
+    x, y = snake_list[-1]
+    rect_head = pygame.draw.rect(dis, red, [x, y, snake_block, snake_block])
+    return rect_head
+
+# Fonction qui renvoie des positions aleatoires
+def random_position(dis_width, dis_height, snake_block):
+    """dis_width : largeur de l ecran
+    dis_height : hauteur de l ecran
+    snake_block : taille de la tete du serpent
+    Renvoie des coordonnees aleatoires a l interieur de l ecran"""
+    x = round(random.randrange(0, dis_width - snake_block)/10)*10
+    y = round(random.randrange(0, dis_height - snake_block)/10)*10
+    return x, y
+
+def gameLoop():
+    game_over = False
+    game_close = False
+
+    current_snake_speed = snake_speed
+
+    # Obstacle
+    obstacles = [pygame.draw.rect(dis, dark_grey, [dis_width/2, dis_height/2, dis_width/4, dis_width/4])]
+
+
+    # Choix d une position de depart en dehors des obstacles
+    x1, y1 = dis_width/2, dis_height/2
+    rect_head = pygame.draw.rect(dis, red,\
+                                 [x1, y1, snake_block, snake_block])
+    while rect_head.collidelist(obstacles) != -1:
+            x1, y1 = random_position(dis_width, dis_height, snake_block)
+            rect_head = pygame.draw.rect(dis, red,\
+                                 [x1, y1, snake_block, snake_block])
+
+    x1_change, y1_change = 0, 0
+
+    snake_list = []
+    length_of_snake = 1
+
+    # Choix d une nourriture en dehors des obstacles
+    foodx, foody = random_position(dis_width, dis_height, snake_block)
+    rect_food = pygame.draw.rect(dis, green, [foodx, foody, snake_block, snake_block])
+    while rect_food.collidelist(obstacles) != -1:
+            foodx, foody = random_position(dis_width, dis_height, snake_block)
+            rect_food = pygame.draw.rect(dis, green,\
+                                 [foodx, foody, snake_block, snake_block])
+ 
+
+    while not game_over:
+        while game_close:
+            dis.fill(grey)
+            message("Vous avez perdu ! Taper sur 'q' pour quitter et 'n' pour jouer une nouvelle partie", red)	     
+            pygame.display.update()
+            for event in pygame.event.get():
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_q:
+                        game_over = True
+                        game_close = False
+                    if event.key == pygame.K_n:
+                        gameLoop()
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                game_over = True
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_LEFT:
+                    x1_change, y1_change = -snake_block, 0
+                elif event.key == pygame.K_RIGHT:
+                    x1_change, y1_change = snake_block, 0
+                elif event.key == pygame.K_UP:
+                    x1_change, y1_change = 0, -snake_block
+                elif event.key == pygame.K_DOWN:
+                    x1_change, y1_change = 0, snake_block
+
+        dis.fill(grey)
+        rect_food = pygame.draw.rect(dis, green, [foodx, foody, snake_block, snake_block])
+        # Trace des obstacles
+        obstacles = [pygame.draw.rect(dis, dark_grey, [dis_width/2, dis_height/2, dis_width/4, dis_width/4])]
+        
+        x1, y1 = (x1 + x1_change) % dis_width, (y1 + y1_change) % dis_height
+
+        snake_head = (x1, y1)
+        snake_list.append(snake_head)
+        if len(snake_list) > length_of_snake:
+            del snake_list[0]
+
+        for position in snake_list[:-1]:
+            if position == snake_head:
+                game_close = True
+
+        # Nouvelle position de la tete
+        rect_head = our_snake(snake_block, snake_list)
+        your_score(length_of_snake - 1)
+                   
+        # Si la tete rencontre un obstacle
+        if rect_head.collidelist(obstacles) != -1:
+            game_close = True
+        
+        pygame.display.update()
+
+        if x1 == foodx and y1 == foody:
+            message("Miam!!", red)
+            pygame.display.update()
+            length_of_snake += 1
+
+            current_snake_speed += 1
+			# Choix d une nourriture en dehors des obstacles
+            foodx, foody = random_position(dis_width, dis_height, snake_block)
+            rect_food = pygame.draw.rect(dis, green, [foodx, foody, snake_block, snake_block])
+            while rect_food.collidelist(obstacles) != -1:
+                foodx, foody = random_position(dis_width, dis_height, snake_block)
+                rect_food = pygame.draw.rect(dis, green, [foodx, foody, snake_block, snake_block])
+
+            time.sleep(2)
+
+        clock.tick(current_snake_speed)
+        
+    pygame.quit()
+    quit()
+
+gameLoop()
+</pre>
+
+<Exercices>
+<ol>
+<li>Modifier l'obstacle existant.</li>
+<li>Ajouter plusieurs obstacles sur le même écran.</li>
+</ol>
+
+<h1 id="Niveaux">
+Ajout de niveaux
+</h1>
+
+Nous allons maintenant ajouter différents niveaux au jeu. Dans le code suivant, les niveaux seront passés tous les 3 points de score. La fonction <em>obstacles</em> permet, étant donné le niveau, de renvoyer une liste d'obstacles. Nous avons également modifié la mise à jour du corps du serpent qui n'est effectuée que lorsque le serpent change de position. Cela permet d'introduire une fonction pause avec la touche <em>K_SPACE</em>
+<pre id="11-serpent_niveaux">
+import pygame
+import time
+import random
+
+pygame.init()
+
+dis_width, dis_height = 800, 600
+snake_block = 10
+snake_speed = 15
+
+white = (255, 255, 255)
+yellow = (255, 255, 102)
+black = (0, 0, 0)
+red = (255, 0, 0)
+green = (100, 255, 100)
+blue = (0, 0, 225)
+grey = (50, 50, 50)
+dark_grey = (20, 20, 20)
+
+dis = pygame.display.set_mode((dis_width, dis_height))
+pygame.display.set_caption("Jeu du serpent")
+
+clock = pygame.time.Clock()
+
+font_style = pygame.font.SysFont(None, 25)
+score_font = pygame.font.SysFont("comicsansms", 35) # Fonte du score
+
+def your_score(score):
+    """score : score du joueur
+    Affiche le score en haut a gauche de l ecran"""
+    value = score_font.render("Votre score : "+str(score), True, yellow)
+    dis.blit(value, [0, 0])
+
+def message(msg, color):
+    """msg : chaine de caracter
+    color : couleur
+    Affiche le message msg en couleur color"""
+    mesg = font_style.render(msg, True, color)
+    text_rect = mesg.get_rect(center=(dis_width/2, dis_height/2))
+    dis.blit(mesg, text_rect)
+
+def our_snake(snake_block, snake_list):
+    """snake_block : taille du serpent
+    snake_list : positions du corps du serpent
+    dessine le serpent sur l ecran"""
+    for i in range(0, len(snake_list)-1):
+        x, y = snake_list[i]
+        pygame.draw.rect(dis, black, [x, y, snake_block, snake_block])
+    x, y = snake_list[-1]
+    rect_head = pygame.draw.rect(dis, red, [x, y, snake_block, snake_block])
+    return rect_head
+
+def random_position(dis_width, dis_height, snake_block):
+    x = round(random.randrange(0, dis_width - snake_block)/10)*10
+    y = round(random.randrange(0, dis_height - snake_block)/10)*10
+    return x, y
+
+def obstacles(level):
+    if level == 0:
+        return []
+    elif level == 1:
+        return [
+            pygame.draw.rect(dis, dark_grey, [dis_width/2, dis_height/2, dis_width/4, dis_width/4])]
+    elif level == 2:
+        return [
+            pygame.draw.rect(dis, dark_grey, [0, dis_height/2, dis_width, dis_width/4])]
+    else:
+            return [\
+                    pygame.draw.rect(dis, dark_grey, [dis_width/2, dis_height/2, dis_width/4, dis_width/4]),\
+                    pygame.draw.rect(dis, dark_grey, [dis_width/4, dis_height/4, dis_width/4, dis_width/4]),]
+
+def gameLoop():
+    game_over = False
+    game_close = False
+
+    level = 0
+    score = 0
+    length_of_snake = 1
+    current_snake_speed = snake_speed
+    
+    # Obstacles
+    rect_obs = obstacles(level)
+    
+    # Choix d une position de depart en dehors des obstacles
+    x1, y1 = dis_width/2, dis_height/2
+    rect_head = pygame.draw.rect(dis, red,\
+                                 [x1, y1, snake_block, snake_block])
+    while rect_head.collidelist(rect_obs) != -1:
+            x1, y1 = random_position(dis_width, dis_height, snake_block)
+            rect_head = pygame.draw.rect(dis, red,\
+                                 [x1, y1, snake_block, snake_block])
+
+    x1_change, y1_change = 0, 0
+    snake_list = [(x1, y1)]
+
+    # Choix d une nourriture en dehors des obstacles
+    foodx, foody = random_position(dis_width, dis_height, snake_block)
+    rect_food = pygame.draw.rect(dis, green, [foodx, foody, snake_block, snake_block])
+    while rect_food.collidelist(rect_obs) != -1:
+            foodx, foody = random_position(dis_width, dis_height, snake_block)
+            rect_food = pygame.draw.rect(dis, green,\
+                                 [foodx, foody, snake_block, snake_block])
+
+    while not game_over:
+        while game_close:
+            dis.fill(grey)
+            message("Vous avez perdu ! Taper sur 'q' pour quitter et 'n' pour jouer une nouvelle partie", red)	     
+            pygame.display.update()
+            for event in pygame.event.get():
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_q:
+                        game_over = True
+                        game_close = False
+                    if event.key == pygame.K_n:
+                        gameLoop()
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                game_over = True
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_LEFT:
+                    x1_change, y1_change = -snake_block, 0
+                elif event.key == pygame.K_RIGHT:
+                    x1_change, y1_change = snake_block, 0
+                elif event.key == pygame.K_UP:
+                    x1_change, y1_change = 0, -snake_block
+                elif event.key == pygame.K_DOWN:
+                    x1_change, y1_change = 0, snake_block
+                elif event.key == pygame.K_SPACE:
+                    x1_change, y1_change = 0, 0
+
+
+
+        dis.fill(grey)
+        rect_food = pygame.draw.rect(dis, green, [foodx, foody, snake_block, snake_block])
+
+        x1, y1 = (x1 + x1_change) % dis_width, (y1 + y1_change) % dis_height
+
+        # Trace des obstacles
+        rect_obs = obstacles(level)
+
+        if (x1_change, y1_change) != (0, 0):
+            snake_head = (x1, y1)
+            snake_list.append(snake_head)
+            if len(snake_list) > length_of_snake:
+                del snake_list[0]
+
+            for position in snake_list[:-1]:
+                if position == snake_head:
+                    game_close = True
+
+        rect_head = our_snake(snake_block, snake_list)
+        # Ajout du score
+        your_score(score)
+                   
+        rect_obs = obstacles(level)
+        
+        if rect_head.collidelist(rect_obs) != -1:
+            game_close = True
+        
+        pygame.display.update()
+
+        if x1 == foodx and y1 == foody:
+            message("Miam!!", red)
+            pygame.display.update()
+            length_of_snake += 1
+            score += 1
+            if score % 3 == 0:
+                level += 1
+                rect_obs = obstacles(level)
+
+            current_snake_speed += 1
+            # Nouvelle position de depart (eventuellement)
+            rect_head = pygame.draw.rect(dis, red,\
+                                 [x1, y1, snake_block, snake_block])
+            while rect_head.collidelist(rect_obs) != -1:
+                x1, y1 = random_position(dis_width, dis_height, snake_block)
+                rect_head = pygame.draw.rect(dis, red,\
+                                 [x1, y1, snake_block, snake_block])
+
+            # Nouvelle nourriture            
+            foodx, foody = random_position(dis_width, dis_height, snake_block)
+            rect_food = pygame.draw.rect(dis, green, [foodx, foody, snake_block, snake_block])
+            while rect_food.collidelist(rect_obs) != -1:
+                foodx, foody = random_position(dis_width, dis_height, snake_block)
+                rect_food = pygame.draw.rect(dis, green, [foodx, foody, snake_block, snake_block])
+
+            time.sleep(2)
+
+        clock.tick(current_snake_speed)
+        
+    pygame.quit()
+    quit()
+
+gameLoop()
+</pre>
+
+<h2>
+Exercices
+</h2>
+<ol>
+<li>Modifier le temps passé par niveau.</li>
+<li>Modifier et ajouter des niveaux.</li>
 </ol>
 
 <h1 id="Statistiques">
