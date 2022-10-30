@@ -29,3 +29,8 @@ calculs:
     docs:
      - titre: "Résumé"
        url: "ect2-cplts_e05.pdf"
+  - titre: "Fonctions Python"
+    docs:
+     - titre: "Formulaire"
+       url: "ect2-cplts_e06.pdf"
+       

@@ -759,7 +759,7 @@ def message(msg, color):
 def our_snake(snake_block, snake_list):
     """snake_block : taille du serpent
     snake_list : positions du corps du serpent
-    dessine le serpent sur l ecran"""
+    dessine le serpent sur l ecran et renvoie la position de la tete"""
     for i in range(0, len(snake_list)-1):
         x, y = snake_list[i]
         pygame.draw.rect(dis, black, [x, y, snake_block, snake_block])
@@ -941,7 +941,7 @@ def message(msg, color):
 def our_snake(snake_block, snake_list):
     """snake_block : taille du serpent
     snake_list : positions du corps du serpent
-    dessine le serpent sur l ecran"""
+    dessine le serpent sur l ecran et renvoie la position de la tete"""
     for i in range(0, len(snake_list)-1):
         x, y = snake_list[i]
         pygame.draw.rect(dis, black, [x, y, snake_block, snake_block])
@@ -950,11 +950,17 @@ def our_snake(snake_block, snake_list):
     return rect_head
 
 def random_position(dis_width, dis_height, snake_block):
+    """dis_width : largeur de l ecran
+    dis_height : hauteur de l ecran
+    snake_block : taille de la tete du serpent
+    Renvoie des coordonnees aleatoires a l interieur de l ecran"""
     x = round(random.randrange(0, dis_width - snake_block)/10)*10
     y = round(random.randrange(0, dis_height - snake_block)/10)*10
     return x, y
 
 def obstacles(level):
+    """level : entier designant le niveau du jeu
+    renvoie la liste d obstacles associee au niveau"""
     if level == 0:
         return []
     elif level == 1:
@@ -1098,10 +1104,330 @@ gameLoop()
 Exercices
 </h2>
 <ol>
-<li>Modifier le temps passé par niveau.</li>
+<li>Modifier le score nécessaire pour changer de niveau.</li>
+<li>Afficher le niveau sur l'écran.</li>
 <li>Modifier et ajouter des niveaux.</li>
 </ol>
 
 <h1 id="Statistiques">
   Enregistrement des statistiques
 </h1>
+
+Les statistiques des joueurs vont être stockées dans un fichier <em>JSON</em>. La commande <em>open</em> permet d'ouvrir le fichier, puis de lire son contenu via la commande <em>load</em> du module <em>json</em> et enfin de le stocker dans un dictionnaire. L'alternative <em>try</em> permet de créer un dictionnaire vide si le fichier de statistiques n'existe pas.
+
+Au démarrage du jeu, la fonction <em>ask_for_user()</em> affiche une invitation à saisir son nom. Le nom est validé en appuant sur la touche <em>K_RETURN</em>.
+
+À la fin de la partie, les données sont ensuite enregistrées en précisant la date et l'heure de la fin du jeu.
+
+Les statistiques peuvent ensuite être affichées en cliquant sur <em>K_s</em>
+
+<pre id="12-serpent_statistiques">
+import pygame
+import time
+import random
+import json # Permet de stocker les donnees au format json
+
+pygame.init() # Initialise l environnement
+
+# Chargement des statistiques
+try:
+    with open("snake_score.json", "r") as score_file:
+        # Charger le fichier s il existe sous forme de dictionnaire
+        data = json.load(score_file)
+except:
+    # Creation du dictionnaire vide si le fichier n existe pas
+    data = {}
+
+dis_width, dis_height = 800, 600 # Dimensions de l ecran
+snake_block = 10 # Taille du serpent
+snake_speed = 15 # Rapidite du serpent
+
+white = (255, 255, 255)
+yellow = (255, 255, 102)
+black = (0, 0, 0)
+red = (255, 0, 0)
+green = (0, 255, 0)
+blue = (0, 0, 225)
+grey = (50, 50, 50)
+dark_grey = (20, 20, 20)
+
+dis = pygame.display.set_mode((dis_width, dis_height))
+pygame.display.set_caption("Jeu du serpent")
+
+clock = pygame.time.Clock()
+
+msg_font_size = 25
+font_style = pygame.font.SysFont(None, msg_font_size)
+score_font_size = 35
+score_font = pygame.font.SysFont("comicsansms", score_font_size)
+
+
+def statistics(dis):
+    run = True
+    while run:
+        for event in pygame.event.get():
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_q:
+                    # Enregistrement des statistiques
+                    run = False
+                    game_over = True
+                    game_close = False
+                elif event.key == pygame.K_n:
+                    run = False
+                    gameLoop()
+        dis.fill(grey)
+        with open("snake_score.json", "r") as score_file:
+            # Charger le fichier s il existe sous forme de dictionnaire
+            data = json.load(score_file)
+        number_cols = len(data)
+        counter = 0
+        for nom in data:
+            x = counter * dis_width//number_cols
+            scores = sorted(data[nom], reverse=True)
+            v = score_font.render(nom, True, yellow)
+            dis.blit(v, [x, 0])
+            for (line, s) in enumerate(scores):
+                v = score_font.render(str(s[0]) + ", " + s[1].split(" ")[0], True, yellow)
+                dis.blit(v, [x, (line + 1) * msg_font_size])
+            counter += 1
+        pygame.display.flip()
+
+            
+def ask_for_user():
+    text = ""
+    input_active = True
+    font = pygame.font.SysFont(None, 35)
+    run = True
+    while run:
+        clock.tick(60)
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                run = False
+            elif event.type == pygame.MOUSEBUTTONDOWN:
+                input_active = True
+                text = ""
+            elif event.type == pygame.KEYDOWN and input_active:
+                if event.key == pygame.K_RETURN:
+                    input_active = False
+                    return text
+                elif event.key == pygame.K_BACKSPACE:
+                    text =  text[:-1]
+                else:
+                    text += event.unicode
+            
+            dis.fill(0)
+            text_surf = font.render("Utilisateur = "+text, True, (255, 0, 0))
+            dis.blit(text_surf, text_surf.get_rect(center = dis.get_rect().center))
+            pygame.display.flip()
+            
+
+def your_score(level, score):
+    """level : niveau du jeu
+    score : score du joueur
+    Affiche le niveau et le score en haut a gauche de l ecran"""
+    value = [score_font.render("Votre niveau : "+str(level), True, yellow),
+             score_font.render("Votre score : "+str(score), True, yellow)
+             ]
+    for line in range(len(value)):
+        dis.blit(value[line], (0,line*score_font_size))
+
+def message(msg, color):
+    """msg : chaine de caracter
+    color : couleur
+    Affiche le message msg en couleur color"""
+    mesg = []
+    for m in msg:
+        mesg.append(font_style.render(m, True, color))
+    text_rect = []
+    for line in range(len(mesg)):
+        text_rect.append(mesg[line].get_rect(center=(dis_width/2, dis_height/2 + line * msg_font_size)))
+    for line in range(len(text_rect)):
+        dis.blit(mesg[line], text_rect[line])
+
+
+        # dis.blit(text_rect[line], (0,line*score_font_size))
+    
+    # text_rect = 
+
+def our_snake(snake_block, snake_list):
+    """snake_block : taille du serpent
+    snake_list : positions du corps du serpent
+    dessine le serpent sur l ecran et renvoie la position de la tete"""
+    for i in range(0, len(snake_list)-1):
+        x, y = snake_list[i]
+        pygame.draw.rect(dis, black, [x, y, snake_block, snake_block])
+    x, y = snake_list[-1]
+    rect_head = pygame.draw.rect(dis, red, [x, y, snake_block, snake_block])
+    return rect_head
+
+def random_position(dis_width, dis_height, snake_block):
+    """dis_width : largeur de l ecran
+    dis_height : hauteur de l ecran
+    snake_block : taille de la tete du serpent
+    Renvoie des coordonnees aleatoires a l interieur de l ecran"""
+    x = round(random.randrange(0, dis_width - snake_block)/10)*10
+    y = round(random.randrange(0, dis_height - snake_block)/10)*10
+    return x, y
+
+def obstacles(level):
+    """level : entier designant le niveau du jeu
+    renvoie la liste d obstacles associee au niveau"""
+    if level == 0:
+        return []
+    elif level == 1:
+        return [
+            pygame.draw.rect(dis, dark_grey, [dis_width/2, dis_height/2, dis_width/4, dis_width/4])]
+    elif level == 2:
+        return [
+            pygame.draw.rect(dis, dark_grey, [0, dis_height/2, dis_width, dis_width/4])]
+    else:
+            return [\
+                    pygame.draw.rect(dis, dark_grey, [dis_width/2, dis_height/2, dis_width/4, dis_width/4]),\
+                    pygame.draw.rect(dis, dark_grey, [dis_width/4, dis_height/4, dis_width/4, dis_width/4]),]
+
+        
+def gameLoop():
+    # Demande de l utilisateur et creation de sa liste de scores
+    user = ask_for_user()
+    if user not in data:
+        data[user] = []
+
+    game_over = False
+    game_close = False
+
+    level = 0
+    score = 0
+    length_of_snake = 1
+    current_snake_speed = snake_speed
+
+    rect_obs = obstacles(level)
+    
+    x1, y1 = dis_width/2, dis_height/2
+    rect_head = pygame.draw.rect(dis, red,\
+                                 [x1, y1, snake_block, snake_block])
+    while rect_head.collidelist(rect_obs) != -1:
+            x1, y1 = random_position(dis_width, dis_height, snake_block)
+            rect_head = pygame.draw.rect(dis, red,\
+                                 [x1, y1, snake_block, snake_block])
+
+    x1_change, y1_change = 0, 0
+    snake_list = [(x1, y1)]
+
+    foodx, foody = random_position(dis_width, dis_height, snake_block)
+    rect_food = pygame.draw.rect(dis, green, [foodx, foody, snake_block, snake_block])
+    while rect_food.collidelist(rect_obs) != -1:
+            foodx, foody = random_position(dis_width, dis_height, snake_block)
+            rect_food = pygame.draw.rect(dis, green,\
+                                 [foodx, foody, snake_block, snake_block])
+
+    while not game_over:
+        while game_close:
+            dis.fill(grey)
+            message(["Vous avez perdu !",\
+                     "`q` : quitter",\
+                     "`n` : nouvelle partie",\
+                     "`s` : statistiques"], red)	     
+            pygame.display.update()
+            # Enregistrement des statistiques
+            t = time.localtime()
+            current_time = time.strftime("%Y-%-m-%-d %H:%M:%S", t)
+
+            for event in pygame.event.get():
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_q:
+                        # Enregistrement des statistiques
+                        data[user].append((score, current_time))
+                        with open("snake_score.json", "w") as score_file:
+                            json.dump(data, score_file)
+                        game_over = True
+                        game_close = False
+                    elif event.key == pygame.K_n:
+                         # Enregistrement des statistiques
+                        data[user].append((score, current_time))
+                        with open("snake_score.json", "w") as score_file:
+                            json.dump(data, score_file)
+                        gameLoop()
+                    elif event.key == pygame.K_s:
+                        # Enregistrement des statistiques
+                        data[user].append((score, current_time))
+                        with open("snake_score.json", "w") as score_file:
+                            json.dump(data, score_file)
+                        statistics(dis)
+                        
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                game_over = True
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_LEFT:
+                    x1_change, y1_change = -snake_block, 0
+                elif event.key == pygame.K_RIGHT:
+                    x1_change, y1_change = snake_block, 0
+                elif event.key == pygame.K_UP:
+                    x1_change, y1_change = 0, -snake_block
+                elif event.key == pygame.K_DOWN:
+                    x1_change, y1_change = 0, snake_block
+                elif event.key == pygame.K_SPACE:
+                    x1_change, y1_change = 0, 0
+
+        dis.fill(grey)
+        rect_food = pygame.draw.rect(dis, green, [foodx, foody, snake_block, snake_block])
+
+        x1, y1 = (x1 + x1_change) % dis_width, (y1 + y1_change) % dis_height
+
+        rect_obs = obstacles(level)
+
+        if (x1_change, y1_change) != (0, 0):
+            snake_head = (x1, y1)
+            snake_list.append(snake_head)
+            if len(snake_list) > length_of_snake:
+                del snake_list[0]
+
+            for position in snake_list[:-1]:
+                if position == snake_head:
+                    game_close = True
+
+        rect_head = our_snake(snake_block, snake_list)
+
+        your_score(level, score)
+                   
+        rect_obs = obstacles(level)
+        
+        if rect_head.collidelist(rect_obs) != -1:
+            game_close = True
+        
+        pygame.display.update()
+
+        if x1 == foodx and y1 == foody:
+            message(["Miam!!"], red)
+            pygame.display.update()
+            length_of_snake += 1
+            score += 1
+            if score % 3 == 0:
+                level += 1
+                rect_obs = obstacles(level)
+
+            current_snake_speed += 1
+
+            rect_head = pygame.draw.rect(dis, red,\
+                                 [x1, y1, snake_block, snake_block])
+            while rect_head.collidelist(rect_obs) != -1:
+                x1, y1 = random_position(dis_width, dis_height, snake_block)
+                rect_head = pygame.draw.rect(dis, red,\
+                                 [x1, y1, snake_block, snake_block])
+
+
+            foodx, foody = random_position(dis_width, dis_height, snake_block)
+            rect_food = pygame.draw.rect(dis, green, [foodx, foody, snake_block, snake_block])
+            while rect_food.collidelist(rect_obs) != -1:
+                foodx, foody = random_position(dis_width, dis_height, snake_block)
+                rect_food = pygame.draw.rect(dis, green, [foodx, foody, snake_block, snake_block])
+
+            time.sleep(2)
+
+        clock.tick(current_snake_speed)
+							     
+    pygame.quit()
+    quit()
+
+gameLoop()
+</pre>

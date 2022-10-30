@@ -10,3 +10,7 @@ chapitres:
   - titre: "Matrices inversibles"
     chapitre: true
     td: true
+
+  - titre: "Variables aléatoires discrètes finies"
+    chapitre: true
+    td: true
