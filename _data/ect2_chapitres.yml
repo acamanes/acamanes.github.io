@@ -14,3 +14,7 @@ chapitres:
   - titre: "Variables aléatoires discrètes finies"
     chapitre: true
     td: true
+
+  - titre: "Calculs de sommes, Séries numériques"
+    chapitre: true
+    td: true

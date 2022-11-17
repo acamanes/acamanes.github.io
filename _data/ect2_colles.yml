@@ -12,3 +12,5 @@ semaines:
   - holidays: true
     title : "Concours Blanc"
   - title: "Matrices inversibles"
+  - title: "Variables aléatoires discrètes finies"
+  - title: "Variables aléatoires discrètes finies (couples)"

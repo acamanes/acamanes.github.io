@@ -8,3 +8,9 @@ chapitres:
   - titre: "Intégration"
     chapitre: true
     td: true
+  - titre: "Espaces vectoriels"
+    chapitre: true
+    td: true
+  - titre: "Applications linéaires"
+    chapitre: true
+    td: true
