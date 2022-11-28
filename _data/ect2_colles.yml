@@ -14,3 +14,9 @@ semaines:
   - title: "Matrices inversibles"
   - title: "Variables aléatoires discrètes finies"
   - title: "Variables aléatoires discrètes finies (couples)"
+  - title: "Variables aléatoires discrètes finies (couples)"
+  - title: "Sommes et Séries"
+  - holidays: true
+    title : "Vacances de Noël"
+  - holidays: true
+  - title: "Sommes et Séries"
