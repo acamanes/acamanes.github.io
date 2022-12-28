@@ -12,3 +12,11 @@ semaines:
   - title: "Intégration"
   - title: "Intégration"
   - title: "Espaces vectoriels"
+  - holidays: true
+    title : "Partiels"
+  - holidays: true
+  - title: "Algèbre linéaire"
+  - holidays: true
+    title : "Vacances de Noël"
+  - holidays: true
+  - title: "Algèbre linéaire"

@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Articles Scientifiques
+title: Livres & Articles
 permalink: /diffusion/articles.html
 toc: true
 toc_sticky: true
@@ -21,6 +21,22 @@ sidebar:
 </nobr>
 </center>
 
+
+<h2> Livres </h2>
+{% for chap in site.data.diffusion_articles.livres %}
+<h3 id="#docs_{{cptdoc}}">
+<a href="{{chap.url}}">
+{{chap.titre}}</a>
+</h3>
+{% if chap.journal %}
+<b><i>{{chap.journal}}</i></b>
+{% endif %}
+{{chap.presentation}}
+{% assign cptdoc = cptdoc  | plus:1 %}
+{% endfor %}
+
+
+<h2> Articles </h2>
 {% for chap in site.data.diffusion_articles.articles %}
 <h3 id="#docs_{{cptdoc}}">
 {% if chap.fichier %}

@@ -1,0 +1,53 @@
+---
+layout: single
+title: Les Colles en PSI
+permalink: /psi/colles.html
+toc: true
+toc_sticky: true
+toc_label: "Au menu"
+toc_levels: 1..6
+---
+
+<ol>
+{% for s in site.data.colles %}
+{% if s.holidays != true %}
+<li>
+<span id="affiche_date"></span>
+<a href="./psi_doc/colle{{s.number}}.pdf">{{s.title}}</a>
+</li>
+{% else %}
+{{s.title}}
+{% endif %}
+{% endfor %}
+</ol>
+
+<h3>The toDateString() method converts a date to a date string:</h3>
+<p id="demo1"></p>
+
+<h3>The toLocaleTimeString() method outputs formatted time:</h3>
+<p id="demo2"></p>
+
+<h3>The getFullYear() method outputs the year:</h3>
+<p id="demo3"></p>
+
+<script>
+// create date object
+var d = new Date(2021, 09, 20);
+
+<!-- function affiche_date() {d.getDate() + '-' + d.getMonth() + '-' + d.getFullYear()}; -->
+
+
+// use toDateString() to output formatted date
+document.getElementById("affiche_date").textContent = 
+d.getDate() + '-' + d.getMonth() + '-' + d.getFullYear();
+
+// use toLocaleTimeString() to output formatted time
+document.getElementById("demo2").innerHTML = d.toLocaleTimeString();
+
+// use getFullYear() to output year
+document.getElementById("demo3").innerHTML = d.getFullYear();
+
+
+function addweek(date, i){
+return date + i * 7};
+</script>
