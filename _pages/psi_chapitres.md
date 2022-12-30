@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Chapitres en PSI"
+title: "Cours & Exercices en PSI"
 permalink: /psi/chapitres.html
 toc: true
 toc_sticky: true

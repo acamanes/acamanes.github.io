@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Chapitres en D2"
+title: "Cours & Exercices en D2"
 permalink: /d2/chapitres.html
 toc: true
 toc_sticky: true

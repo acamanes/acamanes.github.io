@@ -17,8 +17,13 @@ $text-color: #e5eaed;
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
-h2 {color:#ccc4cd;}
-h3 {color:#9fb1b2;}
+h1 {text-align:center;
+    font-size:1.25em;
+    color:#ccc4cd;}
+h2 {color:#ccc4cd;
+    font-size:1.15em;}
+h3 {color:#9fb1b2;
+    font-size:1.1em;}
 
 a.ref {text-decoration: none;
        color:#a67c81;

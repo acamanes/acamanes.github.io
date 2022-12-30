@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Chapitres en ECT 2"
+title: "Cours & Exercices en ECT 2"
 permalink: /ect2/chapitres.html
 toc: true
 toc_sticky: true
