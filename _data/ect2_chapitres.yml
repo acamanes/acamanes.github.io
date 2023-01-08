@@ -22,3 +22,7 @@ chapitres:
   - titre: "Variables aléatoires discrètes infinies"
     chapitre: true
     td: true
+
+  - titre: "Réduction"
+    chapitre: true
+    td: true

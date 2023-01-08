@@ -20,3 +20,5 @@ semaines:
     title : "Vacances de Noël"
   - holidays: true
   - title: "Algèbre linéaire"
+  - title: "Probabilités"
+  - title: "Probabilités & Variables aléatoires discrètes"
