@@ -20,3 +20,6 @@ chapitres:
   - titre: "Variables aléatoires discrètes"
     chapitre: true
     td: true
+  - titre: "Estimation"
+    chapitre: true
+    td: true
