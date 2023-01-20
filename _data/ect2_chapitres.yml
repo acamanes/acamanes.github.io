@@ -26,3 +26,7 @@ chapitres:
   - titre: "Réduction"
     chapitre: true
     td: true
+    
+  - titre: "Intégrales généralisées"
+    chapitre: true
+    td: true

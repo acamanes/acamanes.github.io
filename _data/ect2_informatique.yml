@@ -13,3 +13,5 @@ presentations:
    td: true
  - titre: "Suites de réels"
    td: true
+ - titre: "Bases de données (Représentation et Premières requêtes)"
+   td: true
