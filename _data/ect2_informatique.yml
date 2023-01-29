@@ -15,3 +15,5 @@ presentations:
    td: true
  - titre: "Bases de données (Représentation et Premières requêtes)"
    td: true
+ - titre: "Bases de données (Requêtes avancées et Modifications sur les tables)"
+   td: true

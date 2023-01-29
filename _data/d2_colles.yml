@@ -19,6 +19,8 @@ semaines:
   - holidays: true
     title : "Vacances de Noël"
   - holidays: true
+  - holidays: true
   - title: "Algèbre linéaire"
   - title: "Probabilités"
   - title: "Probabilités & Variables aléatoires discrètes"
+  - title: "Variables aléatoires discrètes"

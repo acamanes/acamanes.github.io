@@ -30,3 +30,7 @@ chapitres:
   - titre: "Intégrales généralisées"
     chapitre: true
     td: true
+        
+  - titre: "Variables aléatoires à densité"
+    chapitre: true
+    td: true
