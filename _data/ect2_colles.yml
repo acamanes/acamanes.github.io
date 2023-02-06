@@ -24,3 +24,10 @@ semaines:
   - title: "Variables aléatoires discrètes infinies"
   - title: "Réduction"
   - title: "Réduction"
+  - title: "Intégrales généralisées"
+  - title: "Intégrales généralisées"
+  - holidays: true
+    title : "Vacances d'hiver"
+  - holidays: true
+  - holidays: true
+    title : "Concours Blanc"
