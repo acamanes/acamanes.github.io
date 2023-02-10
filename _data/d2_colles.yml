@@ -25,3 +25,7 @@ semaines:
   - title: "Probabilités & Variables aléatoires discrètes"
   - title: "Variables aléatoires discrètes"
   - title: "Probabilités, Variables aléatoires discrètes, Estimation"
+  - title: "Probabilités, Variables aléatoires discrètes, Estimation, Variables aléatoires à densité"
+  - holidays: true
+    title : "Vacances d'hiver"
+  - holidays: true
