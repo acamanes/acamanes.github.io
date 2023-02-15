@@ -34,3 +34,7 @@ chapitres:
   - titre: "Variables aléatoires à densité"
     chapitre: true
     td: true
+
+  - titre: "Convergence, Estimation"
+    chapitre: true
+    td: true

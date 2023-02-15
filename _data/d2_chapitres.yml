@@ -26,3 +26,6 @@ chapitres:
   - titre: "Variables aléatoires à densité"
     chapitre: true
     td: true
+  - titre: "Réduction"
+    chapitre: true
+    td: true
