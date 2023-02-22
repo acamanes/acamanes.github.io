@@ -29,3 +29,11 @@ chapitres:
   - titre: "Réduction"
     chapitre: true
     td: true
+  - titre: "Fonctions de plusieurs variables"
+    chapitre: false
+    td: false
+  - titre: "Statistiques descriptives"
+    chapitre: false
+    td: false
+  - titre: "Relations binaires (Résumé de cours)"
+    chapitre: true

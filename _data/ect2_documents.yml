@@ -17,20 +17,28 @@ calculs:
        url: "ect2-cplts_e02.pdf"
      - titre: "Propositions de corrigés"
        url: "ect2-cplts_s02.pdf"
-  - titre: "Primitives"
+  - titre: "Dérivées"
     docs:
      - titre: "Règles de calculs"
        url: "ect2-cplts_e03.pdf"
+  - titre: "Primitives"
+    docs:
+     - titre: "Règles de calculs"
+       url: "ect2-cplts_e04.pdf"
   - titre: "Calcul matriciel"
     docs:
      - titre: "Résumé"
-       url: "ect2-cplts_e04.pdf"
+       url: "ect2-cplts_e05.pdf"
   - titre: "Probabilités sur un ensemble fini"
     docs:
      - titre: "Résumé"
-       url: "ect2-cplts_e05.pdf"
+       url: "ect2-cplts_e06.pdf"
+  - titre: "Études de suites"
+    docs:
+     - titre: "Résumé"
+       url: "ect2-cplts_e07.pdf"
   - titre: "Fonctions Python"
     docs:
      - titre: "Formulaire"
-       url: "ect2-cplts_e06.pdf"
+       url: "ect2-cplts_e08.pdf"
        
