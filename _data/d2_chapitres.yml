@@ -30,10 +30,10 @@ chapitres:
     chapitre: true
     td: true
   - titre: "Fonctions de plusieurs variables"
-    chapitre: false
+    chapitre: true
     td: false
   - titre: "Statistiques descriptives"
-    chapitre: false
-    td: false
-  - titre: "Relations binaires (Résumé de cours)"
+    chapitre: true
+    td: true
+  - titre: "Relations binaires"
     chapitre: true
