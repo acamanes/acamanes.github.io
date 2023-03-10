@@ -31,7 +31,7 @@ chapitres:
     td: true
   - titre: "Fonctions de plusieurs variables"
     chapitre: true
-    td: false
+    td: true
   - titre: "Statistiques descriptives"
     chapitre: true
     td: true
