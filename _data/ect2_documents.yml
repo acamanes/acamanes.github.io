@@ -37,6 +37,10 @@ calculs:
     docs:
      - titre: "Résumé"
        url: "ect2-cplts_e07.pdf"
+  - titre: "Fonctions"
+    docs:
+     - titre: "Résumé (illustrations à venir...)"
+       url: "ect2-cplts_e08.pdf"
   - titre: "Fonctions Python"
     docs:
      - titre: "Formulaire"
