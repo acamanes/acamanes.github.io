@@ -37,7 +37,10 @@ sidebar:
 {% endif %}</h3>
 <!-- <a href="./ect2_doc/info_option/oi-p_{{np}}.pdf">Présentation</a>. -->
 {% if chap.td %}
-<a href="./ect2_doc/ect2-tp_e{{np}}.pdf">T.D.</a>.
+<a href="./ect2_doc/ect2-tp_e{{np}}.pdf">T.D.</a>
+{% if chap.sol %}
+, <a href="./ect2_doc/ect2-tp_s{{np}}.pdf">correction</a>
+{% endif %}.
 {% endif %}
 </li>
 {% assign cptnp = cptnp | plus:1 %}
