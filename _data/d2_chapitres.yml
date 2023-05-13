@@ -37,3 +37,6 @@ chapitres:
     td: true
   - titre: "Relations binaires"
     chapitre: true
+  - titre: "Nombres complexes"
+    chapitre: true
+    td: true
