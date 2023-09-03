@@ -1,0 +1,36 @@
+startdate: "2021-09-19 12:00"
+
+semaines:
+  - title: "Algèbre linéaire"
+  - title: "Algèbre linéaire"
+  - title: "Intégration sur un segment"
+  - title: "Intégration sur un segment"
+  - title: "Matrices inversibles"
+  - holidays: true
+    title : "Vacances de la Toussaint"
+  - holidays: true
+  - holidays: true
+    title : "Concours Blanc"
+  - title: "Matrices inversibles"
+  - title: "Variables aléatoires discrètes finies"
+  - title: "Variables aléatoires discrètes finies (couples)"
+  - title: "Variables aléatoires discrètes finies (couples)"
+  - title: "Sommes et Séries"
+  - holidays: true
+    title : "Vacances de Noël"
+  - holidays: true
+  - title: "Sommes et Séries"
+  - title: "Variables aléatoires discrètes infinies"
+  - title: "Variables aléatoires discrètes infinies"
+  - title: "Réduction"
+  - title: "Réduction"
+  - title: "Intégrales généralisées"
+  - title: "Intégrales généralisées"
+  - holidays: true
+    title : "Vacances d'hiver"
+  - holidays: true
+  - title: "Variables aléatoires à densité"
+  - holidays: true
+    title : "Concours Blanc"
+  - title: "Variables aléatoires à densité"
+  - title: "Programme libre"

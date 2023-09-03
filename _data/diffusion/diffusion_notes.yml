@@ -1,0 +1,40 @@
+- titre: "Le théorème de Banach-Kuratowski"
+  presentation: |
+    Pourquoi ne peut-on pas prendre la tribu discrète dans le jeu de pile ou face ? Relecture de l'article initial.
+  fichier: "banach_kuratowski.pdf"
+
+- titre: "Polymères dirigés et Réseaux conducteurs de chaleur"
+  presentation: |
+      Présentation des résultats obtenus dans le cadre de l'étude probabiliste de deux modèles de physique statistique.
+  journal: "Manuscrit de Thèse."
+  fichier: "these_camanes.pdf"
+
+- titre: "Le mouvement brownien (II)"
+  presentation: |
+    Le mouvement brownien comme limite de marches aléatoires : le théorème de Donsker.
+  journal: "Notes d'exposé au séminaire des doctorants."
+  fichier: "brownien_donsker.pdf"
+
+- titre: "Le mouvement brownien (I)"
+  presentation: |
+    Quelques propriétés et une construction du mouvement brownien : le théorème de Wiener.
+  journal: "Notes d'exposé au séminaire des doctorants"
+  fichier: "brownien_l2.pdf"
+
+- titre: "Le théorème de Wigner"
+  presentation: |
+    Comportement du spectre de certaines matrices aléatoires dont la taille tend vers l'infini : le théorème de Wigner.
+  journal: "Notes d'exposé au séminaire des doctorants."
+  fichier: "wigner.pdf"
+
+- titre: "Récurrence des marches aléatoires"
+  presentation: |
+    Pourquoi un homme ivre est presque sûr de rentrer chez lui alors que ce n'est pas le cas d'un oiseau éméché ?
+  journal: ""
+  fichier: "expose_recurrence_clemenceau.pdf"
+
+- titre: "La conjecture de Parisi"
+  presentation: |
+    Travail sur un article de M. Talagrand.
+  journal: "Mémoire de DEA."
+  fichier: "master_camanes.pdf"

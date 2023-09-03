@@ -1,0 +1,29 @@
+presentations:
+ - titre: "Lecture de code : Variables & Fonctions"
+   td: true
+   sol: true
+ - titre: "Lecture de code : Structures de contrôle"
+   td: true
+   sol: true
+ - titre: "Modules : numpy & matplotlib.pyplot"
+   td: true
+   sol: true
+ - titre: "Fonctions & Suites"
+   td: true
+   sol: true
+ - titre: "Matrices & Statistiques"
+   td: true
+   sol: true
+ - titre: "Variables aléatoires discrètes"
+   td: true
+   sol: true
+ - titre: "Suites de réels"
+   td: true
+   sol: true
+ - titre: "Bases de données (Représentation et Premières requêtes)"
+   td: true
+ - titre: "Bases de données (Requêtes avancées et Modifications sur les tables)"
+   td: true
+ - titre: "Exercice de révision"
+   td: true
+   sol: true

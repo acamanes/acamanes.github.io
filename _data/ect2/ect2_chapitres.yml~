@@ -1,0 +1,90 @@
+chapitres:
+  - titre: "Calculs algébriques"
+    chapitre: false
+    td: false
+    objectifs: false
+    complements:
+     - titre: "Résumé & Exercices"
+       sol: true
+
+  - titre: "Calculs de puissances"
+    chapitre: false
+    td: false
+    objectifs: false
+    complements:
+     - titre: "Résumé & Exercice"
+       sol: true
+
+  - titre: "Récurrences"
+    chapitre: false
+    td: false
+    objectifs: false
+    complements:
+     - titre: "Résumé & Exercices"
+       sol: true
+
+  - titre: "Etudes de fonctions"
+    chapitre: false
+    td: true
+    objectifs: true
+    complements:
+     - titre: "Résumé"
+     - titre: "Stratégies de dérivation"
+       sol: true
+     - titre: "Stratégies de primitivation"
+    
+  - titre: "Calcul matriciel"
+    chapitre: true
+    td: true
+    objectifs: true
+
+  - titre: "Intégrale sur un segment"
+    chapitre: true
+    td: true
+    objectifs: true
+
+  - titre: "Matrices inversibles"
+    chapitre: true
+    td: true
+    objectifs: true
+    complements:
+     - titre: "Résumé"
+
+  - titre: "Variables aléatoires discrètes finies"
+    chapitre: true
+    td: true
+    objectifs: true
+    complements:
+     - titre: "Probabilités sur un ensemble fini"
+
+  - titre: "Calculs de sommes, Séries numériques"
+    chapitre: true
+    td: true
+    objectifs: true
+    complements:
+     - titre: "Études de suites"
+
+  - titre: "Variables aléatoires discrètes infinies"
+    chapitre: true
+    td: true
+    objectifs: true
+
+  - titre: "Réduction"
+    chapitre: true
+    td: true
+    objectifs: true
+    
+  - titre: "Intégrales généralisées"
+    chapitre: true
+    td: true
+    objectifs: true
+        
+  - titre: "Variables aléatoires à densité"
+    chapitre: true
+    td: true
+    objectifs: true
+
+  - titre: "Convergence, Estimation"
+    chapitre: true
+    td: true
+    objectifs: true
