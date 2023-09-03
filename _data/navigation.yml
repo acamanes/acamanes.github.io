@@ -8,9 +8,7 @@ main:
   - title: "MPSI"
     url: /mpsi/option_informatique.html
   - title: "Diffusion Scientifique"
-    url: /diffusion/ateliers.html
-  - title: "Liens"
-    url: /liens
+    url: /diffusion/notes.html
 
 ect2:
   - title: "Chapitres"
@@ -53,11 +51,8 @@ mpsi:
 
 diffusion:
   - title: "Articles"
-    url: "/diffusion/articles.html"
+    url: "/diffusion/notes.html"
+  - title: "Publications"
+    url: "/diffusion/publications.html"
   - title: "Ateliers"
     url: "/diffusion/ateliers.html"
-  - title: "Université"
-    url: "/diffusion/universite.html"
-
-liens:
-  - title: "Liens"

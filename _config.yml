@@ -29,19 +29,30 @@ encoding	: "utf-8"
 locale: "fr-FR"
 
 # Definitions du site
-title	 	   : "Autour des Maths" # "Pi Rho Maths"
-email		   : alain.camanes@free.fr
-description	   : "Ce site contient différents documents de travail à destination des étudiants de CPGE. Vous trouverez également les documents utilisés lors de mes années à l'Université de Nantes."
+title	 	   : "Autour des Maths"
+description	   : "Ce site contient différents documents de travail à destination des étudiants de CPGE ou autour de la diffusion scientifique."
 url	     	   : http://acamanes.github.io
-name		   : Alain Camanes
 logo		   : /_pages/images/ico.png
+name : "Alain Camanes"
+location : "Toulouse" 
+contact		   : alain.camanes@free.fr
 
+author:
+  name: "Alain Camanes"
+  links:
+    - label: "Email"
+      icon: "fas fa-envelope-square"
+      url: "mailto:alain.camanes@free.fr"
+
+atom_feed:
+  hide: true
+  
 include:
   - _pages
 
 plugins:
-  - jekyll-feed
   - jekyll-include-cache
+
 
 
 # Exclude from processing.
