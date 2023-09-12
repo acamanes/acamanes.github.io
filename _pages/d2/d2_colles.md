@@ -13,20 +13,12 @@ sidebar:
 
 {% assign week = 7 | times: 86400 %}
 {% assign quatrejours = 4 | times: 86400 %}
-{% assign debutsemaine = site.data.d2_colles.startdate | date : "%s" %}
-{% assign finsemaine = site.data.d2_colles.startdate | date : "%s" | plus: quatrejours %}
+{% assign debutsemaine = site.data.d2.d2_colles.startdate | date : "%s" %}
+{% assign finsemaine = site.data.d2.d2_colles.startdate | date : "%s" | plus: quatrejours %}
 {% assign number = 1 %}
 
-<center>
-<nobr>
-{% for r in site.data.d2_colles.ref %}
-<a href="./d2_doc/ref/{{r.ref}}" class="ref">&Sigma;</a>
-{% endfor %}
-</nobr>
-</center>
-
 <ol>
-{% for s in site.data.d2_colles.semaines %}
+{% for s in site.data.d2.d2_colles.semaines %}
 {% if number < 10 %}
 {% assign cpt = "0" | append:number %}
 {% else %}
@@ -36,7 +28,7 @@ sidebar:
 {% if s.holidays != true %}
 <li>
 <h6 id="colle_{{cpt}}">{{debutsemaine| date:"%d/%m"}}-{{finsemaine| date:"%d/%m"}}</h6>
-<a href="./d2_doc/d2-colles{{cpt}}.pdf">{{s.title}}</a>
+<a href="./d2-colles{{cpt}}.pdf">{{s.title}}</a>
 </li>
 {% assign number = number | plus: 1 %}
 {% else %}

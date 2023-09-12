@@ -1,16 +1,18 @@
-startdate: "2021-09-19 12:00"
+startdate: "2023-09-18 12:00"
 
 semaines:
-  - title: "Algèbre linéaire"
-  - title: "Algèbre linéaire"
+  - title: "Étude de fonctions"
+  - title: "Étude de fonctions"
+  - title: "Calcul matriciel"
+  - title: "Calcul matriciel"
   - title: "Intégration sur un segment"
-  - title: "Intégration sur un segment"
-  - title: "Matrices inversibles"
   - holidays: true
     title : "Vacances de la Toussaint"
   - holidays: true
   - holidays: true
     title : "Concours Blanc"
+  - title: "Intégration sur un segment"
+  - title: "Matrices inversibles"
   - title: "Matrices inversibles"
   - title: "Variables aléatoires discrètes finies"
   - title: "Variables aléatoires discrètes finies (couples)"

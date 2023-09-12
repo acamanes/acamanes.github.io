@@ -1,13 +1,14 @@
-startdate: "2021-09-19 12:00"
+startdate: "2023-09-18 12:00"
 
 semaines:
-  - title: "Analyse réelle"
-  - title: "Analyse réelle"
+  - title: "Analyse réelle (Suites)"
+  - title: "Analyse réelle (Suites & Fonctions)"
+  - title: "Analyse réelle (Suites & Fonctions)"
   - title: "Dénombrement"
   - title: "Dénombrement"
-  - title: "Intégration sur un segment"
   - holidays: true
     title: "Vacances de Toussaint"
+  - title: "Intégration sur un segment"
   - holidays: true
   - title: "Intégration"
   - title: "Intégration"
