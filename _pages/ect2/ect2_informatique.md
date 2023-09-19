@@ -13,19 +13,8 @@ sidebar:
 
 {% assign cptnp = 1 %}
 
-<center>
-<nobr>
-{% for r in site.data.ect2_informatique.ref %}
-<a href="./ect2_doc/ref/{{r.ref}}" class="ref">&Sigma;</a>
-{% endfor %}
-</nobr>
-</center>
-
-
-<!-- <a href="{{site.data.psi_info.formulaire}}">Formulaire</a> disponible lors des Oraux de Centrale. -->
-
 <ul start="0" style="list-style-type:none">
-{% for chap in site.data.ect2_informatique.presentations %}
+{% for chap in site.data.ect2.ect2_informatique.presentations %}
 {% if cptnp < 10 %}
 {% assign np = "0" | append:cptnp %}
 {% else %}
@@ -33,13 +22,12 @@ sidebar:
 {% endif %}
 <li> <h3 id="#p_{{np}}">{{chap.titre}}
 {% if chap.ref %}
-<a href="./ect2_doc/ref/{{chap.ref}}" class="ref">&Sigma;</a>
+<a href="./ref/{{chap.ref}}" class="ref">&Sigma;</a>
 {% endif %}</h3>
-<!-- <a href="./ect2_doc/info_option/oi-p_{{np}}.pdf">Présentation</a>. -->
 {% if chap.td %}
-<a href="./ect2_doc/ect2-tp_e{{np}}.pdf">T.D.</a>
+<a href="./info/ect2-tp_e{{np}}.pdf">T.D.</a>
 {% if chap.sol %}
-, <a href="./ect2_doc/ect2-tp_s{{np}}.pdf">correction</a>
+, <a href="./info/ect2-tp_s{{np}}.pdf">correction</a>
 {% endif %}.
 {% endif %}
 </li>

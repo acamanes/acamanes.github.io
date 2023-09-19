@@ -17,6 +17,8 @@ ect2:
     url: /ect2/colles.html
   - title: "Informatique"
     url: /ect2/informatique.html
+  - title: "Devoirs"
+    url: /ect2/devoirs.html
   - title: "Documents de travail"
     url: /ect2/documents.html
 
@@ -25,6 +27,8 @@ d2:
     url: /d2/chapitres.html
   - title: "Colles"
     url: /d2/colles.html
+  - title: "Devoirs"
+    url: /d2/devoirs.html
   - title: "Documents de travail"
     url: /d2/documents.html
 

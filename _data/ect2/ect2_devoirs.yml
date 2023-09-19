@@ -1,0 +1,9 @@
+devoirs:
+  - type: dl
+    title: "Une étude de fonction (BCE BSB - 2023 - Exercice 1)"
+  - type: dl
+    title: "Une étude de fonction (Écricome - 2023 - Exercice 2)"
+  - type: dl
+    title: "Une étude de fonction (BCE ESCP - 2021 - Exercice 3)"
+  - type: dc
+    title: "Dérivation & Limites"

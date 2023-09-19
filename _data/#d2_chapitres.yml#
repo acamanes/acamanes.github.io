@@ -1,0 +1,43 @@
+chapitres:
+
+- titre: "Analyse réelle"
+    chapitre: true
+    td: true
+  - titre: "Dénombrement"
+    chapitre: true
+    td: true
+  - titre: "Intégration"
+    chapitre: true
+    td: true
+  - titre: "Espaces vectoriels"
+    chapitre: true
+    td: true
+  - titre: "Applications linéaires"
+    chapitre: true
+    td: true
+  - titre: "Probabilités"
+    chapitre: true
+    td: true
+  - titre: "Variables aléatoires discrètes"
+    chapitre: true
+    td: true
+  - titre: "Estimation"
+    chapitre: true
+    td: true
+  - titre: "Variables aléatoires à densité"
+    chapitre: true
+    td: true
+  - titre: "Réduction"
+    chapitre: true
+    td: true
+  - titre: "Fonctions de plusieurs variables"
+    chapitre: true
+    td: true
+  - titre: "Statistiques descriptives"
+    chapitre: true
+    td: true
+  - titre: "Relations binaires"
+    chapitre: true
+  - titre: "Nombres complexes"
+    chapitre: true
+    td: true
