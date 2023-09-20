@@ -2,6 +2,7 @@ chapitres:
   - titre: "Analyse réelle"
     chapitre: true
     td: true
+    tdsol: true
   - titre: "Dénombrement"
     chapitre: true
     td: true
@@ -37,6 +38,8 @@ chapitres:
     td: true
   - titre: "Relations binaires"
     chapitre: true
+    td: false
+    tdsol: false
   - titre: "Nombres complexes"
     chapitre: true
     td: true

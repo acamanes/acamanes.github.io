@@ -34,9 +34,14 @@ sidebar:
 {% if chap.td %},{%else%}.{%endif%}
 
 {% if chap.td %}
-<a href="./exercices/d2-exos_e{{number}}.pdf">Exercices</a>.
+<a href="./exercices/d2-exos_e{{number}}.pdf">Exercices</a>
 {% endif %}
 
+{% if chap.tdsol %},{%else%}.{%endif%}
+
+{% if chap.tdsol %}
+<a href="./exercices/d2-exos_s{{number}}.pdf">Solution</a>.
+{% endif %}
 </li>
 {% endfor %}
 </ul>
