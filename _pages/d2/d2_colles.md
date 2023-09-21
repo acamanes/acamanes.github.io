@@ -28,7 +28,7 @@ sidebar:
 {% if s.holidays != true %}
 <li>
 <h6 id="colle_{{cpt}}">{{debutsemaine| date:"%d/%m"}}-{{finsemaine| date:"%d/%m"}}</h6>
-<a href="./d2-colles{{cpt}}.pdf">{{s.title}}</a>
+<a href="./colles/d2-colles{{cpt}}.pdf">{{s.title}}</a>
 </li>
 {% assign number = number | plus: 1 %}
 {% else %}
