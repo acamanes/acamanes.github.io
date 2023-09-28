@@ -16,9 +16,13 @@ sidebar:
 {% assign cptobj = 1 %}
 {% assign cptcplts = 1 %}
 
+<i>
+Les solutions des exercices n'ont pas été suffisamment relues et comportent encore des coquilles. Utilisez les avec un regard critique et n'hésitez pas à me communiquer toute erreur que vous auriez constatée.
+</i>
+
 <ul start="0" style="list-style-type:none">
 {% for chap in site.data.ect2.ect2_chapitres.chapitres %}
- {% assign number = forloop.index | plus: 0 %}
+ {% assign number = forloop.index | plus: -1 %}
  {% if number < 10 %}
   {% assign number = "0" | append:number %}
  {% endif %}
@@ -44,9 +48,15 @@ sidebar:
    {% assign ntd = cpttd %}
   {% endif %}
    <a href="./exercices/ect2-exos_e{{ntd}}.pdf">Exercices</a>
-   {% if chap.objectifs %}, {%else%}. {%endif%}
   {% assign cpttd = cpttd | plus:1 %}
+  {% if chap.tdsol %},{%else%}.{%endif%}
  {% endif %}
+  
+ {% if chap.tdsol %}
+   <a href="./exercices/ect2-exos_s{{number}}.pdf">Solutions</a>
+   {% if chap.objectifs %}, {%else%}. {%endif%}
+ {% endif %}
+
 
  {% if chap.objectifs %}
   {% if cptobj < 10 %}

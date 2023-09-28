@@ -16,6 +16,10 @@ sidebar:
 {% assign cpttop = 1 %}
 {% assign cpttheme = 1 %}
 
+<i>
+Les solutions des exercices n'ont pas été suffisamment relues et comportent encore des coquilles. Utilisez les avec un regard critique et n'hésitez pas à me communiquer toute erreur que vous auriez constatée.
+</i>
+
 <ul start="0" style="list-style-type:none">
 {% for chap in site.data.d2.d2_chapitres.chapitres %}
 {% assign number = forloop.index | plus: 0 %}
@@ -40,7 +44,7 @@ sidebar:
 {% if chap.tdsol %},{%else%}.{%endif%}
 
 {% if chap.tdsol %}
-<a href="./exercices/d2-exos_s{{number}}.pdf">Solution</a>.
+<a href="./exercices/d2-exos_s{{number}}.pdf">Solutions</a>.
 {% endif %}
 </li>
 {% endfor %}

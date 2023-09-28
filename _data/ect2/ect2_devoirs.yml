@@ -7,3 +7,7 @@ devoirs:
     title: "Une étude de fonction (BCE ESCP - 2021 - Exercice 3)"
   - type: dc
     title: "Dérivation & Limites"
+  - type: dl
+    title: "Puissances de matrices (BCE BSB - 2009 - Exercice 1)"
+  - type: dc
+    title: "Dérivation, Limites & Calcul matriciel"

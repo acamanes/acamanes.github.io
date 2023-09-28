@@ -4,44 +4,35 @@ chapitres:
     td: false
     objectifs: false
     complements:
-     - titre: "Résumé & Exercices"
+     - titre: "Calculs algébriques (Résumé & Exercices)"
        sol: true
-
-  - titre: "Calculs de puissances"
-    chapitre: false
-    td: false
-    objectifs: false
-    complements:
-     - titre: "Résumé & Exercice"
+     - titre: "Calculs de puissances (Résumé & Exercice)"
        sol: true
-
-  - titre: "Récurrences"
-    chapitre: false
-    td: false
-    objectifs: false
-    complements:
-     - titre: "Résumé & Exercices"
+     - titre: "Récurrences (Résumé & Exercices)"
        sol: true
 
   - titre: "Etudes de fonctions"
     chapitre: false
     td: true
+    tdsol: true
     objectifs: true
     complements:
      - titre: "Résumé de cours"
      - titre: "Stratégies de dérivation"
        sol: true
-     - titre: "Stratégies de primitivation"
     
   - titre: "Calcul matriciel"
     chapitre: true
     td: true
+    tdsol: true
     objectifs: true
 
   - titre: "Intégrale sur un segment"
     chapitre: true
     td: true
     objectifs: true
+    complements:
+     - titre: "Stratégies de primitivation"
 
   - titre: "Matrices inversibles"
     chapitre: true

@@ -6,6 +6,7 @@ chapitres:
   - titre: "Dénombrement"
     chapitre: true
     td: true
+    tdsol: true
   - titre: "Intégration"
     chapitre: true
     td: true
