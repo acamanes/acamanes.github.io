@@ -8,11 +8,11 @@ semaines:
   - title: "Dénombrement"
   - holidays: true
     title: "Vacances de Toussaint"
-  - title: "Intégration sur un segment"
   - holidays: true
-  - title: "Intégration"
-  - title: "Intégration"
-  - title: "Espaces vectoriels"
+  - title: "Probabilités discrètes"
+  - title: "Probabilités discrètes"
+  - title: "Variables aléatoires discrètes"
+  - title: "Variables aléatoires discrètes"
   - holidays: true
     title : "Partiels"
   - holidays: true
@@ -22,11 +22,11 @@ semaines:
   - holidays: true
   - holidays: true
   - title: "Algèbre linéaire"
-  - title: "Probabilités"
-  - title: "Probabilités & Variables aléatoires discrètes"
-  - title: "Variables aléatoires discrètes"
-  - title: "Probabilités, Variables aléatoires discrètes, Estimation"
-  - title: "Probabilités, Variables aléatoires discrètes, Estimation, Variables aléatoires à densité"
+  - title: ""
+  - title: ""
+  - title: ""
+  - title: ""
+  - title: ""
   - holidays: true
     title : "Vacances d'hiver"
   - holidays: true
