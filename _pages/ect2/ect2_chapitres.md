@@ -37,7 +37,7 @@ Les solutions des exercices n'ont pas été suffisamment relues et comportent en
     {% assign nchap = cptchap %}
    {% endif %}
    <a href="./chapitres/ect2-chap{{nchap}}.pdf">Cours</a>
-   {% if chap.td or chap.objectifs %}, {%else%}. {%endif%}
+   {% if chap.td or chap.tdsol or chap.objectifs %}, {%else%}. {%endif%}
    {% assign cptchap = cptchap | plus:1 %}
   {% endif %}
 
@@ -49,9 +49,10 @@ Les solutions des exercices n'ont pas été suffisamment relues et comportent en
   {% endif %}
    <a href="./exercices/ect2-exos_e{{ntd}}.pdf">Exercices</a>
   {% assign cpttd = cpttd | plus:1 %}
-  {% if chap.tdsol %},{%else%}.{%endif%}
+  {% if chap.tdsol or chap.objectifs%},{%else%}.{%endif%}
  {% endif %}
-  
+
+
  {% if chap.tdsol %}
    <a href="./exercices/ect2-exos_s{{number}}.pdf">Solutions</a>
    {% if chap.objectifs %}, {%else%}. {%endif%}

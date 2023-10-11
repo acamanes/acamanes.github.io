@@ -10,6 +10,7 @@ chapitres:
   - titre: "Probabilités"
     chapitre: true
     td: true
+    tdsol: true
   - titre: "Variables aléatoires discrètes"
     chapitre: true
     td: true

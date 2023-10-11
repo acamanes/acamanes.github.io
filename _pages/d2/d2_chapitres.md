@@ -33,15 +33,14 @@ Les solutions des exercices n'ont pas été suffisamment relues et comportent en
 {% endif %}</h2>
 {% if chap.chapitre %}
 <a href="./chapitres/d2-chap{{number}}.pdf">Cours</a>
+<nospace/>
+{%if chap.td or chap.tdsol%},{%else%}.{%endif%}
 {% endif %}
-
-{% if chap.td %},{%else%}.{%endif%}
 
 {% if chap.td %}
 <a href="./exercices/d2-exos_e{{number}}.pdf">Exercices</a>
+{%if chap.tdsol%},{%else%}.{%endif%}
 {% endif %}
-
-{% if chap.tdsol %},{%else%}.{%endif%}
 
 {% if chap.tdsol %}
 <a href="./exercices/d2-exos_s{{number}}.pdf">Solutions</a>.
