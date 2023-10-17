@@ -30,6 +30,7 @@ chapitres:
   - titre: "Intégrale sur un segment"
     chapitre: true
     td: true
+    tdsol: true
     objectifs: true
     complements:
      - titre: "Stratégies de primitivation"
