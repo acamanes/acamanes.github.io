@@ -38,6 +38,7 @@ chapitres:
   - titre: "Matrices inversibles"
     chapitre: true
     td: true
+    tdsol: true
     objectifs: true
     complements:
      - titre: "Résumé de cours"
