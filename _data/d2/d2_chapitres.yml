@@ -14,9 +14,11 @@ chapitres:
   - titre: "Variables aléatoires discrètes"
     chapitre: true
     td: true
+    tdsol: true
   - titre: "Estimation"
     chapitre: true
     td: true
+    tdsol: true
   - titre: "Espaces vectoriels"
     chapitre: true
     td: true

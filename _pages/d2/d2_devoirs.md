@@ -19,7 +19,7 @@ sidebar:
 {% assign cpt = dl %}
 {% endif %}
 <li id="{{s.type}}_{{cpt}}">
-<a href="./devoirs/d2-dl{{cpt}}_enonce.pdf">{{s.title}}</a>
+<a href="./devoirs/d2-dl{{cpt}}_enonce.pdf">dl n°{{cpt}}</a> : {{s.title}}
 </li>
 {% assign dl = dl | plus: 1 %}
 
@@ -31,7 +31,7 @@ sidebar:
 {% assign cpt = dc %}
 {% endif %}
 <li>
-<a href="./devoirs/d2-dc{{cpt}}.pdf">{{s.title}}</a>
+<a href="./devoirs/d2-dc{{cpt}}.pdf">dc n°{{cpt}}</a> : {{s.title}}
 </li>
 {% assign dc = dc | plus: 1 %}
 
@@ -43,7 +43,7 @@ sidebar:
 {% assign cpt = ds %}
 {% endif %}
 <li>
-<a href="./devoirs/d2-ds{{cpt}}_enonce.pdf">{{s.title}}</a>
+<a href="./devoirs/d2-ds{{cpt}}_enonce.pdf">ds n°{{cpt}}</a> : {{s.title}}
 </li>
 {% assign ds = ds | plus: 1 %}
 {% endif %}

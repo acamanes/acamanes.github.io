@@ -46,6 +46,7 @@ chapitres:
   - titre: "Variables aléatoires discrètes finies"
     chapitre: true
     td: true
+    tdsol: true
     objectifs: true
     complements:
      - titre: "Probabilités sur un ensemble fini"

@@ -11,3 +11,15 @@ devoirs:
     title: "Puissances de matrices (BCE BSB - 2009 - Exercice 1)"
   - type: dc
     title: "Dérivation, Limites & Calcul matriciel"
+  - type: dl
+    title: "Calcul matriciel (BCE ESCP - 2021 - Exercice 1)"
+  - type: dc
+    title: "Calcul matriciel - Calcul intégral"
+  - type: dl
+    title: "Puissances de matrices - Suites"
+  - type: dc
+    title: "Calculs d'intégrales"
+  - type: ds
+    title: "Calculs matriciels & système de suites (BSB - 2009 - Exercice 1) <br/> Calculs matriciels & suite récurrente double (Ecricome - 2014 - Exercice 2 Partie I) <br/> Étude de fonction et tracé (BSB - 2018 - Exercice 2) <br/> Suite d'intégrales (ESCP - 2012 - Exercice 2)"
+  - type: ds
+    title: "Calculs matriciels & double étude de suite (Ecricome - 2013 - Exercice 1) <br/> Calculs matriciels, étude de suite, fonction déterminant  (ESCP - 2009 - Exercice 4) <br/> Étude de fonction & recherche d'un zéro (BSB - 2016 - Exercice 2) <br/> Étude de fonction & solution implicite d'équation (Ecricome - 2013 - Exercice 2)"

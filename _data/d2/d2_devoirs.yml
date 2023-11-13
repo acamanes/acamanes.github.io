@@ -17,3 +17,5 @@ devoirs:
   - type: dl
     title: "Étude de courbe (d'après BCE ESCP - 2021 - Exercice 3) <br/>
     	    Dénombrement de surjections"
+  - type: dl
+    title: "Probabilités conditionnelles"
