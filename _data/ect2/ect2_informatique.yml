@@ -7,6 +7,7 @@ presentations:
    sol: true
  - titre: "Fonctions"
    td: true
+   sol: true
  - titre: "Suites"
    td: true
  - titre: "Modules : numpy & matplotlib.pyplot"
