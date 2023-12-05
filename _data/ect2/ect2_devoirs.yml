@@ -23,3 +23,13 @@ devoirs:
     title: "Calculs matriciels & système de suites (BSB - 2009 - Exercice 1) <br/> Calculs matriciels & suite récurrente double (Ecricome - 2014 - Exercice 2 Partie I) <br/> Étude de fonction et tracé (BSB - 2018 - Exercice 2) <br/> Suite d'intégrales (ESCP - 2012 - Exercice 2)"
   - type: ds
     title: "Calculs matriciels & double étude de suite (Ecricome - 2013 - Exercice 1) <br/> Calculs matriciels, étude de suite, fonction déterminant  (ESCP - 2009 - Exercice 4) <br/> Étude de fonction & recherche d'un zéro (BSB - 2016 - Exercice 2) <br/> Étude de fonction & solution implicite d'équation (Ecricome - 2013 - Exercice 2)"
+  - type: dl
+    title: "Reprise des sujets du C.B."
+  - type: dl
+    title: "Variables aléatoires de loi binomiale (BSB - 2012 - Exercice 3)"
+  - type: dl
+    title: "Formule des probabilités totales et puissance matricielle (ESCP - 2012 - Exercice 3)"
+  - type: dc
+    title: "Inverses de matrices, Dérivation, Intégration, Lois usuelles"
+  - type: dl
+    title: "Loi de couple (BSB - 2010 - Exercice 3)"

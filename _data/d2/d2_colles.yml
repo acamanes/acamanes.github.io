@@ -16,21 +16,20 @@ semaines:
   - holidays: true
     title : "Partiels"
   - holidays: true
-  - title: "Algèbre linéaire"
+  - title: "Variables aléatoires discrètes, Estimation"
   - holidays: true
     title : "Vacances de Noël"
   - holidays: true
-  - holidays: true
-  - title: "Algèbre linéaire"
-  - title: ""
-  - title: ""
-  - title: ""
-  - title: ""
-  - title: ""
+  - title: "Variables aléatoires discrètes, Estimation"
+  - title: "Algèbre linéaire (vecteurs et espaces vectoriels)"
+  - title: "Algèbre linéaire (vecteurs et espaces vectoriels)"
+  - title: "Applications linéaires"
+  - title: "Applications linéaires"
+  - title: "Intégration"
   - holidays: true
     title : "Vacances d'hiver"
   - holidays: true
-  - title: "Probabilités, Variables aléatoires discrètes, Estimation, Variables aléatoires à densité"
+  - title: "Intégration, Variables aléatoires à densité"
   - title: "Réduction"
   - title: "Réduction"
   - title: "Fonctions de plusieurs variables"

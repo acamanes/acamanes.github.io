@@ -19,3 +19,10 @@ devoirs:
     	    Dénombrement de surjections"
   - type: dl
     title: "Probabilités conditionnelles"
+  - type: ds
+    title: "Étude de courbe (ÉNS - 2011 - Problème 1) <br/>
+    	    Chemins Est / Nord (ÉNS - 2014 - Problème 2) <br/>
+	    Modèle météorologique (ESCP - 2019 - Exercice 3) <br/>
+	    Somme de deux dés (ÉNS - 2012 - Problème 1)"
+  - type: dl
+    title: "Temps d'arrêts (ÉNS - 2023 - Problème 2)"
