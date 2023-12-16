@@ -54,6 +54,7 @@ chapitres:
   - titre: "Calculs de sommes, Séries numériques"
     chapitre: true
     td: true
+    tdsol: true
     objectifs: true
     complements:
      - titre: "Études de suites"
@@ -61,6 +62,7 @@ chapitres:
   - titre: "Variables aléatoires discrètes infinies"
     chapitre: true
     td: true
+    tdsol: true
     objectifs: true
 
   - titre: "Réduction"

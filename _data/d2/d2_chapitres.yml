@@ -22,6 +22,7 @@ chapitres:
   - titre: "Espaces vectoriels"
     chapitre: true
     td: true
+    tdsol: true
   - titre: "Applications linéaires"
     chapitre: true
     td: true

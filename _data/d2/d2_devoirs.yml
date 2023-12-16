@@ -26,3 +26,7 @@ devoirs:
 	    Somme de deux dés (ÉNS - 2012 - Problème 1)"
   - type: dl
     title: "Temps d'arrêts (ÉNS - 2023 - Problème 2)"
+  - type: ds
+    title: "Comparaison de stratégies (ÉNS - 2019 - Problème 3) <br/>
+    	    Comparaison d'estimateurs (ÉNS - 2016 - Problème 2) <br/>
+	    Marches aléatoires (d'après CAPES - 2012)"

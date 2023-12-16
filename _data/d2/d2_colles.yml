@@ -22,13 +22,13 @@ semaines:
   - holidays: true
   - title: "Variables aléatoires discrètes, Estimation"
   - title: "Algèbre linéaire (vecteurs et espaces vectoriels)"
-  - title: "Algèbre linéaire (vecteurs et espaces vectoriels)"
   - title: "Applications linéaires"
   - title: "Applications linéaires"
   - title: "Intégration"
   - holidays: true
     title : "Vacances d'hiver"
   - holidays: true
+  - title: "Intégration, Variables aléatoires à densité"
   - title: "Intégration, Variables aléatoires à densité"
   - title: "Réduction"
   - title: "Réduction"

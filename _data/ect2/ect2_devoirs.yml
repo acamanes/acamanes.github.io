@@ -33,3 +33,5 @@ devoirs:
     title: "Inverses de matrices, Dérivation, Intégration, Lois usuelles"
   - type: dl
     title: "Loi de couple (BSB - 2010 - Exercice 3)"
+  - type: dl
+    title: "Processus probabiliste (Ecricome - 2018 - Exercice 3)"
