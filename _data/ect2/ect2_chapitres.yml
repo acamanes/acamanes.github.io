@@ -68,6 +68,7 @@ chapitres:
   - titre: "Réduction"
     chapitre: true
     td: true
+    tdsol: true
     objectifs: true
     
   - titre: "Intégrales généralisées"

@@ -20,7 +20,7 @@ semaines:
   - holidays: true
     title : "Vacances de Noël"
   - holidays: true
-  - title: "Variables aléatoires discrètes, Estimation"
+  - holidays: true
   - title: "Algèbre linéaire (vecteurs et espaces vectoriels)"
   - title: "Applications linéaires"
   - title: "Applications linéaires"
@@ -30,7 +30,6 @@ semaines:
   - holidays: true
   - title: "Intégration, Variables aléatoires à densité"
   - title: "Intégration, Variables aléatoires à densité"
-  - title: "Réduction"
   - title: "Réduction"
   - title: "Fonctions de plusieurs variables"
   - title: "Fonctions de plusieurs variables"

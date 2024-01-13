@@ -1,4 +1,4 @@
-devoirs:
+wdwevoirs:
   - type: dl
     title: "Une étude de fonction (ÉNS - 2018 - Problème 1)"
   - type: dl
@@ -30,3 +30,8 @@ devoirs:
     title: "Comparaison de stratégies (ÉNS - 2019 - Problème 3) <br/>
     	    Comparaison d'estimateurs (ÉNS - 2016 - Problème 2) <br/>
 	    Marches aléatoires (d'après CAPES - 2012)"
+  - type: dl
+    title: "Réduction sans le dire (ÉNS - 1989 - Exercice 2)"
+  - type: dl
+    title: "Convergence en probabilité (ÉNS - 2014 - Exercice 3) <br/>
+            Détection d'un dé pipé (ÉNS - 2017 - Problème 3)"
