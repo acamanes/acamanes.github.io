@@ -30,6 +30,7 @@ chapitres:
   - titre: "Intégration"
     chapitre: true
     td: true
+    tdsol: true
   - titre: "Variables aléatoires à densité"
     chapitre: true
     td: true

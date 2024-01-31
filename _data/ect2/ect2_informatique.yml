@@ -14,13 +14,6 @@ presentations:
  - titre: "Matrices"
    td: true
    sol: true
- - titre: "Variables aléatoires discrètes"
-   td: true
-   sol: true
- - titre: "Bases de données (Représentation et Premières requêtes)"
-   td: true
- - titre: "Bases de données (Requêtes avancées et Modifications sur les tables)"
-   td: true
- - titre: "Exercice de révision"
+ - titre: "Variables aléatoires"
    td: true
    sol: true

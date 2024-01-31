@@ -74,6 +74,7 @@ chapitres:
   - titre: "Intégrales généralisées"
     chapitre: true
     td: true
+    tdsol: true
     objectifs: true
         
   - titre: "Variables aléatoires à densité"
