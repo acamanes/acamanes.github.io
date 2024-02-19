@@ -1,7 +1,7 @@
 - titre: "À propos des coefficients binomiaux ou dénombrer plutôt que calculer"
   presentation: |
-    On propose des démonstrations des principales propriétés des coefficients binomiaux utilisant exclusivement du dénombrement.
-  fichier: "denombrement.pdf"
+    On propose une démonstration des principales propriétés des coefficients binomiaux reposant exclusivement sur des méthodes de dénombrement.
+  fichier: "binomiaux.pdf"
 
 - titre: "Le théorème de Banach-Kuratowski"
   presentation: |
@@ -10,7 +10,7 @@
 
 - titre: "Polymères dirigés et Réseaux conducteurs de chaleur"
   presentation: |
-      Présentation des résultats obtenus dans le cadre de l'étude probabiliste de deux modèles de physique statistique.
+    Présentation des résultats obtenus dans le cadre de l'étude probabiliste de deux modèles de physique statistique.
   journal: "Manuscrit de Thèse."
   fichier: "these_camanes.pdf"
 
