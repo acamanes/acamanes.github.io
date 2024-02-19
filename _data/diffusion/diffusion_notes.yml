@@ -1,3 +1,8 @@
+- titre: "À propos des coefficients binomiaux ou dénombrer plutôt que calculer"
+  presentation: |
+    On propose des démonstrations des principales propriétés des coefficients binomiaux utilisant exclusivement du dénombrement.
+  fichier: "denombrement.pdf"
+
 - titre: "Le théorème de Banach-Kuratowski"
   presentation: |
     Pourquoi ne peut-on pas prendre la tribu discrète dans le jeu de pile ou face ? Relecture de l'article initial.

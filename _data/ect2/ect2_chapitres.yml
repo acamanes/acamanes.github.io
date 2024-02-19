@@ -80,6 +80,7 @@ chapitres:
   - titre: "Variables aléatoires à densité"
     chapitre: true
     td: true
+    tdsol: true
     objectifs: true
 
   - titre: "Convergence, Estimation"
