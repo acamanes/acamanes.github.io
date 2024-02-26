@@ -86,4 +86,5 @@ chapitres:
   - titre: "Convergence, Estimation"
     chapitre: true
     td: true
+    tdsol: true
     objectifs: true

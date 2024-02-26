@@ -38,9 +38,11 @@ chapitres:
   - titre: "Réduction"
     chapitre: true
     td: true
+    tdsol: true
   - titre: "Fonctions de plusieurs variables"
     chapitre: true
     td: true
+    tdsol: true
   - titre: "Statistiques descriptives"
     chapitre: true
     td: true
