@@ -1,3 +1,8 @@
+- titre: "Régression linéaire - Convergence des estimateurs"
+  presentation: |
+    On propose une démonstration de la convergence des estimateurs de la pente, de l'ordonnée à l'origine et du bruit ainsi que leur normalité asymptotique.
+  fichier: "regression_lineaire.pdf"
+
 - titre: "À propos des coefficients binomiaux ou dénombrer plutôt que calculer"
   presentation: |
     On propose une démonstration des principales propriétés des coefficients binomiaux reposant exclusivement sur des méthodes de dénombrement.
