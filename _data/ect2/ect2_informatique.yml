@@ -17,3 +17,9 @@ presentations:
  - titre: "Variables aléatoires"
    td: true
    sol: true
+ - titre: "Bases de données - Représentation & Premières requêtes"
+   td: true
+   sol: true
+ - titre: "Bases de données - Création, Modification & Requêtes avec jointures, agrégats"
+   td: true
+   sol: true
