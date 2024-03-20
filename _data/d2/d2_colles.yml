@@ -22,14 +22,15 @@ semaines:
   - holidays: true
   - holidays: true
   - title: "Algèbre linéaire (vecteurs et espaces vectoriels)"
-  - title: "Applications linéaires"
+  - title: "Algèbre linéaire, Applications linéaires"
   - title: "Applications linéaires"
   - title: "Intégration"
   - holidays: true
     title : "Vacances d'hiver"
   - holidays: true
-  - title: "Intégration, Variables aléatoires à densité"
-  - title: "Intégration, Variables aléatoires à densité"
+  - title: "Intégration"
+  - title: "Variables aléatoires à densité"
+  - title: "Variables aléatoires à densité"
   - title: "Réduction"
   - title: "Réduction"
   - title: "Fonctions de plusieurs variables"
