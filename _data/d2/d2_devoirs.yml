@@ -40,3 +40,24 @@ devoirs:
   - type: dl
     title: "Matrices magiques (ÉNS - 2018 - Problème 3) <br/>
             Variables aléatoires discrètes et estimateur (ÉNS - 2018 - Problème 4)"
+  - type: ds
+    title: "Espace vectoriel matriciel (ÉNS - 2023 - Problème 1) <br/>
+            Estimateur du nombre de boules dans une urne (ÉNS - 2021 - Problème 2)<br/>
+	    Matrices nilpotentes (ÉNS - 2020 - Problème 2)<br/>
+	    Des billets dans des enveloppes (ÉNS - 2015 - Problème 4)"	    
+  - type: dl
+    title: "Inégalité de Bessel (ÉNS - 2023 - Problème 3)"
+  - type: dl
+    title: "Inégalité de Poincaré (ÉNS - 2021 - Problème 3)"
+  - type: dl
+    title: "Une équation matricielle (ÉNS - 2019 - Problème 1) <br/>
+    	    Composition d'applications linéaires(ÉNS - 2016 - Problème 1)"
+  - type: ds
+    title: "Estimation dans une loi uniforme (ÉNS - 2015 - Problème 2) <br/>
+            Trigonalisation (ÉNS - 2015 - Problème 3)<br/>
+	    Commutant (ÉNS - 2022 - Problème 3)<br/>
+	    Lois conditionnelles (ÉNS - 2018 - Problème 2)"	    
+  - type: dl
+    title: "Optimisations à 1 dimension, 2 dimensions libres puis sous contraintes (ÉNS - 2020 - Problème 1)"
+  - type: dl
+    title: "Inégalité arithmético-géométrique (ÉNS - 2019 - Problème 2)"
