@@ -54,3 +54,4 @@ chapitres:
   - titre: "Nombres complexes"
     chapitre: true
     td: true
+    tdsol: true
