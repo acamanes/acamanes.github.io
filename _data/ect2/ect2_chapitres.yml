@@ -1,5 +1,5 @@
 chapitres:
-  - titre: "Calculs algébriques"
+  - titre: "Calculs algébriques & Raisonnements"
     chapitre: false
     td: false
     objectifs: false
@@ -10,7 +10,11 @@ chapitres:
        sol: true
      - titre: "Récurrences (Résumé & Exercices)"
        sol: true
-
+    flowcharts:
+     - titre: "Combattre les inégalités"
+     - titre: "Recherche des racines de polynômes"
+     - titre : Raisonnement par l'absurde"
+     
   - titre: "Etudes de fonctions"
     chapitre: false
     td: true
@@ -20,6 +24,9 @@ chapitres:
      - titre: "Résumé de cours"
      - titre: "Stratégies de dérivation"
        sol: true
+    flowcharts:
+     - titre: "Étude de continuité"
+     - titre: "Calculs de dérivées"
     
   - titre: "Calcul matriciel"
     chapitre: true
@@ -34,6 +41,9 @@ chapitres:
     objectifs: true
     complements:
      - titre: "Stratégies de primitivation"
+    flowcharts:
+     - titre: "Calculs d'intégrales"
+     - titre: "Intégration par parties"
 
   - titre: "Matrices inversibles"
     chapitre: true
@@ -42,6 +52,8 @@ chapitres:
     objectifs: true
     complements:
      - titre: "Résumé de cours"
+    flowcharts:
+     - titre: "Inverser les matrices"
 
   - titre: "Variables aléatoires discrètes finies"
     chapitre: true
@@ -50,7 +62,10 @@ chapitres:
     objectifs: true
     complements:
      - titre: "Probabilités sur un ensemble fini"
-
+    flowcharts:
+     - titre: "Déterminer la loi"
+     - titre: "Calculs d'espérance et de variance"
+    
   - titre: "Calculs de sommes, Séries numériques"
     chapitre: true
     td: true
@@ -58,6 +73,9 @@ chapitres:
     objectifs: true
     complements:
      - titre: "Études de suites"
+    flowcharts:
+     - titre: "Existence de limites"
+     - titre: "Calculs de limites"
 
   - titre: "Variables aléatoires discrètes infinies"
     chapitre: true
@@ -82,6 +100,8 @@ chapitres:
     td: true
     tdsol: true
     objectifs: true
+    flowcharts:
+     - titre: "Fonctions de répartition & Espérance, Variance"
 
   - titre: "Convergence, Estimation"
     chapitre: true

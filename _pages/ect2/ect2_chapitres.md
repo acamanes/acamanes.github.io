@@ -15,6 +15,7 @@ sidebar:
 {% assign cpttd = 1 %}
 {% assign cptobj = 1 %}
 {% assign cptcplts = 1 %}
+{% assign cptfc = 1 %}
 
 <i>
 Les solutions des exercices n'ont pas été suffisamment relues et comportent encore des coquilles. Utilisez les avec un regard critique et n'hésitez pas à me communiquer toute erreur que vous auriez constatée.
@@ -69,7 +70,9 @@ Les solutions des exercices n'ont pas été suffisamment relues et comportent en
  {% assign cptobj = cptobj | plus:1 %}
  {% endif %}
 
+ 
  {% if chap.complements %}
+ <h3 class="mycss">Compléments :</h3>
  <ul>
  {% for theme in chap.complements %}
   <li>
@@ -88,4 +91,22 @@ Les solutions des exercices n'ont pas été suffisamment relues et comportent en
   {% endfor %}
  </ul>
  {% endif %}
+
+{% if chap.flowcharts %}
+ <h3 class="mycss">Diagrammes :</h3>
+<ul>
+ {% for theme in chap.flowcharts %}
+  <li>
+  {% if cptfc < 10 %}
+    {% assign nfc = "0" | append:cptfc %}
+    {% else %}
+    {% assign nfc = cptfc %}
+   {% endif %}
+   <a href="./flowcharts/ect2-flowcharts{{nfc}}.pdf">{{theme.titre}}</a>
+   {% assign cptfc = cptfc | plus:1 %}
+  </li>
+  {% endfor %}
+ </ul>
+ {% endif %}
+
 {% endfor %}

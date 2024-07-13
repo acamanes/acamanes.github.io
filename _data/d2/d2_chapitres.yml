@@ -3,46 +3,76 @@ chapitres:
     chapitre: true
     td: true
     tdsol: true
+    objectifs: true
+    complements:
+    - titre: "Formules de Taylor"
+      sol: false
   - titre: "Dénombrement"
     chapitre: true
     td: true
     tdsol: true
+    objectifs: true
+    complements:
+    - titre: "Tirages"
+      sol: false
   - titre: "Probabilités"
     chapitre: true
     td: true
     tdsol: true
+    objectifs: true
   - titre: "Variables aléatoires discrètes"
     chapitre: true
     td: true
     tdsol: true
+    objectifs: true
+    complements:
+    - titre: "Max et Min de v.a."
+      sol: false
   - titre: "Estimation"
     chapitre: true
     td: true
     tdsol: true
+    objectifs: true
   - titre: "Espaces vectoriels"
     chapitre: true
     td: true
     tdsol: true
+    objectifs: true
   - titre: "Applications linéaires"
     chapitre: true
     td: true
     tdsol: true
+    objectifs: true
+    complements:
+    - titre: "Hyperplans"
+      sol: false
+    - titre: "Quand (ne pas) utiliser le déterminant ?"
+      sol: false
+    - titre: "Changements de bases"
+      sol: false
   - titre: "Intégration"
     chapitre: true
     td: true
     tdsol: true
+    objectifs: true
   - titre: "Variables aléatoires à densité"
     chapitre: true
     td: true
     tdsol: true
+    objectifs: true
   - titre: "Réduction"
     chapitre: true
     td: true
     tdsol: true
+    objectifs: true
   - titre: "Fonctions de plusieurs variables"
     chapitre: true
     td: true
     tdsol: true
+    objectifs: true
+    complements:
+    - titre: "Optimisation"
+      sol: false
   - titre: "Statistiques descriptives"
     chapitre: true
     td: true

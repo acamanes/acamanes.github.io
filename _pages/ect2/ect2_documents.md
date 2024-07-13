@@ -13,23 +13,12 @@ sidebar:
 
 {% assign cptdoc = 0 %}
 
-<center>
-<nobr>
-{% for r in site.data.ect2_documents.ref %}
-<a href="./ect2_doc/ref/{{r.ref}}" class="ref">&Sigma;</a>
-{% endfor %}
-</nobr>
-</center>
-
 <ul start="0" style="list-style-type:none">
-{% for chap in site.data.ect2_documents.calculs %}
+{% for chap in site.data.ect2.ect2_documents.calculs %}
 <li> <h3 id="#docs_{{cptdoc}}">{{chap.titre}}</h3>
 <ul>
 {% for doc in chap.docs %}
-<li><a href="./ect2_doc/{{doc.url}}">{{doc.titre}}</a>.
-{% for r in doc.ref %}
-<a href="./ect2_doc/ref/{{r}}" class="ref">&Sigma;</a>
-{% endfor %}
+<li><a href="./doc/{{doc.url}}">{{doc.titre}}</a>.
 </li>
 {% endfor %}
 </ul>
