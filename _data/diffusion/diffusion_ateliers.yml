@@ -2,17 +2,31 @@ presentation: |
   Les ateliers proposés sont sans ordinateur et ont pour but la manipulation d'idées mathématiques ou informatiques en adéquation avec les notions étudiées durant la classe. Ces ateliers ont été organisés dans des classes de primaire. Les durées et niveaux indiqués sont approximatifs. N'hésitez pas à me contacter pour modifier les sources. Un grand merci aux enseignants qui ont échangé lors de la préparation et ont ouvert les portes de leurs classes. Certaines activités se sont inspirées du groupe de travail <a href="https://github.com/InfoSansOrdi/InfoSansOrdi/blob/master/README.md">ISO</a>.
 
 ateliers:
+  - titre: "Énigmes"
+    niveau: "Cycle 3"
+    presentation: |
+      Énigmes à chercher en classe
+    ateliers:
+      - titre: "Les ampoules"
+        niveau: "CM2"
+        presentation: |
+          Une question d'allumage et d'extinction d'ampoules qui mène à des questions d'arithmétique.
+        fichier: "cm2-01-ampoules"
 
-  - titre: "Parcours d'économes (à venir)"
+
+
+
+
+  - titre: "Circuits eulériens"
     niveau: "Cycle 3"
     presentation: |
       Recherche de circuits eulériens dans des graphes et recherche d'une caractérisation.
     ateliers:
-      - titre: "Parcours d'économes"
+      - titre: "Circuits eulériens"
         niveau: "CM2"
         presentation: |
-          (à venir)
-        fichier: "cm2-01-parcours_d_economes"
+          Recherche de chemins dans la cour, puis à l'aide de planches à clous. Recherche d'une caractérisation théorique.
+        fichier: "cm2-02-circuits_euleriens"
 
 
   - titre: "Un bol d'Euler"
