@@ -4,6 +4,7 @@ gem "github-pages", group: :jekyll_plugins
 gem "jekyll-include-cache", group: :jekyll_plugins
 gem "jekyll-remote-theme"
 gem "minimal-mistakes-jekyll"
+gem "liquid", "~>4.0.4"
 
 # # Hello! This is where you manage which Jekyll version is used to run.
 # # When you want to use a different version, change it below, save the
@@ -34,3 +35,5 @@ gem "minimal-mistakes-jekyll"
 # # Performance-booster for watching directories on Windows
 # gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 
+
+gem "webrick", "~> 1.9"
