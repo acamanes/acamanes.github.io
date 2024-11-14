@@ -9,9 +9,9 @@ semaines:
   - holidays: true
     title : "Vacances de la Toussaint"
   - holidays: true
+  - title: "Intégration sur un segment"
   - holidays: true
     title : "Concours Blanc"
-  - title: "Intégration sur un segment"
   - title: "Matrices inversibles"
   - title: "Matrices inversibles"
   - title: "Variables aléatoires discrètes finies"
