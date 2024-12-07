@@ -7,29 +7,32 @@ semaines:
   - title: "Calcul matriciel"
   - title: "Intégration sur un segment"
   - holidays: true
-    title : "Vacances de la Toussaint"
+    title : "Vacances de la Toussaint (semaine 1)"
   - holidays: true
+    title : "Vacances de la Toussaint (semaine 2)"
   - title: "Intégration sur un segment"
   - holidays: true
-    title : "Concours Blanc"
+    title : "Concours Blanc 1"
   - title: "Matrices inversibles"
   - title: "Matrices inversibles"
   - title: "Variables aléatoires discrètes finies"
   - title: "Variables aléatoires discrètes finies (couples)"
   - title: "Sommes et Séries"
   - holidays: true
-    title : "Vacances de Noël"
+    title : "Vacances de Noël (semaine 1)"
   - holidays: true
+    title : "Vacances de Noël (semaine 2)"
   - title: "Sommes et Séries"
   - title: "Variables aléatoires discrètes infinies"
   - title: "Variables aléatoires discrètes infinies"
   - title: "Réduction"
   - title: "Réduction"
   - holidays: true
-    title : "Vacances d'hiver"
+    title : "Vacances d'hiver (semaine 1)"
   - holidays: true
+    title : "Vacances d'hiver (semaine 1)"
   - holidays: true
-    title : "Concours Blanc"
+    title : "Concours Blanc 2"
   - title: "Intégrales généralisées"
   - title: "Intégrales généralisées"
   - title: "Variables aléatoires à densité"

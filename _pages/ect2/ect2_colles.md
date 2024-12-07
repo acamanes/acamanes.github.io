@@ -32,7 +32,8 @@ sidebar:
 </li>
 {% assign number = number | plus: 1 %}
 {% else %}
-{{s.title}}
+<em>{{s.title}}</em>
+<br/>
 {% endif %}
 
 {% assign debutsemaine = debutsemaine | date : "%s" | plus: week %}

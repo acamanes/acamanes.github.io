@@ -7,27 +7,31 @@ semaines:
   - title: "Dénombrement"
   - title: "Dénombrement"
   - holidays: true
-    title: "Vacances de Toussaint"
+    title: "Vacances de Toussaint (semaine 1)"
   - holidays: true
+    title: "Vacances de Toussaint (semaine 2)"
   - title: "Probabilités discrètes"
   - title: "Probabilités discrètes"
   - title: "Variables aléatoires discrètes"
   - title: "Variables aléatoires discrètes"
+  - holidays: true
+    title : "Partiels (révisions)"
   - holidays: true
     title : "Partiels"
-  - holidays: true
   - title: "Variables aléatoires discrètes, Estimation"
   - holidays: true
-    title : "Vacances de Noël"
+    title : "Vacances de Noël (semaine 1)"
   - holidays: true
-  - holidays: true
+    title : "Vacances de Noël (semaine 2)"
+  - title: "Variables aléatoires discrètes, Estimation"
   - title: "Algèbre linéaire (vecteurs et espaces vectoriels)"
   - title: "Algèbre linéaire, Applications linéaires"
   - title: "Applications linéaires"
   - title: "Intégration"
   - holidays: true
-    title : "Vacances d'hiver"
+    title : "Vacances d'hiver (semaine 1)"
   - holidays: true
+    title : "Vacances d'hiver (semaine 2)"
   - title: "Intégration"
   - title: "Variables aléatoires à densité"
   - title: "Variables aléatoires à densité"
