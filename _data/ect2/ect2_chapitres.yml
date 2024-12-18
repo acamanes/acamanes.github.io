@@ -73,6 +73,7 @@ chapitres:
     objectifs: true
     complements:
      - titre: "Études de suites"
+       sol: true
     flowcharts:
      - titre: "Existence de limites"
      - titre: "Calculs de limites"
