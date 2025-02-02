@@ -27,6 +27,7 @@ semaines:
   - title: "Algèbre linéaire (vecteurs et espaces vectoriels)"
   - title: "Algèbre linéaire, Applications linéaires"
   - title: "Applications linéaires"
+  - title: "Applications linéaires"
   - title: "Intégration"
   - holidays: true
     title : "Vacances d'hiver (semaine 1)"
