@@ -28,5 +28,7 @@ devoirs:
   - type: "dl"
     title: "Puissance de matrices, changement de bases"
   - type: "dl"
-    title: "Exemple d'endomorphismes nilpotents"
+    title: "Réduction des endomorphismes nilpotents de l'espace"
+  - type: "dl"
+    title: "Inégalité de Poincaré - Commutant d'une matrice"
     

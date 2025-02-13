@@ -46,3 +46,5 @@ devoirs:
     title: "Variables aléatoires, probabilités totales, puissance de matrice"
   - type: "dl"
     title: "Diagonalisation, puissance de matrices, probabilités totales"
+  - type: "dl"
+    title: "Étude de fonction, tangentes, points d'inflexions, tracé, densité de probabilité, espérance - Probabilités totales, variables aléatoires discrètes, Python, densité, absence d'espérance."
