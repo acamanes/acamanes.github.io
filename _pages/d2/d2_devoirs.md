@@ -13,6 +13,11 @@ sidebar:
 <ol>
 {% for s in site.data.d2.d2_devoirs.devoirs %}
 {% if s.type == "dl" %}
+{% if s.bis %}
+<li id="{{s.type}}_{{cpt}}">
+<a href="./devoirs/d2-dl{{cpt}}b_enonce.pdf">dl n°{{cpt}} bis</a> : {{s.title}}
+</li>
+{% else %}
 {% if dl < 10 %}
 {% assign cpt = "0" | append:dl %}
 {% else %}
@@ -22,6 +27,7 @@ sidebar:
 <a href="./devoirs/d2-dl{{cpt}}_enonce.pdf">dl n°{{cpt}}</a> : {{s.title}}
 </li>
 {% assign dl = dl | plus: 1 %}
+{% endif %}
 
 {% else %}
 {% if s.type == "dc" %}

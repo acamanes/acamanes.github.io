@@ -31,4 +31,13 @@ devoirs:
     title: "Réduction des endomorphismes nilpotents de l'espace"
   - type: "dl"
     title: "Inégalité de Poincaré - Commutant d'une matrice"
+  - type: "dl"
+    title: "Étude de fonction <br/> Convergence en probabilité <br/> Lois conditionnelles <br/> Endomorphisme trigonalisable <br/> Inverse des matrices triangulaires"
+    bis: "true"
+  - type: "dl"
+    title: "Estimateurs - Loi uniforme à densité"
+  - type: "dl"
+    title: "Réduction - Matrice de projecteur <br/> Estimation"
+  - type: "dl"
+    title: "Fonctions à plusieurs variables - Optimisation, lagrangien"
     
