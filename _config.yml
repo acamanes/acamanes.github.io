@@ -32,7 +32,7 @@ locale: "fr-FR"
 title	 	   : "Autour des Maths"
 description	   : "Ce site contient différents documents de travail à destination des étudiants de CPGE ou autour de la diffusion scientifique."
 url	     	   : http://acamanes.github.io
-logo		   : /_pages/images/ico.png
+logo		   : ./_pages/images/ico.png
 name : "Alain Camanes"
 location : "Toulouse" 
 contact		   : alain.camanes@free.fr
@@ -52,25 +52,3 @@ include:
 
 plugins:
   - jekyll-include-cache
-
-
-
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/

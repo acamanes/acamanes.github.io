@@ -42,12 +42,12 @@ Les solutions des exercices n'ont pas été suffisamment relues et comportent en
    {% assign cptchap = cptchap | plus:1 %}
   {% endif %}
 
- {% if chap.td %}
   {% if cpttd < 10 %}
    {% assign ntd = "0" | append:cpttd %}
    {% else %}
    {% assign ntd = cpttd %}
   {% endif %}
+ {% if chap.td %}
    <a href="./exercices/d2-exos_e{{ntd}}.pdf">Exercices</a>
   {% assign cpttd = cpttd | plus:1 %}
   {% if chap.tdsol or chap.objectifs%},{%else%}.{%endif%}
